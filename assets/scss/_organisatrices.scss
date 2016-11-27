@@ -1,0 +1,211 @@
+/* ===================================
+          PAGE ORGANISATRICES
+ ================================== */
+ .presentation-section{
+     .organisatrices{
+         .photos{
+             margin: 0;
+
+             .col-xs-12{
+                 &:nth-child(1){
+                     .img-oval {
+                         width: $img-oval-width-mobile;
+                         height: $img-oval-height-mobile;
+                         border-radius: 112.5px / 133px;
+                         margin-top: $img-oval-margin-top-mobile;
+                     }
+
+                     &:after{
+                         content: "";
+                         border-bottom: $border-element;
+                         margin: $img-oval-after-margin;
+                         display: block;
+                         width: 50%;
+                     }
+                }
+
+                 h4{
+                     font-size: $font-size-large;
+                     margin-bottom: $page-h4-margin-bottom;
+                     text-align: center;
+                     color: $gray-ultra-light;
+                     margin-top: 0;
+                }
+
+                p{
+                    font-size: $font-size-medium;
+                    text-align: left;
+                    margin: $page-p-margin;
+                    margin-bottom: 0;
+                    background: $gray-ultra-light;
+                    color: $gray-base;
+                    border-radius: $page-p-border-radius;
+                    border: $page-p-border;
+                    padding: $page-p-padding-mobile;
+                    font-style: normal;
+                 }
+             }
+         }
+    }
+}
+
+@media(min-width:$screen-sm) {
+    .presentation-section{
+
+        .organisatrices{
+            display: none;
+        }
+
+        .row{
+            &.photos-deskop{
+                margin: $photos-deskop-margin-tablet;
+                margin-top: $margin-semi-medium;
+
+                .col-lg-4{
+                    .img-oval {
+                        width: $img-oval-width-tablet;
+                        height: $img-oval-height-tablet;
+                        border-radius: 100px / 120.5px;
+                    }
+
+                    &:after{
+                        content: "";
+                        border-bottom: $border-element;
+                        margin: $img-oval-after-margin;
+                        display: block;
+                        width: 45%;
+                    }
+                }
+            }
+
+
+            &.bio-deskop{
+                margin: $bio-deskop-margin-tablet;
+                padding: $bio-deskop-padding-tablet;
+                background: $gray-ultra-light;
+
+                .col-lg-4{
+                     padding-right: $bio-deskop-block-padding-horizontal-tablet;
+                     padding-left: $bio-deskop-block-padding-horizontal-tablet;
+                     text-align: left;
+
+                      h4{
+                          font-size: $font-size-large;
+                          margin-bottom: $bio-deskop-h4-margin-bottom-tablet;
+                          margin-top: 0;
+                          text-align: center;
+                     }
+
+                     p{
+                         font-size: $font-size-medium;
+                         margin: $bio-deskop-p-margin-tablet;
+                         margin-bottom: 0;
+                         color: $gray-base;
+                         font-style: normal;
+                         width: 100%;
+                    }
+               }
+           }
+       }
+    }
+}
+
+
+@media(min-width:$screen-md) {
+    .presentation-section{
+
+        .row{
+            &.photos-deskop{
+                margin: $photos-deskop-margin-medium-deskop;
+                margin-top: $margin-medium;
+
+                .col-lg-4{
+                    .img-oval {
+                        width: $img-oval-width-deskop;
+                        height: $img-oval-height-deskop;
+                        border-radius: 112.5px / 133px;
+                    }
+
+                    &:after{
+                        border-bottom: $border-element;
+                        margin: $img-oval-after-margin-medium-deskop;
+                        width: 45%;
+                    }
+                }
+            }
+
+
+            &.bio-deskop{
+                margin: $bio-deskop-margin-medium-deskop;
+                padding: $bio-deskop-padding-medium-deskop;
+
+                .col-lg-4{
+                     padding-right: $bio-deskop-block-padding-horizontal-medium-deskop;
+                     padding-left: $bio-deskop-block-padding-horizontal-medium-deskop;
+
+                      h4{
+                          font-size: $font-size-large;
+                          margin-bottom: $bio-deskop-h4-margin-bottom-medium-deskop;
+                      }
+
+                     p{
+                         font-size: $font-size-medium;
+                         margin: $bio-deskop-p-margin-medium-deskop;
+                    }
+               }
+           }
+       }
+   }
+}
+
+
+@media(min-width:$screen-lg) {
+    .presentation-section{
+
+        .row{
+            &.photos-deskop{
+                margin: $photos-deskop-margin-large-deskop;
+                margin-top: $margin-large;
+
+                .col-lg-4{
+                    &:after{
+                        margin: $img-oval-after-margin-large-deskop;
+                        width: 45%;
+                    }
+                }
+            }
+
+
+            &.bio-deskop{
+                margin: $bio-deskop-margin-large-deskop;
+                padding:  $bio-deskop-padding-large-deskop;
+
+                .col-lg-4{
+                     padding-right: $bio-deskop-block-padding-horizontal-large-deskop;
+                     padding-left: $bio-deskop-block-padding-horizontal-large-deskop;
+
+                      h4{
+                          font-size: $font-size-large;
+                          margin-bottom: $bio-deskop-h4-margin-bottom-large-deskop;
+                     }
+
+                     p{
+                         font-size: $font-size-medium;
+                         margin: $bio-deskop-p-margin-large-deskop;
+                         margin-bottom: 0;
+                    }
+               }
+           }
+       }
+   }
+}
+
+@media(max-width:$screen-sm) {
+    .presentation-section{
+
+        .photos-deskop,
+        .bio-deskop{
+            display: none;
+        }
+    }
+}

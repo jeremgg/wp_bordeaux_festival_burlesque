@@ -1,0 +1,34 @@
+.media-section {
+  margin-top: 11.6rem;
+  padding-top: 10rem;
+}
+
+.media-section .container .row {
+  position: relative;
+}
+
+.media-section .container .row .col-lg-2 {
+  margin-bottom: 78px;
+}
+
+.media-section .container .row .col-lg-2 .navbar-form {
+  margin: 0;
+}
+
+.media-section .container .row .col-lg-8 {
+  position: relative;
+}
+
+.media-section .container .row .col-lg-8 .topbar h3 {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 40px;
+  width: 49%;
+  min-width: 320px;
+  color: #FFF;
+}
+
+.media-section .container .row .col-lg-8 .topbar h2 {
+  padding-right: 20px;
+  color: #666;
+}

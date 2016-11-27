@@ -1,0 +1,138 @@
+/* ===================================
+          PAGE RESERVATION
+================================== */
+
+.booking-section{
+    .booking{
+        margin: $booking-margin;
+
+        img{ margin: 0 auto; }
+
+        &:last-child{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        > .col-xs-6{
+            border: $border-element;
+            padding: $booking-block-padding;
+            margin-right: 0;
+            width: calc(50% - .5rem);
+
+            &:first-child{ margin-right: .25rem; }
+            &:last-child{ margin-left: .5rem; }
+
+            h2{
+                font-size: $font-size-large;
+                margin: $booking-block-h2-margin;
+            }
+
+            .col-lg-4{  display: none; }
+        }
+    }
+}
+
+
+@media(max-width:$screen-lg) {
+    #about{
+        .container{
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+@media(min-width:$screen-sm) {
+    .booking-section{
+
+       .booking{
+               margin: $booking-margin-tablet;
+
+           > .col-sm-4{
+               width: calc(43.33333% - 2rem);
+               padding-top: $booking-block-padding-tablet;
+
+               &.col-sm-offset-2{
+                   margin-left: 7.66667%;
+                   padding-top: $booking-block-offset-padding-tablet;
+               }
+
+               &:first-child{ margin-right: 0; }
+               &:last-child{ margin-left: $booking-block-last-padding-tablet; }
+
+               h2{
+                   font-size: $font-size-h3;
+                   margin: $booking-block-h2-margin-tablet }
+
+               .col-lg-4{
+                    display: block;
+                    border: none;
+                    margin: 0;
+                    padding-bottom: 0;
+
+                    &.links{
+                        padding-left: 0;
+                        padding-right: 0;
+                        text-align: left;
+
+                        &.fnac{ padding-bottom: 11px; padding-top: 0;}
+                        &.digitick{ padding-top: 8px; }
+                        &.ticketmaster{ padding-top: 8px; }
+
+                        img{ margin: 0; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:$screen-md) {
+    .booking-section{
+        .booking{
+             margin: $booking-margin-medium-deskop;
+
+             > .col-md-4{
+                 width: calc(33.33333% - 2.5rem);
+                 padding-top: $booking-block-padding-medium-deskop;
+
+                 &.col-sm-offset-2{
+                     margin-left: 16.66667%;
+                 }
+
+                 &:first-child{ margin-right: 0; }
+                 &:last-child{ margin-left: $booking-block-last-padding-medium-deskop; }
+
+                 h2{
+                     font-size: $font-size-30;
+                     margin: $booking-block-h2-margin-medium-deskop; }
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-lg) {
+    .booking-section{
+        .booking{
+            margin: $booking-margin-large-deskop;
+
+            img{ margin: 0 auto; max-width: 225px; }
+
+            > .col-lg-4{
+               width: calc(33.33333% - 3rem);
+               padding-top: $booking-block-padding-large-deskop;
+
+               &:first-child{ margin-right: 0; }
+               &:last-child{ margin-left: $booking-block-last-padding-large-deskop; }
+
+               h2{
+                   font-size: $font-size-30;
+                   margin: $booking-block-h2-margin-large-deskop; }
+            }
+        }
+    }
+}

@@ -1,0 +1,370 @@
+/* =======================
+           THEME
+======================= */
+$theme-color :  #cf9702;
+
+$font-family-custom-1 :  "Playfair Display", serif !default;
+$font-family-custom-2 :  "Roboto Condensed", sans-serif !default;
+
+$font-size-10 : 10px;
+$font-size-20 : 20px;
+$font-size-21 : 21px;
+$font-size-22 : 22px;
+$font-size-30 : 30px;
+
+$font-weight-custom-base: bold;
+$font-weight-custom-1 : 300;
+$font-weight-custom-2 : 700;
+$font-weight-custom-3: 900;
+
+$line-height-semi-medium : 2rem;
+
+$transition-duration-slow : .3s;
+$transition-duration-medium : .5s;
+$transition-duration-long : 1s;
+
+$height-micro : .2rem;
+$height-small : 2rem;
+$height-semi-medium : 4rem;
+$width-micro : .2rem;
+$width-medium : 5rem;
+
+$padding-semi-micro : .5rem;
+$padding-micro : 1rem;
+$padding-semi-medium : 2rem;
+$padding-medium : 3rem;
+$padding-semi-medium : 4rem;
+$padding-medium : 5rem;
+
+$margin-semi-micro : .5rem;
+$margin-micro : 1rem;
+$margin-micro-big : 1.5rem;
+$margin-semi-medium : 2rem;
+$margin-semi-medium-big : 2.5rem;
+$margin-medium : 3rem;
+$margin-medium-big : 3.5rem;
+$margin-semi-large : 4rem;
+$margin-large : 5rem;
+$margin-large-big : 6rem;
+$margin-large-bigger : 7rem;
+
+$margin-semi-micro-full : 0 .5rem;
+$margin-micro-full : 0 1rem;
+$margin-semi-small-full : 0 1.5rem;
+$margin-small-full : 0 2rem;
+$margin-semi-medium-full : 0 2.5rem;
+$margin-medium-full : 0 3rem;
+$margin-semi-large-full : 0 4rem;
+$margin-large-full : 0 5rem;
+
+$margin-semi-micro-full-inverse : .5rem 0;
+$margin-micro-full-inverse : 1rem 0;
+$margin-semi-small-full-inverse : 1.5rem 0;
+$margin-small-full-inverse : 2rem 0;
+$margin-semi-medium-full-inverse : 2.5rem 0;
+$margin-medium-full-inverse : 3rem 0;
+$margin-medium-full-big-inverse : 3.5rem 0;
+$margin-semi-large-full-inverse : 4rem 0;
+$margin-large-full-inverse : 5rem 0;
+
+$margin-semi-small-center : 1.5rem auto;
+$margin-small-center : 2rem auto;
+$margin-medium-center : 3rem auto;
+
+//margin responsive :
+$margin-top-mobile : 3rem;
+$margin-top-tablet : 5rem;
+$margin-top-medium-deskop : 7.5rem;
+$margin-top-large-deskop : 10rem;
+
+$border-element : 1px solid $theme-color;
+$border-element-medium : 2px solid $theme-color;
+$thumbs-border: 15px solid #fff;
+$border-nav-rs-responsive : 1px solid #e7e7e7;
+
+$border-radius-micro: 1rem;
+
+
+
+
+
+/* =======================
+           NAV
+======================= */
+
+$nav-li-underline-height : $height-micro;   //20px
+$nav-li-underline-bottom : .8rem;
+
+$nav-underline-margin-large-deskop : 0 25px;
+
+$nav-rs-margin-top : $margin-micro;            //10px
+$nav-rs-border : $border-nav-rs-responsive;    //1px solid #e7e7e7;
+$nav-rs-link-padding : 1rem .5rem !default;
+
+$nav-padding-medium-deskop : $margin-medium-full-big-inverse;  //35px 0
+$nav-padding-large-deskop : $margin-semi-large-full-inverse;   //40px 0
+
+$navbar-brand-size-mobile : 9rem;
+$navbar-brand-size-medium-deskop : 10rem;
+$navbar-brand-size-large-deskop : 11rem;
+
+
+
+
+
+/* =======================
+        BURGER MENU
+======================= */
+
+$burger-width : 3.4rem;
+$burger-height : $burger-width;
+
+$burger-span-width : 2.2rem;
+$burger-span-height : $height-micro;    //20px
+
+$svg-stroke-width : $width-micro;       //20px
+
+
+
+
+
+/* =======================
+          HEADER
+======================= */
+
+$header-margin-top-mobile : 5.5rem;
+$header-margin-top-medium-deskop : 10.6rem;
+$header-margin-top-large-deskop : 12.6rem;
+
+$header-h1-margin-mobile : $margin-semi-small-full-inverse;           //15px 0
+$header-h1-margin-tablet : $margin-semi-medium-full-inverse;          //25px 0
+$header-h1-margin-medium-deskop : $margin-semi-large-full-inverse;    //40px 0
+$header-h1-margin-large-deskop : $margin-large-full-inverse;          //50px 0
+
+$header-h1-margin : 90%;
+
+
+
+
+
+/* =======================
+    PAGE ORGANISATRICES
+======================= */
+
+$organisatrice-margin : $margin-micro-full;   //0 10px
+
+$photos-deskop-margin-tablet : $margin-semi-small-full;      //0 15px
+$photos-deskop-margin-medium-deskop : $margin-small-full;    //0 20px
+$photos-deskop-margin-large-deskop : $margin-medium-full ;   //0 30px
+
+//image oval
+$img-oval-width-mobile : 225px;
+$img-oval-width-tablet : 200px;
+$img-oval-width-deskop : 225px;
+
+$img-oval-height-mobile : 266px;
+$img-oval-height-tablet : 241px;
+$img-oval-height-deskop : 266px;
+
+$img-oval-margin-top-mobile : $margin-medium;    //30px
+
+//bordure bottom
+$img-oval-after-margin: $margin-semi-small-center;            //15px auto
+$img-oval-after-margin-tablet: $margin-semi-small-center;     //15px auto
+$img-oval-after-margin-medium-deskop: $margin-small-center;   //20px auto
+$img-oval-after-margin-large-deskop: $margin-medium-center;   //30px 0
+
+//content mobile
+$page-h4-margin-bottom : $margin-micro-big;     //15px
+
+$page-p-margin : $margin-semi-small-center;     //15px auto
+$page-p-border-radius : $border-radius-micro;   //10px
+$page-p-border: $border-element-medium;         //2px solid $theme-color
+
+$page-p-padding-mobile : $margin-semi-large;    //40px
+
+//content tablet & deskop
+$bio-deskop-margin-tablet : $margin-semi-small-full;      //0 15px
+$bio-deskop-margin-medium-deskop : $margin-small-full;    //0 20px
+$bio-deskop-margin-large-deskop : $margin-medium-full ;   //0 30px
+
+$bio-deskop-padding-tablet : $margin-medium-full-inverse;              //3rem 0
+$bio-deskop-padding-medium-deskop : $margin-semi-large-full-inverse;   //4rem 0
+$bio-deskop-padding-large-deskop : $margin-large-full-inverse;         //5rem 0
+
+$bio-deskop-block-padding-horizontal-tablet : $margin-medium-big;          //35px 0
+$bio-deskop-block-padding-horizontal-medium-deskop : $margin-large-big;    //60px
+$bio-deskop-block-padding-horizontal-large-deskop : $margin-large-bigger;  //7rem
+
+$bio-deskop-h4-margin-bottom-tablet : $margin-micro-big;             //15px
+$bio-deskop-h4-margin-bottom-medium-deskop : $margin-semi-medium;    //20px
+$bio-deskop-h4-margin-bottom-large-deskop : $margin-medium;          //30px
+
+$bio-deskop-p-margin-tablet : $margin-semi-small-full-inverse;           //15px 0
+$bio-deskop-p-margin-medium-deskop : $margin-small-full-inverse;         //20px 0
+$bio-deskop-p-margin-large-deskop : $margin-medium-full-inverse;         //30px 0
+
+
+
+/* =======================
+    PAGE INFOS PRATIQUES
+======================= */
+
+$map-height-mobile : 320px;
+
+$infos-lieu-padding-top-mobile : $margin-semi-medium;        //20px
+$infos-lieu-padding-top-tablet : $margin-medium-big;         //35px
+$infos-lieu-padding-top-deskop-medium : $margin-semi-large;  //40px
+$infos-lieu-padding-top-large-deskop : $margin-large;        //50px
+
+$infos-lieu-block-margin-mobile : $margin-top-mobile;                  //30px
+$infos-lieu-block-margin-tablet : $margin-top-tablet;                  //50px
+$infos-lieu-block-margin-medium-deskop : $margin-top-medium-deskop;    //75px
+$infos-lieu-block-margin-large-deskop : $margin-top-large-deskop;      //100px
+
+$infos-lieu-h4-margin : $margin-micro-big;                        //15px
+$infos-lieu-h4-margin-tablet : $margin-semi-medium;               //20px
+$infos-lieu-h4-margin-medium-deskop : $margin-semi-medium-big;    //25px
+$infos-lieu-h4-margin-large-deskop : $margin-medium;              //30px
+
+$infos-pratique-h1-padding-tablet : $margin-semi-medium;              //20px
+$infos-pratique-h1-padding-medium-deskop : $margin-semi-medium-big;   //25px
+$infos-pratique-h1-padding-large-deskop : $margin-medium;             //30px
+
+$infos-pratique-margin-top : $margin-medium;               //30px
+$infos-pratique-padding-horizontal : $margin-micro-big;    //15px
+
+$infos-transport-margin-bottom : $margin-micro-big;             //15px
+
+$infos-transport-margin-top-tablet : $margin-semi-medium;           //20px
+$infos-transport-margin-top-medium-deskop : $margin-semi-medium;    //20px
+$infos-transport-margin-top-large-deskop : $margin-medium;          //30px
+
+
+
+/* ===================================
+          PAGE RESERVATION
+ ================================== */
+$booking-margin : 3rem 1.5rem .5rem 1.5rem;
+$booking-margin-tablet : 5rem 0 2rem 0;
+$booking-margin-medium-deskop : 7.5rem 0 2.5rem 0;
+$booking-margin-large-deskop : 10rem 0 3rem 0;
+
+$booking-block-padding : $margin-micro-big;                   //15px
+$booking-block-padding-tablet : $margin-semi-medium;          //20px
+$booking-block-padding-medium-deskop : $margin-semi-medium;   //20px
+$booking-block-padding-large-deskop : $margin-semi-medium;    //20px
+
+$booking-block-last-padding-tablet : $margin-semi-medium;               //20px
+$booking-block-last-padding-medium-deskop : $margin-semi-medium-big;    //25px;
+$booking-block-last-padding-large-deskop : $margin-medium;              //30px
+
+$booking-block-offset-padding-tablet : $margin-semi-medium;          //20px
+
+$booking-block-h2-margin : $margin-micro-full-inverse;                        //10px 0
+$booking-block-h2-margin-tablet : $margin-small-full-inverse;                 //20px 0
+$booking-block-h2-margin-medium-deskop : $margin-semi-medium-full-inverse;    //25px 0
+$booking-block-h2-margin-large-deskop : $margin-medium-full-inverse;          //30px 0
+
+
+
+/* ===================================
+              PAGE HOME
+ ================================== */
+$home-margin : $margin-top-mobile;     //30px
+
+$home-slider-margin-horizontal : $margin-semi-medium;          //20px
+
+$home-slider-indicator-margin : $margin-micro-big;                        //15px
+$home-slider-indicator-margin-tablet : $margin-semi-medium;               //20px
+$home-slider-indicator-margin-medium-deskop : $margin-semi-medium-big;    //25px
+$home-slider-indicator-margin-large-deskop : $margin-medium;              //30px
+
+$home-carroussel-inner-margin : $margin-micro-big;                        //15px
+$home-carroussel-inner-margin-top-tablet : $margin-semi-medium;           //20px
+$home-carroussel-inner-margin-medium-deskop : $margin-semi-medium-big;    //25px
+$home-carroussel-inner-margin-large-deskop : $margin-medium;              //30px
+
+$home-blog-margin : $margin-top-mobile;                         //30px
+$home-blog-margin-tablet : $margin-top-tablet;                  //50px
+$home-blog-margin-medium-deskop : $margin-top-medium-deskop;    //75px
+$home-blog-margin-large-deskop : $margin-top-large-deskop;      //100px
+
+$home-blog-bloc-padding : 2rem 0 1.5rem 0;
+
+$home-blog-bloc-content-padding : $margin-micro;                  //10px
+$home-blog-bloc-content-padding-tablet : $margin-micro-big;       //15px
+
+$home-blog-date-padding : -3px;
+
+$home-blog-p-padding : $margin-micro-full-inverse;                        //1rem 0
+$home-blog-p-padding-tablet : $margin-semi-small-full-inverse;            //1.5rem 0
+$home-blog-p-padding-medium-deskop : $margin-semi-small-full-inverse;     //1.5rem 0
+$home-blog-p-padding-large-deskop : 2rem 0 1.5rem 0;
+
+$home-blog-button-border-radius : $border-radius-micro;   //10px
+$home-blog-button-border-radius-tablet : .4rem;
+
+$home-blog-button-padding : 6px 10px;
+$home-blog-button-padding-tablet : 6px 12px;
+
+$home-blog-offset-width : 46.5%;
+
+
+
+/* ===================================
+              PAGE MEDIA
+ ================================== */
+$media-container-padding-top-tablet : 5.5rem;
+$media-container-padding-top-medium-deskop : 11.5rem;
+$media-container-padding-top-large-deskop : 12.5rem;
+
+$media-bloc-first-margin-top-tablet : $margin-top-tablet;                  //50px
+$media-bloc-first-margin-top-medium-deskop : $margin-top-medium-deskop;    //75px
+$media-bloc-first-margin-top-large-deskop : $margin-top-large-deskop;     //100px
+
+$navbar-form-margin-bottom-tablet : 7.8rem;
+
+$topbar-h3-margin-bottom : $margin-large;     //50px
+$topbar-h3-margin-bottom-tablet : $margin-large-big;   //60px
+$topbar-h3-margin-bottom-medium-deskop : $margin-top-medium-deskop;   //75px
+$topbar-h3-margin-bottom-large-deskop : $margin-top-large-deskop;     //100px
+
+$topbar-h3-width : 90%;
+$topbar-h3-before-width : $width-medium;     //50px
+$topbar-h3-before-height : $height-small;     //20px
+
+$tp-grid-li-border : $thumbs-border;              //15px solid #fff;
+$tp-grid-link-border : $border-element-medium;    //2px solid $theme-color;
+$tp-grid-link-padding : $margin-semi-micro;       //5px
+
+$tp-title-padding : $margin-micro;    //10px
+
+$loader-width : $width-medium;     //50px
+
+
+
+
+
+/* ===================================
+            PROGRAMMING
+ ================================== */
+ $intro-section-padding-top : 125px;
+
+
+
+
+
+ /* ===================================
+              FOOTER
+ ================================== */
+$footer-margin-top : $margin-top-mobile;                         //30px
+$footer-margin-top-tablet : $margin-top-tablet;                  //50px
+$footer-margin-top-medium-deskop : $margin-top-medium-deskop;    //75px
+$footer-margin-top-large-deskop : $margin-top-large-deskop;      //100px
+
+$footer-partenairs-margin-top : $margin-micro-big;     //15px
+
+$footer-rs-padding : 0 7.5rem;
+$footer-rs-padding-left-tablet : 6.5rem !important;
+$footer-line-height : 40px;

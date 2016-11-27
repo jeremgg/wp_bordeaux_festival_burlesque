@@ -1,0 +1,228 @@
+/* ===================================
+        PAGE INFOS PRATIQUES
+ ================================== */
+ .map{
+     height: $map-height-mobile;
+ }
+
+ .infos-section{
+     .row{
+         &.lieu{
+             padding-top: $infos-lieu-padding-top-mobile;
+
+             .col-xs-12{
+                 margin-bottom: $infos-lieu-block-margin-mobile;
+
+                 h4{
+                     color: $theme-color;
+                     font-size: $font-size-medium;
+                     text-align: center;
+                     font-weight: $font-weight-custom-1;
+                     margin-bottom: $infos-lieu-h4-margin;
+                     margin-top: 0;
+                 }
+
+                 p{
+                     font-size: 14px;
+                     font-family: $font-family-custom-2; }
+             }
+         }
+
+         &.pratique{
+             h1{
+                 font-size: 24px;
+                 margin: 0;
+             }
+
+             .row{
+                 margin-top: $infos-pratique-margin-top;
+                 padding-left: $infos-pratique-padding-horizontal;
+                 padding-right: $infos-pratique-padding-horizontal;
+
+                 &.transport{
+                     .col-xs-12{
+                         &:first-child{
+                             text-align: center;
+                             margin-bottom: $infos-transport-margin-bottom;
+
+                             img{ margin: 0 auto; }
+                         }
+                     }
+
+                     .col-xs-12{
+                         span{
+                             font-family: $font-family-custom-1;
+                             color: $theme-color;
+                             font-size: $font-size-medium;
+                             text-align: center;
+                             font-weight: $font-weight-custom-2;
+                             display: block;
+                         }
+
+                         p{
+                             font-family: $font-family-custom-2;
+                             font-size: $font-size-base;
+                             margin-bottom: 0;
+                             text-align: center;
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+
+
+ @media(min-width:$screen-sm) {
+     .map{
+         height: 700px;
+     }
+
+     .infos-section{
+         .row{
+             &.lieu{
+                 padding-top: $infos-lieu-padding-top-tablet;
+
+                 .col-xs-12{
+                     margin-bottom: $infos-lieu-block-margin-tablet;
+
+                     h4{
+                         font-size: $font-size-large;
+                         margin-bottom: $infos-lieu-h4-margin-tablet;
+                     }
+
+                     p{ font-size: $font-size-medium; }
+                 }
+             }
+
+             &.pratique{
+                 h1{
+                     font-size: $font-size-30;
+                     padding-bottom: $infos-pratique-h1-padding-tablet;
+                     border-bottom: $border-element;
+                 }
+
+                 .row{
+                     &.transport{
+                         margin-top: $infos-transport-margin-top-tablet;
+
+                         .col-xs-12{
+                             &:first-child{
+                                 text-align: center;
+                                 margin-bottom: $infos-transport-margin-bottom;
+                             }
+                         }
+
+                         .col-md-6{
+                             text-align: left;
+
+                             span{  font-size: $font-size-large; display: inline-block;  }
+                             p{ font-size: $font-size-medium; display: initial; }
+
+                             &:nth-child(1) p{ line-height: 86px; }
+                             &:nth-child(2) p{ line-height: 78px; }
+                             &:nth-child(3) p{ line-height: 77px; }
+                             &:nth-child(4) p{ line-height: 58px; }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+
+
+
+
+@media(min-width:$screen-md) {
+
+    .infos-section{
+        .row{
+            &.lieu{
+                padding-top: $infos-lieu-padding-top-deskop-medium;
+
+                .col-xs-12{
+                    margin-bottom: $infos-lieu-block-margin-medium-deskop;
+
+                    h4{
+                        font-size: $font-size-20;
+                        margin-bottom: $infos-lieu-h4-margin-medium-deskop;
+                    }
+
+                    p{ font-size: $font-size-large; }
+                }
+            }
+
+            &.pratique{
+                h1{
+                    font-size: $font-size-h1;
+                    padding-bottom: $infos-pratique-h1-padding-medium-deskop;
+                }
+
+                .row{
+                    &.transport{
+                        margin-top: $infos-transport-margin-top-medium-deskop;
+
+                        .col-xs-12{
+                            &:first-child{
+                                text-align: center;
+                                margin-bottom: $infos-transport-margin-bottom;
+                            }
+
+                            span{  font-size: $font-size-20; display: inline-block;  }
+                            p{ font-size: $font-size-20; display: initial; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(min-width:$screen-lg) {
+    .infos-section{
+        .row{
+            &.lieu{
+                padding-top: $infos-lieu-padding-top-large-deskop;
+
+                .col-xs-12{
+                    margin-bottom: $infos-lieu-block-margin-large-deskop;
+
+                    h4{
+                        font-size: $font-size-20;
+                        margin-bottom: $infos-lieu-h4-margin-large-deskop;
+                    }
+
+                    p{ font-size: $font-size-large; }
+                }
+            }
+
+            &.pratique{
+                h1{
+                    font-size: $font-size-h1;
+                    padding-bottom: $infos-pratique-h1-padding-large-deskop;
+                }
+
+                .row{
+                    &.transport{
+                        margin-top: $infos-transport-margin-top-large-deskop;
+
+                        .col-xs-12{
+                            &:first-child{
+                                text-align: center;
+                                margin-bottom: $infos-transport-margin-bottom;
+                            }
+
+                            span{  font-size: $font-size-20; display: inline-block;  }
+                            p{ font-size: $font-size-20; display: initial; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
