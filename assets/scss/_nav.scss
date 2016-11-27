@@ -343,10 +343,11 @@
                 li:nth-child(6) > a{
                   width: calc( 100% - (3rem * 2));
                   padding: 1rem 2.5rem;
-                  padding-right: $padding-medium;
+                  margin-right: $padding-medium;
+                  width: 9.5rem;
 
                   &:before{
-                      width: calc( 100% - (3rem));
+                      width: calc( 100% - (2.5rem * 2));
                   }
                 }
 

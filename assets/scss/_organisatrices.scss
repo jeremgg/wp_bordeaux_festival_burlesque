@@ -32,18 +32,30 @@
                      margin-top: 0;
                 }
 
-                p{
-                    font-size: $font-size-medium;
-                    text-align: left;
-                    margin: $page-p-margin;
-                    margin-bottom: 0;
+                .bg-content{
                     background: $gray-ultra-light;
-                    color: $gray-base;
-                    border-radius: $page-p-border-radius;
                     border: $page-p-border;
+                    border-radius: $page-p-border-radius;
                     padding: $page-p-padding-mobile;
-                    font-style: normal;
-                 }
+                    margin: $page-p-margin;
+                    width: 90%;
+
+                    p{
+                        font-size: $font-size-medium;
+                        text-align: left;
+                        margin-bottom: 0;
+                        color: $gray-base;
+                        font-style: normal;
+                        margin-bottom: $margin-micro-big;
+
+                        &:first-child{ display: none; }
+                        &:last-child{ margin-bottom: 0; }
+                    }
+
+                    a{
+                        color: $theme-color;
+                    }
+                }
              }
          }
     }
@@ -96,13 +108,30 @@
                           text-align: center;
                      }
 
-                     p{
-                         font-size: $font-size-medium;
+                     .bg-content{
+                         background: $gray-ultra-light;
+                         border: none;
+                         border-radius: $page-p-border-radius;
+                         padding: 0;
                          margin: $bio-deskop-p-margin-tablet;
-                         margin-bottom: 0;
-                         color: $gray-base;
-                         font-style: normal;
                          width: 100%;
+
+                         p{
+                             font-size: $font-size-medium;
+                             text-align: left;
+                             color: $gray-base;
+                             font-style: normal;
+                             margin-bottom: $margin-micro-big;
+
+
+                             &:first-child{ display: none; }
+                             &:last-child{ margin-bottom: 0; }
+                         }
+
+                         a{
+                             color: $theme-color;
+                         }
+
                     }
                }
            }
@@ -148,10 +177,25 @@
                           margin-bottom: $bio-deskop-h4-margin-bottom-medium-deskop;
                       }
 
-                     p{
-                         font-size: $font-size-medium;
-                         margin: $bio-deskop-p-margin-medium-deskop;
-                    }
+                      .bg-content{
+                          margin: $bio-deskop-p-margin-medium-deskop;
+
+                          p{
+                              font-size: $font-size-medium;
+                              text-align: left;
+                              color: $gray-base;
+                              font-style: normal;
+                              margin-bottom: $margin-micro-big;
+
+
+                              &:first-child{ display: none; }
+                              &:last-child{ margin-bottom: 0; }
+                          }
+
+                          a{
+                              color: $theme-color;
+                          }
+                      }
                }
            }
        }
@@ -189,11 +233,28 @@
                           margin-bottom: $bio-deskop-h4-margin-bottom-large-deskop;
                      }
 
-                     p{
-                         font-size: $font-size-medium;
+                     .bg-content{
                          margin: $bio-deskop-p-margin-large-deskop;
                          margin-bottom: 0;
-                    }
+
+                         p{
+                             font-size: $font-size-medium;
+                             text-align: left;
+                             color: $gray-base;
+                             font-style: normal;
+                             margin-bottom: $margin-semi-medium-big;
+
+
+                             &:first-child{ display: none; }
+                             &:last-child{ margin-bottom: 0; }
+                         }
+
+                         a{
+                             color: $theme-color;
+                         }
+                      }
+
+
                }
            }
        }

@@ -78,13 +78,13 @@ p {
 
 @media (min-width: 992px) {
   .intro-section {
-    margin-top: 10.6rem;
+    margin-top: 7.4rem;
   }
 }
 
 @media (min-width: 1200px) {
   .intro-section {
-    margin-top: 10.6rem;
+    margin-top: 7.4rem;
   }
   .intro-section img {
     width: 100%;
@@ -704,10 +704,11 @@ section p {
   .navbar .navbar-center ul li:nth-child(6) > a {
     width: calc( 100% - (3rem * 2));
     padding: 1rem 2.5rem;
-    padding-right: 5rem;
+    margin-right: 5rem;
+    width: 9.5rem;
   }
   .navbar .navbar-center ul li:nth-child(6) > a:before {
-    width: calc( 100% - (3rem));
+    width: calc( 100% - (2.5rem * 2));
   }
   .navbar .navbar-center ul .rs a {
     padding: 1rem 0.5rem;
@@ -1292,17 +1293,34 @@ section p {
   margin-top: 0;
 }
 
-.presentation-section .organisatrices .photos .col-xs-12 p {
+.presentation-section .organisatrices .photos .col-xs-12 .bg-content {
+  background: white;
+  border: 2px solid #cf9702;
+  border-radius: 1rem;
+  padding: 4rem;
+  margin: 1.5rem auto;
+  width: 90%;
+}
+
+.presentation-section .organisatrices .photos .col-xs-12 .bg-content p {
   font-size: 16px;
   text-align: left;
-  margin: 1.5rem auto;
   margin-bottom: 0;
-  background: white;
   color: #000;
-  border-radius: 1rem;
-  border: 2px solid #cf9702;
-  padding: 4rem;
   font-style: normal;
+  margin-bottom: 1.5rem;
+}
+
+.presentation-section .organisatrices .photos .col-xs-12 .bg-content p:first-child {
+  display: none;
+}
+
+.presentation-section .organisatrices .photos .col-xs-12 .bg-content p:last-child {
+  margin-bottom: 0;
+}
+
+.presentation-section .organisatrices .photos .col-xs-12 .bg-content a {
+  color: #cf9702;
 }
 
 @media (min-width: 768px) {
@@ -1341,13 +1359,29 @@ section p {
     margin-top: 0;
     text-align: center;
   }
-  .presentation-section .row.bio-deskop .col-lg-4 p {
-    font-size: 16px;
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content {
+    background: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0;
     margin: 1.5rem 0;
-    margin-bottom: 0;
+    width: 100%;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p {
+    font-size: 16px;
+    text-align: left;
     color: #000;
     font-style: normal;
-    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p:first-child {
+    display: none;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p:last-child {
+    margin-bottom: 0;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content a {
+    color: #cf9702;
   }
 }
 
@@ -1378,9 +1412,24 @@ section p {
     font-size: 18px;
     margin-bottom: 2rem;
   }
-  .presentation-section .row.bio-deskop .col-lg-4 p {
-    font-size: 16px;
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content {
     margin: 2rem 0;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p {
+    font-size: 16px;
+    text-align: left;
+    color: #000;
+    font-style: normal;
+    margin-bottom: 1.5rem;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p:first-child {
+    display: none;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p:last-child {
+    margin-bottom: 0;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content a {
+    color: #cf9702;
   }
 }
 
@@ -1405,10 +1454,25 @@ section p {
     font-size: 18px;
     margin-bottom: 3rem;
   }
-  .presentation-section .row.bio-deskop .col-lg-4 p {
-    font-size: 16px;
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content {
     margin: 3rem 0;
     margin-bottom: 0;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p {
+    font-size: 16px;
+    text-align: left;
+    color: #000;
+    font-style: normal;
+    margin-bottom: 2.5rem;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p:first-child {
+    display: none;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content p:last-child {
+    margin-bottom: 0;
+  }
+  .presentation-section .row.bio-deskop .col-lg-4 .bg-content a {
+    color: #cf9702;
   }
 }
 

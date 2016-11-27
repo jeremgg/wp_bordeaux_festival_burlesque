@@ -1,199 +1,236 @@
 <?php
+/**
+ * _tk functions and definitions
+ *
+ * @package _tk
+ */
 
-if ( ! function_exists( 'bfb_setup' ) ) :
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) )
+	$content_width = 750; /* pixels */
 
-    function bfb_setup() {
-      	global $cap, $content_width;
+if ( ! function_exists( 'bfb_custom' ) ) :
 
-      	// This theme styles the visual editor with editor-style.css to match the theme style.
-      	//add_editor_style( 'editor-style.css' );
+		// Register Theme Features
+		function bfb_custom() {
 
+				global $cap, $content_width;
 
-      	/* Add default posts and comments RSS feed links to head */
-      	add_theme_support( 'automatic-feed-links' );
+				// Add theme support for Translation
+				load_theme_textdomain( 'text_domain', get_template_directory() . '/language' );
 
-        // Add theme support for Featured Images
+				// This theme styles the visual editor with editor-style.css to match the theme style.
+				//add_editor_style();
+
+				// Add theme support for Automatic Feed Links
+				add_theme_support( 'automatic-feed-links' );
+
+				// Add theme support for Featured Images
         add_theme_support( 'post-thumbnails' );
 
-        // Add theme support for Post Formats
+				// Add theme support for Post Formats
         add_theme_support( 'post-formats', array( 'quote', 'gallery', 'image', 'video', 'link', 'aside' ) );
 
-        // Add theme support for logo
+				// Add theme support for Custom Background
+				add_theme_support( 'custom-background', apply_filters( 'custom_background_args', array(
+						'default-color' => 'ffffff',
+						'default-image' => '',
+				)));
+
+				// Add theme support for logo
         add_theme_support( 'custom-logo', array(
-      		'height'      => 72,
-      		'width'       => 78,
-      		'flex-width' => true,
-          'flex-height' => true
+	      		'height'      => 72,
+	      		'width'       => 78,
+	      		'flex-width' => true,
+	          'flex-height' => true
         ));
 
-        // Add theme support for Custom Background
-       	add_theme_support( 'custom-background', apply_filters( 'bfb_custom_background_args', array(
-            'default-color'          => 'ffffff',
-            'default-image'          => '',
-        )));
+				// register menu
+				register_nav_menus( array(
+						'topbar' => __('menu de navigation', 'bfb'),
+						'bottom' => __('menu du bas de page', 'bfb'),
+						'social' => __('réseaux sociaux du menu de navigation', 'bfb')
+				));
 
-      	// Add theme support for Translation
-      	load_theme_textdomain( 'bfb', get_template_directory() . '/language' );
+				// register widget
+				register_sidebar( array(
+						'name'          => __( 'Menu de gauche', 'bfb'),
+						'id'            =>  'left_sidebar',
+						'description'   =>  '',
+						'class'         => '',
+						'before_widget' => '<li id="%1$s" class="widget %2$s">',
+						'after_widget'  => '</li>',
+						'before_title'  => '<h2 class="widgettitle">',
+						'after_title'   => '</h2>'
+				));
 
-      	// Add theme support for HTML5 Semantic Markup
-      	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
-    }
+				register_sidebar( array(
+						'name'          => __( 'Menu de droite', 'bfb'),
+						'id'            =>  'right_sidebar',
+						'description'   =>  '',
+						'class'         => '',
+						'before_widget' => '<li id="%1$s" class="widget %2$s">',
+						'after_widget'  => '</li>',
+						'before_title'  => '<h2 class="widgettitle">',
+						'after_title'   => '</h2>'
+				));
 
+				register_sidebar( array(
+						'name'          => __( 'Menu du bas', 'bfb'),
+						'id'            =>  'bottom_sidebar',
+						'description'   =>  '',
+						'class'         => '',
+						'before_widget' => '<li id="%1$s" class="widget %2$s">',
+						'after_widget'  => '</li>',
+						'before_title'  => '<h2 class="widgettitle">',
+						'after_title'   => '</h2>'
+				));
+		}
 endif; // bfb_setup
 
-add_action( 'after_setup_theme', 'bfb_setup' );
+add_action( 'after_setup_theme', 'bfb_custom' );
 
 
+/**
+ *  add the logo
+ */
 
-
-//REGISTER MENU
-    function bfb_custom_menus() {
-        register_nav_menus( array(
-            'topbar' => __('menu de navigation', 'bfb'),
-            'bottom' => __('menu du bas de page', 'bfb'),
-            'social' => __('réseaux sociaux du menu de navigation', 'bfb')
-        ));
-    }
-    add_action( 'init', 'bfb_custom_menus' );
-
-
-
-// REGISTER WIDGET
-    function bfb_widgets_init() {
-        register_sidebar( array(
-            'name'          => __( 'Menu de gauche', 'bfb'),
-            'id'            =>  'left_sidebar',
-            'description'   =>  '',
-            'class'         => '',
-            'before_widget' => '<li id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</li>',
-            'before_title'  => '<h2 class="widgettitle">',
-            'after_title'   => '</h2>'
-        ));
-
-        register_sidebar( array(
-            'name'          => __( 'Menu de droite', 'bfb'),
-            'id'            =>  'right_sidebar',
-            'description'   =>  '',
-            'class'         => '',
-            'before_widget' => '<li id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</li>',
-            'before_title'  => '<h2 class="widgettitle">',
-            'after_title'   => '</h2>'
-        ));
-
-        register_sidebar( array(
-            'name'          => __( 'bas de page', 'bfb'),
-            'id'            =>  'bottom_sidebar',
-            'description'   =>  '',
-            'class'         => '',
-            'before_widget' => '<li id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</li>',
-            'before_title'  => '<h2 class="widgettitle">',
-            'after_title'   => '</h2>'
-        ));
-    }
-    add_action( 'widgets_init', 'bfb_widgets_init' );
-
-
-
-//==================================
-//==================================
-
-
-//ajouter le logo
 function bfb_the_custom_logo() {
-    if ( function_exists( 'the_custom_logo' ) ) {
-      the_custom_logo();
-    }
+		if ( function_exists( 'the_custom_logo' ) ) {
+			the_custom_logo();
+		}
 }
 
-//changer la class de son container
-function change_logo_class($html){
-        $html = str_replace('custom-logo-link', 'navbar-brand', $html);
-        return $html;
-    }
+function bfb_change_logo_class($html){
+				$html = str_replace('custom-logo-link', 'navbar-brand', $html);
+				return $html;
+		}
 
-add_filter('get_custom_logo','change_logo_class');
-
-
-//==================================
-//==================================
+add_filter('get_custom_logo','bfb_change_logo_class');
 
 
-//AJOUTER LES FICHIER CSS ET JS
-    function custom_scripts_styles() {
 
-        //ajouter les fichiers css
-            wp_enqueue_style(
-                'default-style',
-                get_template_directory_uri().'/style.css',
-                false ,false, 'all'
-            );
+/**
+ * Enqueue styles
+ */
 
-            wp_enqueue_style(
-               'bootstrap',
-               get_template_directory_uri().'/assets/css/_bootstrap.css',
-                false ,false, 'all'
-           );
+function bfb_custom_styles() {
 
-           wp_enqueue_style(
-              'customize',
-              get_template_directory_uri().'/assets/css/_style.css',
-              false ,false, 'all'
-          );
+		//load base style css
+		wp_enqueue_style(
+				'bfb_default-style',
+				get_template_directory_uri().'/style.css',
+				false ,false, 'all'
+		);
 
+		//load bootstrap css
+		wp_enqueue_style(
+				'bfb_bootstrap',
+			 	get_template_directory_uri().'/assets/css/_bootstrap.css',
+			 	false ,false, 'all'
+	  );
 
-      //ajouter les fichier javascript
-          wp_enqueue_script('jquery');
-
-          wp_enqueue_script(
-              'jquery-script',
-              get_template_directory_uri() . '/assets/js/vendor/jquery-3.1.1.min.js',
-              array(),
-              true
-           );
-
-          wp_enqueue_script(
-              'bootstrap-script',
-              get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js',
-              array(),
-              true
-           );
-
-            wp_enqueue_script(
-                'jquery-easing-script',
-                get_template_directory_uri() . '/assets/js/vendor/jquery.easing.min.js',
-                array(),
-                true
-            );
-
-            wp_enqueue_script(
-                'main-script',
-                get_template_directory_uri() . '/assets/js/main.js',
-                array(),
-                true
-            );
-    }
-    add_action( 'wp_enqueue_scripts', 'custom_scripts_styles' );
+	  //load customize style css
+	  wp_enqueue_style(
+				'customize',
+				get_template_directory_uri().'/assets/css/_style.css',
+				false ,false, 'all'
+		);
+}
+add_action( 'wp_enqueue_scripts', 'bfb_custom_styles' );
 
 
-//==================================
-//==================================
+
+/**
+ * Enqueue scripts
+ */
+
+function bfb_custom_scripts() {
+		//load jquery
+		wp_enqueue_script('jquery');
+
+		wp_enqueue_script(
+				'bfb_jquery-script',
+				get_template_directory_uri() . '/assets/js/vendor/jquery-3.1.1.min.js',
+				array(),
+				true
+		);
+
+		// load bootstrap js
+		wp_enqueue_script(
+				'bfb_bootstrap-script',
+				get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js',
+				array(),
+				true
+		);
+
+		// load bootstrap js
+		wp_enqueue_script(
+				'bfb_jquery-easing-script',
+			 	get_template_directory_uri() . '/assets/js/vendor/jquery.easing.min.js',
+				array(),
+				true
+	  );
+
+		// load main js
+		wp_enqueue_script(
+				'bfb_main-script',
+				get_template_directory_uri() . '/assets/js/main.js',
+				array(),
+				true
+		);
+}
+add_action( 'wp_enqueue_scripts', 'bfb_custom_scripts' );
 
 
-//CHARGER LES FONTS
-    function load_fonts() {
-        wp_register_style('et-googleFonts', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i');
-        wp_enqueue_style( 'et-googleFonts');
 
-        wp_enqueue_style(
-           'font-awesome',
-           get_template_directory_uri().'/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css',
-           false ,false, 'all'
-        );
-    }
-    add_action('wp_print_styles', 'load_fonts');
+/**
+ * Enqueue fonts
+ */
+
+function bfb_custom_fonts() {
+		//load google-fonts
+		wp_register_style('et-googleFonts', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i');
+		wp_enqueue_style( 'et-googleFonts');
+
+		//load font awesome
+		wp_enqueue_style(
+				'font-awesome',
+				get_template_directory_uri().'/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css',
+				false ,false, 'all'
+		);
+}
+add_action('wp_print_styles', 'bfb_custom_fonts');
 
 
- ?>
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/includes/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/includes/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/includes/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/includes/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/includes/jetpack.php';
+
+/**
+ * Load custom WordPress nav walker.
+ */
+require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
