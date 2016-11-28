@@ -69,11 +69,17 @@ p {
  ================================== */
 .intro-section {
   text-align: center;
-  margin-top: 5.5rem;
+  margin-top: 0.8rem;
 }
 
 .intro-section img {
   border-bottom: 1px solid #cf9702;
+}
+
+@media (min-width: 768px) {
+  .intro-section {
+    margin-top: 2.3rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1125,15 +1131,14 @@ section p {
 ================================== */
 .booking-section .booking {
   margin: 3rem 1.5rem 0.5rem 1.5rem;
+  /*&:last-child{
+            margin-top: 0;
+            margin-bottom: 0;
+        }*/
 }
 
 .booking-section .booking img {
   margin: 0 auto;
-}
-
-.booking-section .booking:last-child {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .booking-section .booking > .col-xs-6 {
@@ -1149,6 +1154,10 @@ section p {
 
 .booking-section .booking > .col-xs-6:last-child {
   margin-left: .5rem;
+}
+
+.booking-section .booking > .col-xs-6:nth-child(-n+2) {
+  margin-bottom: .5rem;
 }
 
 .booking-section .booking > .col-xs-6 h2 {
@@ -1183,8 +1192,11 @@ section p {
   .booking-section .booking > .col-sm-4:first-child {
     margin-right: 0;
   }
-  .booking-section .booking > .col-sm-4:last-child {
+  .booking-section .booking > .col-sm-4:nth-child(even) {
     margin-left: 2rem;
+  }
+  .booking-section .booking > .col-sm-4:nth-child(-n+2) {
+    margin-bottom: 2rem;
   }
   .booking-section .booking > .col-sm-4 h2 {
     font-size: 24px;
@@ -1230,8 +1242,11 @@ section p {
   .booking-section .booking > .col-md-4:first-child {
     margin-right: 0;
   }
-  .booking-section .booking > .col-md-4:last-child {
+  .booking-section .booking > .col-md-4:nth-child(even) {
     margin-left: 2.5rem;
+  }
+  .booking-section .booking > .col-md-4:nth-child(-n+2) {
+    margin-bottom: 2.5rem;
   }
   .booking-section .booking > .col-md-4 h2 {
     font-size: 30px;
@@ -1242,6 +1257,7 @@ section p {
 @media (min-width: 1200px) {
   .booking-section .booking {
     margin: 10rem 0 3rem 0;
+    margin-bottom: 0;
   }
   .booking-section .booking img {
     margin: 0 auto;
@@ -1254,8 +1270,11 @@ section p {
   .booking-section .booking > .col-lg-4:first-child {
     margin-right: 0;
   }
-  .booking-section .booking > .col-lg-4:last-child {
+  .booking-section .booking > .col-lg-4:nth-child(even) {
     margin-left: 3rem;
+  }
+  .booking-section .booking > .col-lg-4:nth-child(-n+2) {
+    margin-bottom: 3rem;
   }
   .booking-section .booking > .col-lg-4 h2 {
     font-size: 30px;
