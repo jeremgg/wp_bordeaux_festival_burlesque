@@ -1512,6 +1512,10 @@ section p {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+.infos-section .row.lieu .col-xs-12 a {
+  color: white;
+}
+
 .infos-section .row.pratique h1 {
   font-size: 24px;
   margin: 0;
