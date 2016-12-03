@@ -44,9 +44,6 @@ p{
     img{ border-bottom: $border-element; }
 }
 
-@media(max-width:$screen-sm) {
-    .intro-section{ margin-top: 4rem; }
-}
 
 @media(min-width:$screen-sm) {
     .intro-section{ margin-top: $header-margin-top-tablet; }

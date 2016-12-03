@@ -93,9 +93,10 @@
             z-index: 10000;
 
             img{
-                width: 70%;
+                width: 68%;
+                height: auto;
                 margin: 0 auto;
-                margin-top: -17px;
+                margin-top: -8px;
                 padding-left: $padding-semi-micro;
             }
         }
@@ -228,7 +229,7 @@
     }
 
     .navbar{
-        padding: $margin-medium;
+        padding: $margin-semi-medium;
         transition: background $transition-duration-medium ease-in-out,padding $transition-duration-medium ease-in-out;
         //max-width: $container-large-desktop;
         margin: 0 auto;
@@ -243,11 +244,12 @@
             .navbar-brand{
                 width: $navbar-brand-size-medium-deskop;
                 height: $navbar-brand-size-medium-deskop;
-                top: 104%;
+                top: 108%;
 
                 img{
                     width: 65%;
-                    margin-top: -17px;
+                    height: auto;
+                    margin-top: -5px;
                     padding-left: 5px;
                 }
             }
@@ -303,15 +305,15 @@
 
 @media(min-width:$screen-lg) {
     .navbar{
-        padding: $margin-medium;
+        padding: $margin-semi-medium;
 
         &.top-nav-collapse { padding: 0; }
 
         .navbar-header{
             .navbar-brand{
-                width: $navbar-brand-size-large-deskop;
-                height: $navbar-brand-size-large-deskop;
-                top: 110%;
+              width: $navbar-brand-size-large-deskop;
+              height: $navbar-brand-size-large-deskop;
+                top: 100%;
                 z-index: 0;
 
                 img{
