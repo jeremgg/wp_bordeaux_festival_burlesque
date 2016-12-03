@@ -1,0 +1,102 @@
+/* ===================================
+                404
+ ================================== */
+
+.error404{
+    .error-404{
+        margin-top: 5.5rem;
+
+        h2{
+            font-family: $font-family-custom-1;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: none;
+            margin: 2rem 0;
+        }
+
+        .nippies{
+            border: none;
+            margin: 0 auto;
+        }
+
+        p{
+            font-family: $font-family-custom-1;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: none;
+            font-style: normal;
+            margin-top: 2rem 0;
+        }
+    }
+}
+
+
+@media(min-width:$screen-sm) {
+    .error404{
+        .error-404{
+            margin-top: 6.7rem;
+
+            h2{
+                font-size: 24px;
+                margin: 3rem 0;
+            }
+
+            .nippies{
+                max-width: 640px;
+            }
+
+            p{
+                font-size: 24px;
+                margin-top: 3rem 0;
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-md) {
+    .error404{
+        .error-404{
+            margin-top: 12.7rem;
+
+            h2{
+                font-size: 30px;
+                margin: 4rem 0;
+            }
+
+            .nippies{
+                max-width: 640px;
+            }
+
+            p{
+                font-size: 30px;
+                margin-top: 4rem 0;
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-lg) {
+    .error404{
+        .error-404{
+            margin-top: 13.9rem;
+
+            h2{
+                font-size: 36px;
+                margin: 5rem 0;
+            }
+
+            .nippies{
+                max-width: 640px;
+            }
+
+            p{
+                font-size: 36px;
+                margin-top: 5rem 0;
+            }
+        }
+    }
+}

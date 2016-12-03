@@ -44,12 +44,19 @@ p{
     img{ border-bottom: $border-element; }
 }
 
+@media(max-width:$screen-sm) {
+    .intro-section{ margin-top: 4rem; }
+}
+
 @media(min-width:$screen-sm) {
     .intro-section{ margin-top: $header-margin-top-tablet; }
 }
 
 @media(min-width:$screen-md) {
     .intro-section{ margin-top: $header-margin-top-medium-deskop; }
+    .error404{
+        .intro-section{ margin-top: 10.7rem; }
+    }
 }
 
 @media(min-width:$screen-lg) {
@@ -128,7 +135,6 @@ section{
         p{ font-size: $font-size-large; }
     }
 }
-
 
 
 
