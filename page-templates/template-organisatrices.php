@@ -12,7 +12,7 @@ get_header(); ?>
 						<div class="row">
 								<div class="col-lg-12">
 									<div class="entry-content-thumbnail">
-										<?php the_post_thumbnail(); ?>
+											<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive']); ?>
 									</div>
 								</div>
 						</div>

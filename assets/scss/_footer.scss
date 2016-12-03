@@ -33,7 +33,16 @@
                         text-align: center;
                         padding: 0 7.5rem;
 
-                        a{ color: $gray-base;
+                        .col-xs-6{
+                            width: calc(50% - 4rem);
+                            color: $gray-base;
+                            margin: 0 2rem;
+                            text-align: right;
+
+                            &:nth-child(2){
+                                text-align: left;
+                            }
+
                             .fa{
                                 &:hover{
                                     color: $theme-color;
@@ -50,6 +59,12 @@
                             &:hover{
                                 text-decoration: none;
                                 color: $theme-color;
+                            }
+
+                            &:active,
+                            &visited,
+                            &focus{
+                                text-decoration: none;
                             }
                         }
                     }
@@ -139,7 +154,7 @@
 
       .col-lg-2{
           &:nth-child(1){
-              padding-left: 95px !important;
+              padding-left: 12rem !important;
 
           }
       }

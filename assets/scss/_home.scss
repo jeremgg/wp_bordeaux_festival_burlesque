@@ -265,23 +265,38 @@
                     overflow: hidden;
                     float: none;
 
-                    &.post-1{ background-image: url('../images/home-blog-1.jpg'); }
+                    /*&.post-1{ background-image: url('../images/home-blog-1.jpg'); }
                     &.post-2{  background-image: url('../images/home-blog-2.jpg'); display: none; }
+                    */
 
                     .col-lg-6{
                         width: 55%;
                         padding: $home-blog-bloc-content-padding;
                         background: rgba(255, 255, 255, .65);
+                        text-align: right;
 
                         h3{
                             font-size: 14px;
                             margin: 0;
+                            text-align: center;
+
+                            a{
+                                background: none;
+                                color: $gray-base;
+
+                                &:hover{
+                                  background: none;
+                                  color: $gray-base;
+                                  text-decoration: none;
+                                }
+                            }
                         }
 
                         .date{
                             color: $theme-color;
                             font-family: $font-family-custom-1;
                             font-size: 7px;
+                            text-align: center;
                             font-style: italic;
                             display: block;
                             margin-top: $home-blog-date-padding;
@@ -296,12 +311,13 @@
                             line-height: 1.3;
                         }
 
-                        button{
+                        a{
                             color: $theme-color;
                             margin-left: auto;
                             border-radius: $home-blog-button-border-radius;
                             padding: $home-blog-button-padding;
                             display: block;
+                            display: inline-block;
 
                             &:hover{
                                 background: $theme-color;
@@ -347,13 +363,21 @@
                                 margin: $home-blog-p-padding-tablet;
                             }
 
-                            button{
+                            a{
                                 border-radius: $home-blog-button-border-radius-tablet;
                                 padding: $home-blog-button-padding-tablet
                             }
 
-                            &.col-sm-offset-6{
+                            /*&.col-sm-offset-6{
                                 margin-left: $home-blog-offset-width;
+                            }*/
+                        }
+                    }
+
+                    &:nth-child(even){
+                        .col-lg-12{
+                            .col-lg-6{
+                                float: right;
                             }
                         }
                     }

@@ -1,0 +1,338 @@
+#intro-header{
+    .entry-content-thumbnail{
+        position: relative;
+
+        .row{
+            background: rgba(255, 255, 255, .65);
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - (2 * 2rem));
+            margin: 1rem 2rem;
+            text-align: center;
+            padding: 1rem;
+
+            h1{
+                color: $gray-base;
+                font-family: $font-family-custom-1;
+                font-size: 24px;
+                margin: 0 0 .3rem 0;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            p{
+                width: 70%;
+                color: #000;
+
+                &.date,
+                &.lieu{
+                    font-family: $font-family-custom-1;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+
+                &.price{
+                    font-family: $font-family-custom-2;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.event-section{
+    .row{
+        .col-xs-12{
+            background: #fff;
+            width: calc(100% - (2 * 2rem));
+            margin: 1.5rem 2rem 0 2rem;
+            float: none;
+            padding: 3rem 0;
+
+            h2{
+                width: 75%;
+                color: $gray-base;
+                font-family: $font-family-custom-1;
+                font-size: 16px;
+                font-weight: 700;
+                margin: 0 auto;
+                margin-bottom: 1.5rem;
+                padding: 0 3rem;
+                line-height: 1.3;
+            }
+
+            p{
+                color: $gray-base;
+                text-align: left;
+                width: 100%;
+                padding: 0 3rem;
+
+                &.content{
+                    font-family: $font-family-custom-2;
+                    font-size: 12px;
+                    margin: 0;
+                }
+
+                &.artists{
+                    font-family: $font-family-custom-1;
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin: 3rem 0;
+                }
+            }
+
+            .row{
+                padding: 0 3rem;
+
+                .col-xs-4{
+                    text-align: center;
+                    height: 37px;
+
+                    &.next{ display: block; text-align: right; }
+                    &.prev{ display: block; text-align: left; }
+
+                    a{
+                        display: inline-block;
+
+                        &.interessed{
+                            background: $gray-base;
+                            color: $theme-color;
+                            font-family: $font-family-custom-1;
+                            font-size: 12px;
+                            font-weight: 700;
+                            padding: 1rem;
+                            border-radius: .5rem;
+                            text-decoration: none;
+
+                            &:hover{
+                                background: $theme-color;
+                                color: $gray-ultra-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(min-width:$screen-sm) {
+    #intro-header{
+        .entry-content-thumbnail{
+            .row{
+                width: calc(100% - (2 * 2.25rem));
+                margin: 3rem 2.5rem;
+                padding: $margin-medium;
+                padding-bottom: $margin-semi-medium;
+
+                h1{
+                    width: 100%;
+                    font-size: $font-size-h1;
+                    margin: 0 0 2rem 0;
+                }
+
+                p{
+                    margin-bottom: $margin-semi-medium;
+
+                    &.date{
+                        width: 100%;
+                        font-size: $font-size-20;
+                    }
+
+                    &.price{
+                        font-size: $font-size-medium;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .event-section{
+        .row{
+            .col-xs-12{
+                width: calc(100% - (2 * 2.25rem));
+                margin: 3rem 2.25rem 0 2.25rem;
+                padding: 3rem 5rem;
+
+                h2{
+                    font-size: $font-size-large;
+                    margin-bottom: $margin-semi-medium;
+                    padding: 0;
+                    line-height: 1.3;
+                }
+
+                p{
+                    padding: 0;
+
+                    &.content{
+                        font-size: $font-size-medium;
+                    }
+
+                    &.artists{
+                        font-size: $font-size-h4;
+                        margin: $margin-large-full;
+                    }
+                }
+
+                .row{
+                    padding: 0;
+
+                    .col-xs-4{
+                        height: 45px;
+
+                        a{
+                            &.interessed{
+                                font-size: $font-size-h4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(min-width:$screen-md) {
+    #intro-header{
+        .entry-content-thumbnail{
+            .row{
+                width: calc(100% - (2 * 2.5rem));
+                margin: 4rem 2.5rem;
+                padding: $margin-semi-large;
+                padding-bottom: $margin-medium;
+
+                h1{
+                    width: 100%;
+                    font-size: 48px;
+                    margin: 0 0 2.5rem 0;
+                }
+
+                p{
+                    margin-bottom: $margin-semi-medium-big;
+
+                    &.date{
+                        width: 100%;
+                        font-size: $font-size-h3;
+                    }
+
+                    &.price{
+                        font-size: $font-size-20;
+                    }
+                }
+            }
+        }
+    }
+
+    .event-section{
+        .row{
+            .col-xs-12{
+                width: calc(100% - (2 * 2.5rem));
+                margin: 4rem 2.5rem 0 2.5rem;
+                padding: 4rem 7.5rem;
+
+                h2{
+                    font-size: $font-size-20;
+                    margin-bottom: $margin-semi-medium-big;
+                    line-height: 1.3;
+                }
+
+                p{
+                    &.content{
+                        font-size: $font-size-base;
+                    }
+
+                    &.artists{
+                        font-size: $font-size-medium;
+                        margin: $margin-large-full-inverse;
+                    }
+                }
+
+                .row{
+                    .col-xs-4{
+                        height: 37px;
+
+                        a{
+                            &.interessed{
+                                font-size: $font-size-h4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-lg) {
+    #intro-header{
+        .entry-content-thumbnail{
+            .row{
+                width: calc(100% - (2 * 3rem));
+                margin: 5rem 3rem;
+                padding: $margin-large;
+                padding-bottom: $margin-medium;
+
+                h1{
+                    font-size: 6rem;
+                    margin: 0 0 3rem 0;
+                }
+
+                p{
+                    margin-bottom: $margin-medium;
+
+                    &.date{
+                        font-size: $font-size-h2;
+                    }
+
+                    &.price{
+                        font-size: $font-size-h3;
+                    }
+                }
+            }
+        }
+    }
+
+    .event-section{
+        .row{
+            .col-xs-12{
+                width: calc(100% - (2 * 3rem));
+                margin: 5rem 3rem 0 3rem;
+                padding: 5rem 10rem;
+
+                h2{
+                    font-size: $font-size-h3;
+                    margin-bottom: $margin-medium;
+                }
+
+                p{
+                    &.content{
+                        font-size: $font-size-medium;
+                    }
+
+                    &.artists{
+                        font-size: $font-size-large;
+                        margin: $margin-large-full-inverse;
+                    }
+                }
+
+                .row{
+                    .col-xs-4{
+                        height: 50px;
+
+                        a{
+                            &.interessed{
+                                font-size: $font-size-21;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
