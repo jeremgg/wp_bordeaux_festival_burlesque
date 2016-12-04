@@ -4,15 +4,15 @@
 
 .error404{
     .error-404{
-        margin-top: 4.8rem;
+        margin-top: $margin-top-content-mobile;
 
         h2{
             font-family: $font-family-custom-1;
             color: #fff;
-            font-size: 16px;
+            font-size: $font-size-medium;
             font-weight: 700;
             text-transform: none;
-            margin: 2rem 0;
+            margin: $margin-small-full-inverse;
             line-height: 1.2;
         }
 
@@ -24,11 +24,11 @@
         p{
             font-family: $font-family-custom-1;
             color: #fff;
-            font-size: 16px;
+            font-size: $font-size-medium;
             font-weight: 700;
             text-transform: none;
             font-style: normal;
-            margin-top: 2rem 0;
+            margin-top: $margin-small-full-inverse;
         }
     }
 }
@@ -37,11 +37,11 @@
 @media(min-width:$screen-sm) {
     .error404{
         .error-404{
-            margin-top: 6.3rem;
+            margin-top: $margin-top-content-tablet;
 
             h2{
-                font-size: 24px;
-                margin: 3rem 0;
+                font-size: $font-size-h3;
+                margin: $margin-medium-full-inverse;
             }
 
             .nippies{
@@ -49,8 +49,8 @@
             }
 
             p{
-                font-size: 24px;
-                margin-top: 3rem 0;
+                font-size: $font-size-h3;
+                margin-top: $margin-medium-full-inverse;
             }
         }
     }
@@ -60,11 +60,11 @@
 @media(min-width:$screen-md) {
     .error404{
         .error-404{
-            margin-top: 10rem;
+            margin-top: $margin-top-content-medium-deskop;
 
             h2{
-                font-size: 30px;
-                margin: 4rem 0;
+                font-size: $font-size-h2;
+                margin: $margin-semi-large-full-inverse;
             }
 
             .nippies{
@@ -72,8 +72,8 @@
             }
 
             p{
-                font-size: 30px;
-                margin-top: 4rem 0;
+                font-size: $font-size-h2;
+                margin-top: $margin-semi-large-full-inverse;
             }
         }
     }
@@ -83,11 +83,11 @@
 @media(min-width:$screen-lg) {
     .error404{
         .error-404{
-            margin-top: 9.9rem;
+            margin-top: $margin-top-content-large-deskop;
 
             h2{
-                font-size: 36px;
-                margin: 5rem 0;
+                font-size: $font-size-h1;
+                margin: $margin-large-full-inverse;
             }
 
             .nippies{
@@ -95,8 +95,8 @@
             }
 
             p{
-                font-size: 36px;
-                margin-top: 5rem 0;
+                font-size: $font-size-h1;
+                margin-top: $margin-large-full-inverse;
             }
         }
     }

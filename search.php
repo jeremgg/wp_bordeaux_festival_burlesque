@@ -9,16 +9,22 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<header>
-			<h2 class="page-title"><?php printf( __( 'Search Results for: %s', '_tk' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
-		</header><!-- .page-header -->
+		<section id="intro" class="intro-section results-found">
+				<div class="container">
+						<div class="row">
+								<header>
+										<h2 class="page-title"><?php printf( __( 'Résultats de recherches pour : %s', 'bfb' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+								</header><!-- .page-header -->
 
-		<?php // start the loop. ?>
-		<?php while ( have_posts() ) : the_post(); ?>
+								<?php // start the loop. ?>
+								<?php while ( have_posts() ) : the_post(); ?>
+										<?php get_template_part( 'content', 'search' ); ?>
+								<?php endwhile; ?>
+						</div><!-- .page-content -->
+				</div>
+		</section>
 
-			<?php get_template_part( 'content', 'search' ); ?>
 
-		<?php endwhile; ?>
 
 		<?php _tk_content_nav( 'nav-below' ); ?>
 
@@ -28,5 +34,5 @@ get_header(); ?>
 
 	<?php endif; // end of loop. ?>
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

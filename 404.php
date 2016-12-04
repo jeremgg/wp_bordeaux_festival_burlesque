@@ -2,7 +2,6 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package _tk
  */
 
 get_header(); ?>
@@ -11,7 +10,9 @@ get_header(); ?>
 		<section id="intro" class="intro-section content-padder error-404 not-found">
 				<div class="container">
 						<div class="row">
-								<h2 class="page-title"><?php _e( 'Erreur 404, </br>La page demandé n\'existe pas', 'bfb' ); ?></h2>
+								<header>
+										<h2 class="page-title"><?php _e( 'Erreur 404, </br>La page demandé n\'existe pas', 'bfb' ); ?></h2>
+								</header>
 
 								<div class="page-content">
 										<img src="http://localhost:8888/Bordeaux-burlesque-festival/site/wp-content/uploads/2016/12/nippiesBFB6.gif" alt="" class="img-responsive nippies">
@@ -24,8 +25,6 @@ get_header(); ?>
 						</div><!--/.row  -->
 				</div><!--/.container  -->
 		</section><!--/.intro-section  -->
-
-		<header>
 
 
 
