@@ -2,6 +2,13 @@
           PAGE ORGANISATRICES
  ================================== */
  .presentation-section{
+     h2{
+         font-family: $font-family-custom-1;
+         text-transform: capitalize;
+         font-weight: $font-weight-custom-3;
+         font-style: italic;
+     }
+
      .organisatrices{
          .photos{
              margin: 0;
@@ -24,7 +31,7 @@
                      }
                 }
 
-                 h4{
+                 h2{
                      font-size: $font-size-large;
                      margin-bottom: $page-h4-margin-bottom;
                      text-align: center;
@@ -101,11 +108,12 @@
                      padding-left: $bio-deskop-block-padding-horizontal-tablet;
                      text-align: left;
 
-                      h4{
+                      h2{
                           font-size: $font-size-large;
                           margin-bottom: $bio-deskop-h4-margin-bottom-tablet;
                           margin-top: 0;
                           text-align: center;
+                          color: $gray-base;
                      }
 
                      .bg-content{
@@ -172,9 +180,10 @@
                      padding-right: $bio-deskop-block-padding-horizontal-medium-deskop;
                      padding-left: $bio-deskop-block-padding-horizontal-medium-deskop;
 
-                      h4{
+                      h2{
                           font-size: $font-size-large;
                           margin-bottom: $bio-deskop-h4-margin-bottom-medium-deskop;
+                          color: $gray-base;
                       }
 
                       .bg-content{
@@ -228,9 +237,10 @@
                      padding-right: $bio-deskop-block-padding-horizontal-large-deskop;
                      padding-left: $bio-deskop-block-padding-horizontal-large-deskop;
 
-                      h4{
+                      h2{
                           font-size: $font-size-large;
                           margin-bottom: $bio-deskop-h4-margin-bottom-large-deskop;
+                          color: $gray-base;
                      }
 
                      .bg-content{

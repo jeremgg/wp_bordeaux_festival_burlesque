@@ -32,8 +32,7 @@ get_header(); ?>
 
 										<?php while ($adresse->have_posts()) : $adresse->the_post(); ?>
 												<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-														<h4><?php the_title(); ?></h4>
-														<p><?php the_date(); ?></p>
+														<h2><?php the_title(); ?></h2>
 														<p>
 																<?php the_field('adresse'); ?><br>
 																<a href="<?php the_field('site_web'); ?>" target="_blank"><?php the_field('site_web'); ?></a><br>

@@ -275,7 +275,11 @@
                         background: rgba(255, 255, 255, .65);
                         text-align: right;
 
-                        h3{
+                        h2{
+                            font-family: $font-family-custom-1;
+                            text-transform: uppercase;
+                            color: $gray-base;
+                            font-weight: $font-weight-custom-2;
                             font-size: 14px;
                             margin: 0;
                             text-align: center;
@@ -287,6 +291,10 @@
                                 &:hover{
                                   background: none;
                                   color: $gray-base;
+                                  text-decoration: none;
+                                }
+
+                                &:focus{
                                   text-decoration: none;
                                 }
                             }
@@ -354,7 +362,7 @@
                             width: calc(50% + 1.5rem);
                             padding: $home-blog-bloc-content-padding-tablet;
 
-                            h3{ font-size: $font-size-large; }
+                            h2{ font-size: $font-size-large; }
 
                             .date{ font-size: 8.5px; }
 
@@ -404,7 +412,7 @@
 
                         .col-lg-6{
 
-                            h3{ font-size: $font-size-21; }
+                            h2{ font-size: $font-size-21; }
 
                             .date{ font-size: $font-size-10; }
 
@@ -437,7 +445,7 @@
                         padding: $home-blog-p-padding-large-deskop;
 
                         .col-lg-6{
-                            h3{ font-size: $font-size-21; }
+                            h2{ font-size: $font-size-21; }
 
                             .date{ font-size: $font-size-10; }
 

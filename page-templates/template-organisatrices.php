@@ -52,7 +52,7 @@ get_header(); ?>
 						                        <img class="img-oval" src="<?php echo $image['url']; ?>">
 						                    </div>
 				                    <div class="col-xs-12 col-md-12 col-lg-12">
-				                        <h4><?php the_title(); ?></h4>
+				                        <h2><?php the_title(); ?></h2>
 				                        <div class="bg-content">
 																	<p><?php the_content(); ?></p>
 																	<?php $link_1 = get_field('lien_1'); if (!empty($link_1)): ?>
@@ -73,7 +73,9 @@ get_header(); ?>
 		            </div>
 
 										<?php $organisatrices = new WP_Query(array(
-												'post_type' => 'organisatrices'
+												'post_type' => 'organisatrices',
+												'orderby' => 'ID',
+												'order' => 'ASC'
 										));  ?>
 
 										<!-- BLOC ORGANISATRICES DESKOP-->
@@ -92,7 +94,7 @@ get_header(); ?>
 		                <div class="row bio-deskop">
 												<?php while ($organisatrices->have_posts()) : $organisatrices->the_post(); ?>
 														<div class="col-sm-4 col-md-4 col-lg-4">
-																<h4><?php the_title(); ?></h4>
+																<h2><?php the_title(); ?></h2>
 																<div class="bg-content">
 																		<p><?php the_content(); ?></p>
 																		<?php $link_1 = get_field('lien_1'); if (!empty($link_1)): ?>

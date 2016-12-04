@@ -1053,20 +1053,28 @@ section p {
   text-align: right;
 }
 
-.home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 h3 {
+.home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 h2 {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
   font-size: 14px;
   margin: 0;
   text-align: center;
 }
 
-.home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 h3 a {
+.home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 h2 a {
   background: none;
   color: #000;
 }
 
-.home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 h3 a:hover {
+.home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 h2 a:hover {
   background: none;
   color: #000;
+  text-decoration: none;
+}
+
+.home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 h2 a:focus {
   text-decoration: none;
 }
 
@@ -1125,7 +1133,7 @@ section p {
                                 margin-left: $home-blog-offset-width;
                             }*/
   }
-  .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 h3 {
+  .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 h2 {
     font-size: 18px;
   }
   .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 .date {
@@ -1153,7 +1161,7 @@ section p {
     width: 420px;
     padding: 2rem 0 1.5rem 0;
   }
-  .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 h3 {
+  .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 h2 {
     font-size: 21px;
   }
   .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 .date {
@@ -1175,7 +1183,7 @@ section p {
   .home-section .row.blog .col-lg-6 .col-lg-12 {
     padding: 2rem 0 1.5rem 0;
   }
-  .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 h3 {
+  .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 h2 {
     font-size: 21px;
   }
   .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6 .date {
@@ -1348,6 +1356,13 @@ section p {
 /* ===================================
           PAGE ORGANISATRICES
  ================================== */
+.presentation-section h2 {
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-style: italic;
+}
+
 .presentation-section .organisatrices .photos {
   margin: 0;
 }
@@ -1367,7 +1382,7 @@ section p {
   width: 50%;
 }
 
-.presentation-section .organisatrices .photos .col-xs-12 h4 {
+.presentation-section .organisatrices .photos .col-xs-12 h2 {
   font-size: 18px;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -1435,11 +1450,12 @@ section p {
     padding-left: 3.5rem;
     text-align: left;
   }
-  .presentation-section .row.bio-deskop .col-lg-4 h4 {
+  .presentation-section .row.bio-deskop .col-lg-4 h2 {
     font-size: 18px;
     margin-bottom: 1.5rem;
     margin-top: 0;
     text-align: center;
+    color: #000;
   }
   .presentation-section .row.bio-deskop .col-lg-4 .bg-content {
     background: white;
@@ -1490,9 +1506,10 @@ section p {
     padding-right: 6rem;
     padding-left: 6rem;
   }
-  .presentation-section .row.bio-deskop .col-lg-4 h4 {
+  .presentation-section .row.bio-deskop .col-lg-4 h2 {
     font-size: 18px;
     margin-bottom: 2rem;
+    color: #000;
   }
   .presentation-section .row.bio-deskop .col-lg-4 .bg-content {
     margin: 2rem 0;
@@ -1532,9 +1549,10 @@ section p {
     padding-right: 7rem;
     padding-left: 7rem;
   }
-  .presentation-section .row.bio-deskop .col-lg-4 h4 {
+  .presentation-section .row.bio-deskop .col-lg-4 h2 {
     font-size: 18px;
     margin-bottom: 3rem;
+    color: #000;
   }
   .presentation-section .row.bio-deskop .col-lg-4 .bg-content {
     margin: 3rem 0;
@@ -1580,7 +1598,7 @@ section p {
   margin-bottom: 3rem;
 }
 
-.infos-section .row.lieu .col-xs-12 h4 {
+.infos-section .row.lieu .col-xs-12 h2 {
   color: #cf9702;
   font-size: 16px;
   text-align: center;
@@ -1644,7 +1662,7 @@ section p {
   .infos-section .row.lieu .col-xs-12 {
     margin-bottom: 5rem;
   }
-  .infos-section .row.lieu .col-xs-12 h4 {
+  .infos-section .row.lieu .col-xs-12 h2 {
     font-size: 18px;
     margin-bottom: 2rem;
   }
@@ -1695,7 +1713,7 @@ section p {
   .infos-section .row.lieu .col-xs-12 {
     margin-bottom: 7.5rem;
   }
-  .infos-section .row.lieu .col-xs-12 h4 {
+  .infos-section .row.lieu .col-xs-12 h2 {
     font-size: 20px;
     margin-bottom: 2.5rem;
   }
@@ -1730,7 +1748,7 @@ section p {
   .infos-section .row.lieu .col-xs-12 {
     margin-bottom: 10rem;
   }
-  .infos-section .row.lieu .col-xs-12 h4 {
+  .infos-section .row.lieu .col-xs-12 h2 {
     font-size: 20px;
     margin-bottom: 3rem;
   }
