@@ -30,6 +30,18 @@
 				<div class="container">
 						<div class="navbar-header">
 
+							<?php
+									wp_nav_menu(array(
+											'theme_location' 	=> 'translate',
+											'container'         => 'div',
+											'container_id'      => 'translate',
+											'container_class'   => 'collapse navbar-collapse',
+											'menu_class' 		=> 'nav navbar-nav',
+											'menu_id'			=> 'main-menu',
+											'walker' 			=> ''
+									));
+							?>
+
 								<!-- BURGER MENU -->
 										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 												<!--<span class="sr-only">Toggle navigation</span>-->
@@ -47,7 +59,20 @@
 
 						<!-- NAVIGATION MENU -->
 								<div class="navbar-center">
-										<!-- The WordPress Menu goes here -->
+										<!-- translation button -->
+										<?php
+												wp_nav_menu(array(
+														'theme_location' 	=> 'translate',
+														'container'         => 'div',
+														'container_id'      => 'translate',
+														'container_class'   => 'collapse navbar-collapse',
+														'menu_class' 		=> 'nav navbar-nav',
+														'menu_id'			=> 'main-menu',
+														'walker' 			=> ''
+												));
+										?>
+
+										<!-- navigation menu -->
 										<?php
 												wp_nav_menu(array(
 														'theme_location' 	=> 'topbar',
@@ -58,6 +83,19 @@
 														'menu_id'			=> 'main-menu',
 														'walker' 			=> ''
 												));
+										?>
+
+										<!-- social media button -->
+										<?php
+											/*	wp_nav_menu(array(
+														'theme_location' 	=> 'social-nav',
+														'container'         => 'div',
+														'container_id'      => 'rs-nav',
+														'container_class'   => 'collapse navbar-collapse',
+														'menu_class' 		=> 'nav navbar-nav',
+														'menu_id'			=> 'main-menu',
+														'walker' 			=> ''
+												));*/
 										?>
 								</div><!--/.navbar-center -->
 				</div><!--/.container -->

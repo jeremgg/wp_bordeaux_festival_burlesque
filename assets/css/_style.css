@@ -315,19 +315,32 @@ section p {
 
 .navbar .navbar-header {
   position: relative;
-  /*.circle-bg{
-            height:60px;
-            width:120px;
-            overflow:hidden;
-            background: #f00;
-            border-radius: 0 0 60px 60px;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
+}
 
-        }*/
-  /* demi cercle */
+.navbar .navbar-header #translate {
+  display: inline-block !important;
+  border: none;
+}
+
+.navbar .navbar-header #translate:nth-child(1) {
+  margin-left: 1.5rem;
+}
+
+.navbar .navbar-header #translate:nth-child(1) ul li {
+  display: inline-block;
+}
+
+.navbar .navbar-header #translate:nth-child(1) ul li a {
+  padding: 1rem .5rem;
+  color: #cf9702;
+}
+
+.navbar .navbar-header #translate:nth-child(1) ul li a:hover {
+  color: #000;
+}
+
+.navbar .navbar-header #translate:nth-child(1) ul li a:before {
+  display: none;
 }
 
 .navbar .navbar-header button .menu-icon {
@@ -448,16 +461,20 @@ section p {
   padding-left: 0.5rem;
 }
 
-.navbar .navbar-center ul {
+.navbar .navbar-center #translate {
+  display: none;
+}
+
+.navbar .navbar-center #navbar ul {
   margin: 0;
   margin-top: 4rem;
 }
 
-.navbar .navbar-center ul li {
+.navbar .navbar-center #navbar ul li {
   text-align: center;
 }
 
-.navbar .navbar-center ul li > a {
+.navbar .navbar-center #navbar ul li > a {
   position: relative;
   color: #000;
   font-family: "Playfair Display", serif;
@@ -465,7 +482,7 @@ section p {
   font-weight: bold;
 }
 
-.navbar .navbar-center ul li > a:before {
+.navbar .navbar-center #navbar ul li > a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -480,7 +497,14 @@ section p {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar .navbar-center ul li.active a:before {
+.navbar .navbar-center #navbar ul li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.navbar .navbar-center #navbar ul li.active a:before {
   content: "";
   position: absolute;
   width: calc( 100% - (30% * 2));
@@ -495,30 +519,34 @@ section p {
           transform: scaleX(1);
 }
 
-.navbar .navbar-center ul li > a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-.navbar .navbar-center ul .rs {
-  margin-top: 1rem;
-  border-top: 1px solid #e7e7e7;
-}
-
-.navbar .navbar-center ul .rs a {
+.navbar .navbar-center #navbar ul li:last-child {
   display: inline-block;
-  line-height: 30px;
-  padding: 1rem 0.5rem;
 }
 
-.navbar .navbar-center ul .rs a:before {
+.navbar .navbar-center #navbar ul li:nth-last-child(2) {
+  display: inline-block;
+  margin-left: calc( 50% - (2 * 1rem) - 1rem);
+  margin-right: 1rem;
+}
+
+.navbar .navbar-center #navbar ul li:last-child > a,
+.navbar .navbar-center #navbar ul li:nth-last-child(2) > a {
+  padding: 1rem 0;
+}
+
+.navbar .navbar-center #navbar ul li:last-child > a:before,
+.navbar .navbar-center #navbar ul li:nth-last-child(2) > a:before {
   display: none;
 }
 
-.navbar .navbar-center ul .rs a:hover {
+.navbar .navbar-center #navbar ul li:last-child > a:hover,
+.navbar .navbar-center #navbar ul li:nth-last-child(2) > a:hover {
   color: #cf9702;
+}
+
+.navbar .navbar-center #navbar ul li:nth-last-child(2) > a {
+  margin-right: 1rem;
+  margin-left: 50%;
 }
 
 @-webkit-keyframes circle {
@@ -610,6 +638,9 @@ section p {
   .navbar .navbar-header {
     position: static;
   }
+  .navbar .navbar-header #translate {
+    display: none !important;
+  }
   .navbar .navbar-header .navbar-brand {
     width: 8rem;
     height: 8rem;
@@ -619,43 +650,70 @@ section p {
     width: 65%;
     height: auto;
     margin-top: -5px;
-    padding-left: 5px;
+    padding-left: 0.5rem;
   }
   .navbar .navbar-center {
     display: inline-block;
   }
-  .navbar .navbar-center ul {
+  .navbar .navbar-center #translate {
+    display: inline-block !important;
+  }
+  .navbar .navbar-center #translate:nth-child(1) {
+    margin-right: 1.5rem;
+  }
+  .navbar .navbar-center #translate:nth-child(1) ul li a {
+    padding: 1rem .5rem;
+    color: #cf9702;
+  }
+  .navbar .navbar-center #translate:nth-child(1) ul li a:hover {
+    color: #000;
+  }
+  .navbar .navbar-center #translate:nth-child(1) ul li a:before {
+    display: none;
+  }
+  .navbar .navbar-center #navbar {
+    display: inline-block !important;
+  }
+  .navbar .navbar-center #navbar ul {
     margin-top: 0;
   }
-  .navbar .navbar-center ul li:first-child > a {
+  .navbar .navbar-center #navbar ul li:first-child > a {
     padding-left: 0;
   }
-  .navbar .navbar-center ul li > a {
+  .navbar .navbar-center #navbar ul li > a {
     font-size: 16px;
     padding: 1rem;
   }
-  .navbar .navbar-center ul li > a:before {
+  .navbar .navbar-center #navbar ul li > a:before {
     width: calc( 100% - (10px * 2));
     margin: 0 10px;
   }
-  .navbar .navbar-center ul li.active a:before {
+  .navbar .navbar-center #navbar ul li.active a:before {
     width: calc( 100% - (30% * 2));
   }
-  .navbar .navbar-center ul li:nth-child(1) > a:before {
+  .navbar .navbar-center #navbar ul li:nth-last-child(2) {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  .navbar .navbar-center #navbar ul li:nth-child(1) > a:before {
     width: calc( 100% - 10px);
     margin-left: 0;
     left: 0;
   }
-  .navbar .navbar-center ul li:nth-child(6) > a {
-    padding-right: 1rem;
+  .navbar .navbar-center #navbar ul li:nth-child(6) > a {
+    padding-right: 2rem;
   }
-  .navbar .navbar-center ul .rs {
-    margin-top: 0;
-    border-top: none;
+  .navbar .navbar-center #navbar ul li:last-child > a, .navbar .navbar-center #navbar ul li:nth-last-child(2) > a {
+    padding: 1rem 0;
   }
-  .navbar .navbar-center ul .rs a {
-    line-height: 2rem;
-    padding: 1rem 0.5rem;
+  .navbar .navbar-center #navbar ul li:last-child > a:before, .navbar .navbar-center #navbar ul li:nth-last-child(2) > a:before {
+    display: none;
+  }
+  .navbar .navbar-center #navbar ul li:last-child > a:hover, .navbar .navbar-center #navbar ul li:nth-last-child(2) > a:hover {
+    color: #cf9702;
+  }
+  .navbar .navbar-center #navbar ul li:nth-last-child(2) > a {
+    margin-right: 1rem;
   }
 }
 
@@ -669,38 +727,44 @@ section p {
   .navbar .navbar-header .navbar-brand {
     width: 9rem;
     height: 9rem;
-    top: 100%;
+    top: 105%;
     z-index: 0;
   }
   .navbar .navbar-header .navbar-brand img {
-    width: 65%;
-    margin-top: -5px;
+    width: 63%;
+    margin-top: 0;
   }
-  .navbar .navbar-center ul li > a {
+  .navbar .navbar-center #translate:nth-child(1) {
+    margin-right: 3rem;
+  }
+  .navbar .navbar-center #translate:nth-child(1) ul li a {
+    padding: 1rem .5rem;
+  }
+  .navbar .navbar-center #navbar ul {
+    margin-top: 0;
+  }
+  .navbar .navbar-center #navbar ul li > a {
     font-size: 16px;
     padding: 10px 25px;
   }
-  .navbar .navbar-center ul li > a:before {
+  .navbar .navbar-center #navbar ul li > a:before {
     width: calc( 100% - (2.5rem * 2));
     margin: 0 25px;
   }
-  .navbar .navbar-center ul li.active a:before {
+  .navbar .navbar-center #navbar ul li.active a:before {
     width: calc( 100% - (30% * 2));
   }
-  .navbar .navbar-center ul li:nth-child(1) > a:before {
+  .navbar .navbar-center #navbar ul li:nth-child(1) > a:before {
     width: calc( 100% - 25px);
   }
-  .navbar .navbar-center ul li:nth-child(6) > a {
+  .navbar .navbar-center #navbar ul li:nth-child(6) > a {
     width: calc( 100% - (3rem * 2));
     padding: 1rem 2.5rem;
-    margin-right: 5rem;
+    margin-right: 1rem;
     width: 9.5rem;
   }
-  .navbar .navbar-center ul li:nth-child(6) > a:before {
+  .navbar .navbar-center #navbar ul li:nth-child(6) > a:before {
     width: calc( 100% - (2.5rem * 2));
-  }
-  .navbar .navbar-center ul .rs a {
-    padding: 1rem 0.5rem;
   }
 }
 
@@ -708,6 +772,10 @@ section p {
   #navbar {
     box-shadow: -1px 10px 21px -5px #000;
   }
+}
+
+#wpadminbar {
+  display: none;
 }
 
 /* ===================================
