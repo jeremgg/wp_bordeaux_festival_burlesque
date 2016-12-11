@@ -1,6 +1,26 @@
 /* ===================================
                 HOME
  ================================== */
+.home{
+    .intro-section{
+        .col-lg-12{
+            position: relative;
+
+            img{ border-bottom: none; }
+
+            h2{
+                font-family: $font-family-custom-1;
+                text-transform: none;
+                color: $gray-ultra-light;
+                font-size: $font-size-20;
+                position: absolute;
+                bottom: 1%;
+                left: 30%;
+            }
+        }
+    }
+}
+
 .home-section{
     margin-top: $home-margin;
 
@@ -255,6 +275,10 @@
             .col-xs-12{
                 text-align: center;
                 overflow: hidden;
+                margin-bottom: .5rem;
+                background-repeat: no-repeat;
+
+                &.post:last-child{ display: none;}
 
                 .col-xs-12{
                     margin: 0 auto;
@@ -338,16 +362,68 @@
             }
         }
     }
+
+    .content-title{
+        margin-top: $margin-medium;
+
+        h1{
+            font-family: $font-family-custom-1;
+            text-transform: uppercase;
+            color: $theme-color;
+            font-size: $font-size-h3;
+            margin-top: 0;
+            margin-bottom: $margin-semi-medium;
+       }
+
+       p{
+           color: $gray-ultra-light;
+           font-size: $font-size-base;
+           font-weight: $font-weight-custom-1;
+           font-style: italic;
+           width: $header-h1-margin;
+           margin: 0 auto;
+       }
+    }
+}
+
+
+@media(max-width:420px) {
+    .home{
+        .intro-section{
+            .col-lg-12{
+                h2{
+                    font-size: $font-size-large;
+                    bottom: 1%;
+                    left: 30%;
+                }
+            }
+        }
+    }
 }
 
 
 @media(min-width:$screen-sm) {
-    .home-section{
+    .home{
+        .intro-section{
+            .col-lg-12{
+                h2{
+                    font-size: $font-size-h3;
+                    bottom: 1%;
+                    left: 30%;
+                }
+            }
+        }
+    }
+
+  .home-section{
         .row{
             &.blog{
                 margin-top: $home-blog-margin-tablet;
 
                 .col-lg-6{
+                    margin-bottom: 1rem;
+
+                    &.post:last-child{ display: block;}
 
                     .col-lg-12{
                         margin: 0 auto;
@@ -392,18 +468,44 @@
                 }
             }
         }
+
+        .content-title{
+            margin-top: $margin-large;
+
+            h1{
+                font-size: $font-size-h2;
+                margin-bottom: $margin-medium;
+           }
+
+           p{
+               font-size: $font-size-medium;
+           }
+        }
     }
 }
 
 
 
 @media(min-width:$screen-md) {
-    .home-section{
+    .home{
+        .intro-section{
+            .col-lg-12{
+                h2{
+                    font-size: $font-size-h2;
+                    bottom: 1%;
+                    left: 30%;
+                }
+            }
+        }
+    }
+
+  .home-section{
         .row{
             &.blog{
                 margin-top: $home-blog-margin-medium-deskop;
 
                 .col-lg-6{
+                    margin-bottom: 1.5rem;
 
                     .col-lg-12{
                         margin: 0 auto;
@@ -429,17 +531,43 @@
                 }
             }
         }
+
+        .content-title{
+            margin-top: 7.5rem;
+
+            h1{
+                font-size: $font-size-h1;
+                margin-bottom: $margin-semi-large;
+           }
+
+           p{
+               font-size: $font-size-large;
+           }
+        }
     }
 }
 
 
 @media(min-width:$screen-lg) {
-    .home-section{
+    .home{
+        .intro-section{
+            .col-lg-12{
+                h2{
+                    font-size: $font-size-h1;
+                    bottom: 1%;
+                    left: 30%;
+                }
+            }
+        }
+    }
+
+  .home-section{
         .row{
             &.blog{
                 margin-top: $home-blog-margin-large-deskop;
 
                 .col-lg-6{
+                    margin-bottom: 1.5rem;
 
                     .col-lg-12{
                         padding: $home-blog-p-padding-large-deskop;
@@ -456,6 +584,115 @@
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .content-title{
+            margin-top: 10rem;
+
+            h1{
+                font-size: $font-size-h1;
+                margin-bottom: $margin-large;
+           }
+
+           p{
+               font-size: $font-size-large;
+           }
+        }
+    }
+}
+
+
+/***********************************************/
+.metaslider{
+    #metaslider_700{
+        margin: 0 45px;
+
+        .slides{
+            li{
+                background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-1.png');
+                height: 320px;
+                width: 382px !important;
+                img{
+                    width: 55%;
+                    position: absolute;
+                }
+
+                &:nth-child(3n+1){
+                    background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-1.png');
+                    background-size: contain;
+
+                    //margin-right: 15px !important;
+
+
+                    img{
+                        top: 21%;
+                        left: 32.3%;
+                        width: 144px;
+                        height: 172px;
+                        border-radius: 77.5px / 92.5px;
+                    }
+                }
+
+                &:nth-child(3n+2){
+                    background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-2.png');
+                    background-size: contain;
+                    //margin-right: 15px !important;
+
+                    img{
+                        top: 22.8%;
+                        left: 31.8%;
+                        width: 147px;
+                        height: 177px;
+                        border-radius: 75.5px / 92.5px;
+                    }
+                }
+
+                &:nth-child(3n+3){
+                    background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-3.png');
+                    background-size: contain;
+                    //margin-right: 15px !important;
+
+                    img{
+                        top: 22%;
+                        left: 31.5%;
+                        width: 148px;
+                        height: 175px;
+                        border-radius: 77.5px / 92.5px;
+                    }
+                }
+            }
+        }
+
+        .flex-control-nav{
+            li{
+                a{
+                    border: 1px solid $theme-color;
+
+                    &.flex-active{
+                        background: $theme-color;
+                    }
+                }
+            }
+        }
+
+        .flex-direction-nav{
+            li{
+                a{
+                    //position: static;
+                    background: #fff;
+                    top: 100%;
+                }
+
+                &:first-child a{
+                    background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-g.png');
+                    left: 2%;
+                }
+
+                &:last-child a{
+                    background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-d.png');
+                    right: 2%;
                 }
             }
         }

@@ -31,7 +31,7 @@ get_header(); ?>
 														// Contrôler si ACF est actif
 														if ( !function_exists('get_field') ) return;
 												?>
-												<h1><?php the_field('titre_secondaire'); ?></h1>
+												<h1><?php the_title(); ?></h1>
 												<p><?php the_field('intro'); ?></p>
 										</div>
 				        </div><!-- /.row -->

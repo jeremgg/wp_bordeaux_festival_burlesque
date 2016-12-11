@@ -11,8 +11,15 @@
 @import "infos";
 @import "media";
 @import "programmation";
+
 @import "events";
+
 @import "404";
 @import "search";
 
 @import "footer";
+
+
+#wpadminbar{
+    display: none;
+}

@@ -774,13 +774,27 @@ section p {
   }
 }
 
-#wpadminbar {
-  display: none;
-}
-
 /* ===================================
                 HOME
  ================================== */
+.home .intro-section .col-lg-12 {
+  position: relative;
+}
+
+.home .intro-section .col-lg-12 img {
+  border-bottom: none;
+}
+
+.home .intro-section .col-lg-12 h2 {
+  font-family: "Playfair Display", serif;
+  text-transform: none;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 1%;
+  left: 30%;
+}
+
 .home-section {
   margin-top: 3rem;
 }
@@ -1031,6 +1045,12 @@ section p {
 .home-section .row.blog .col-xs-12 {
   text-align: center;
   overflow: hidden;
+  margin-bottom: .5rem;
+  background-repeat: no-repeat;
+}
+
+.home-section .row.blog .col-xs-12.post:last-child {
+  display: none;
 }
 
 .home-section .row.blog .col-xs-12 .col-xs-12 {
@@ -1112,9 +1132,50 @@ section p {
   color: white;
 }
 
+.home-section .content-title {
+  margin-top: 3rem;
+}
+
+.home-section .content-title h1 {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  color: #cf9702;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.home-section .content-title p {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 420px) {
+  .home .intro-section .col-lg-12 h2 {
+    font-size: 18px;
+    bottom: 1%;
+    left: 30%;
+  }
+}
+
 @media (min-width: 768px) {
+  .home .intro-section .col-lg-12 h2 {
+    font-size: 24px;
+    bottom: 1%;
+    left: 30%;
+  }
   .home-section .row.blog {
     margin-top: 5rem;
+  }
+  .home-section .row.blog .col-lg-6 {
+    margin-bottom: 1rem;
+  }
+  .home-section .row.blog .col-lg-6.post:last-child {
+    display: block;
   }
   .home-section .row.blog .col-lg-6 .col-lg-12 {
     margin: 0 auto;
@@ -1150,11 +1211,29 @@ section p {
   .home-section .row.blog .col-lg-6:nth-child(even) .col-lg-12 .col-lg-6 {
     float: right;
   }
+  .home-section .content-title {
+    margin-top: 5rem;
+  }
+  .home-section .content-title h1 {
+    font-size: 30px;
+    margin-bottom: 3rem;
+  }
+  .home-section .content-title p {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 992px) {
+  .home .intro-section .col-lg-12 h2 {
+    font-size: 30px;
+    bottom: 1%;
+    left: 30%;
+  }
   .home-section .row.blog {
     margin-top: 7.5rem;
+  }
+  .home-section .row.blog .col-lg-6 {
+    margin-bottom: 1.5rem;
   }
   .home-section .row.blog .col-lg-6 .col-lg-12 {
     margin: 0 auto;
@@ -1174,11 +1253,29 @@ section p {
   .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6.col-mg-offset-6 {
     margin-left: 46.5%;
   }
+  .home-section .content-title {
+    margin-top: 7.5rem;
+  }
+  .home-section .content-title h1 {
+    font-size: 36px;
+    margin-bottom: 4rem;
+  }
+  .home-section .content-title p {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .home .intro-section .col-lg-12 h2 {
+    font-size: 36px;
+    bottom: 1%;
+    left: 30%;
+  }
   .home-section .row.blog {
     margin-top: 10rem;
+  }
+  .home-section .row.blog .col-lg-6 {
+    margin-bottom: 1.5rem;
   }
   .home-section .row.blog .col-lg-6 .col-lg-12 {
     padding: 2rem 0 1.5rem 0;
@@ -1195,6 +1292,94 @@ section p {
   .home-section .row.blog .col-lg-6 .col-lg-12 .col-lg-6.col-lg-offset-6 {
     margin-left: 46.5%;
   }
+  .home-section .content-title {
+    margin-top: 10rem;
+  }
+  .home-section .content-title h1 {
+    font-size: 36px;
+    margin-bottom: 5rem;
+  }
+  .home-section .content-title p {
+    font-size: 18px;
+  }
+}
+
+/***********************************************/
+.metaslider #metaslider_700 {
+  margin: 0 45px;
+}
+
+.metaslider #metaslider_700 .slides li {
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-1.png");
+  height: 320px;
+  width: 382px !important;
+}
+
+.metaslider #metaslider_700 .slides li img {
+  width: 55%;
+  position: absolute;
+}
+
+.metaslider #metaslider_700 .slides li:nth-child(3n+1) {
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-1.png");
+  background-size: contain;
+}
+
+.metaslider #metaslider_700 .slides li:nth-child(3n+1) img {
+  top: 21%;
+  left: 32.3%;
+  width: 144px;
+  height: 172px;
+  border-radius: 77.5px / 92.5px;
+}
+
+.metaslider #metaslider_700 .slides li:nth-child(3n+2) {
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-2.png");
+  background-size: contain;
+}
+
+.metaslider #metaslider_700 .slides li:nth-child(3n+2) img {
+  top: 22.8%;
+  left: 31.8%;
+  width: 147px;
+  height: 177px;
+  border-radius: 75.5px / 92.5px;
+}
+
+.metaslider #metaslider_700 .slides li:nth-child(3n+3) {
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-3.png");
+  background-size: contain;
+}
+
+.metaslider #metaslider_700 .slides li:nth-child(3n+3) img {
+  top: 22%;
+  left: 31.5%;
+  width: 148px;
+  height: 175px;
+  border-radius: 77.5px / 92.5px;
+}
+
+.metaslider #metaslider_700 .flex-control-nav li a {
+  border: 1px solid #cf9702;
+}
+
+.metaslider #metaslider_700 .flex-control-nav li a.flex-active {
+  background: #cf9702;
+}
+
+.metaslider #metaslider_700 .flex-direction-nav li a {
+  background: #fff;
+  top: 100%;
+}
+
+.metaslider #metaslider_700 .flex-direction-nav li:first-child a {
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-g.png");
+  left: 2%;
+}
+
+.metaslider #metaslider_700 .flex-direction-nav li:last-child a {
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-d.png");
+  right: 2%;
 }
 
 /* ===================================
@@ -2088,59 +2273,444 @@ section p {
   }
 }
 
+/*.programming-section{
+    padding-top: 3.5rem;
+
+    .container{
+        margin-top: 1.5rem;
+
+        .col-xs-12{
+            #controls{
+                button{
+                    background: none;
+                    color: $gray-ultra-light;
+                    font-family: $font-family-custom-2;
+                    text-transform: capitalize;
+                    font-size: 18px;
+                    font-weight: $font-weight-custom-1;
+                    border: none;
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    &:hover,
+                    &:focus,
+                    &:active{
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+
+            &:last-child{
+                margin-top: $margin-medium;
+                background: url('../images/colonne-mobile.png') no-repeat top center ;
+                background-size: cover;
+
+                .isotope{
+                    height: 900px;
+                    width: 200px;
+                    margin: 0 auto;
+                    display: block;
+
+                    .scroll{
+                        width: 230px;
+                        height: 500px;
+                        margin-left: 10%;
+                        background: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: $screen-md-min) {
+    .programming-section{
+        .container{
+            .col-xs-12{
+                &:last-child{
+                    background: url('../images/colonne-deskop.png') no-repeat top center ;
+
+                    .isotope{
+                        height: 1530px;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+*/
 .programming-section {
-  padding-top: 3.5rem;
+  padding-top: 10rem;
 }
 
 .programming-section .container {
-  margin-top: 1.5rem;
-}
-
-.programming-section .container .col-xs-12 #controls button {
-  background: none;
-  color: white;
-  font-family: "Roboto Condensed", sans-serif;
-  text-transform: capitalize;
-  font-size: 18px;
-  font-weight: 300;
-  border: none;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.programming-section .container .col-xs-12 #controls button:hover, .programming-section .container .col-xs-12 #controls button:focus, .programming-section .container .col-xs-12 #controls button:active {
-  outline: none;
-  border: none;
-}
-
-.programming-section .container .col-xs-12:last-child {
   margin-top: 3rem;
-  background: url("../images/colonne-mobile.png") no-repeat top center;
-  background-size: cover;
 }
 
-.programming-section .container .col-xs-12:last-child .isotope {
-  height: 900px;
-  width: 200px;
+.programming-section .container .row > .col-xs-12:first-child {
+  width: 90%;
+  position: fixed;
+  top: 15%;
+  z-index: 1;
+}
+
+.programming-section .container .row > .col-xs-12:first-child.is-closed {
+  -webkit-transform: translateX(104%);
+      -ms-transform: translateX(104%);
+          transform: translateX(104%);
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.programming-section .container .row > .col-xs-12:first-child.is-opened {
+  -webkit-transform: translateX(20%);
+      -ms-transform: translateX(20%);
+          transform: translateX(20%);
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.programming-section .container .row > .col-xs-12:first-child.is-opened .btn-control img {
+  -webkit-transform: rotate(180deg) translateY(50%) translateX(50%);
+      -ms-transform: rotate(180deg) translateY(50%) translateX(50%);
+          transform: rotate(180deg) translateY(50%) translateX(50%);
+  transition: all .5s;
+}
+
+.programming-section .container .row > .col-xs-12:first-child .col-xs-2 {
+  background: #1c1c3e;
+  width: 7.667%;
+  height: 11rem;
+  position: relative;
+  text-align: initial;
+}
+
+.programming-section .container .row > .col-xs-12:first-child .col-xs-2 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   margin: 0 auto;
-  display: block;
 }
 
-.programming-section .container .col-xs-12:last-child .isotope .scroll {
-  width: 230px;
-  height: 500px;
-  margin-left: 10%;
-  background: red;
+.programming-section .container .row > .col-xs-12:first-child #controls {
+  background: #0c0c1b;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28283d+13,28283d+13,121121+100 */
+  background: #28283d;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #28283d 13%, #28283d 13%, #121121 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28283d', endColorstr='#121121',GradientType=1 );
+  /* IE6-9 */
+  box-shadow: -3px -3px 20px 3px #000000;
+  border-radius: 0 0 0 10px;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul {
+  margin-top: 3rem;
+  padding: 0;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul li {
+  list-style: none;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:before, .programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:after {
+  content: '';
+  background: #cf9702;
+  height: 2px;
+  width: 25%;
+  display: inline-block;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:before {
+  margin-right: 2rem;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:after {
+  margin-left: 2rem;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul li img {
+  margin-bottom: 2rem;
+  width: 50px;
+  height: 50px;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul li a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul li a:hover {
+  color: #cf9702;
+  text-decoration: none;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #controls ul:last-child {
+  margin-top: -1rem;
+  margin-bottom: 3rem;
+}
+
+.programming-section .container .row > .col-xs-12:last-child {
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/column-mobile.png") no-repeat;
+  background-size: cover;
+  height: 1053px;
+  width: 350px;
+  max-width: 420px;
+  margin: 0 2.5rem;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll {
+  margin-left: 22%;
+  margin-top: 76.5%;
+  width: 250px;
+  height: 64.1% !important;
+  overflow-y: scroll;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu {
+  width: 79%;
+  background: white;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc {
+  position: relative !important;
+  width: 100%;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc img {
+  margin-top: 1rem;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .content {
+  position: absolute !important;
+  top: 100% !important;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 1rem;
+  -webkit-transform: translateY(-100%) !important;
+      -ms-transform: translateY(-100%) !important;
+          transform: translateY(-100%) !important;
+  width: 100%;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc:before {
+  content: '.';
+  color: #000;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  line-height: .4;
+  margin-bottom: 1rem;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .date {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  color: #000;
+  margin: 1rem 0 1.5rem 0;
+  width: 100%;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .plus {
+  background: #000;
+  border-radius: 100%;
+  color: white;
+  padding: 5px;
+  margin-right: 1rem;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .reserve {
+  background: #000;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc a:hover {
+  background: #cf9702;
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 440px) {
+  .programming-section .container .row > .col-xs-12:last-child {
+    height: 1264px;
+    width: 420px;
+    margin: 0 auto;
+    float: none;
+  }
+  .programming-section .container .row > .col-xs-12:last-child .scroll {
+    margin-left: 22%;
+    margin-top: 76.5%;
+    width: 301px;
+    height: 64.1% !important;
+    overflow-y: scroll;
+    float: left;
+  }
+  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu {
+    width: 79%;
+    background: white;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .programming-section {
+    padding-top: 10rem;
+  }
+  .programming-section .container {
+    margin-top: 3rem;
+  }
+  .programming-section .container > .col-xs-12:first-child {
+    height: 100px;
+  }
+  .programming-section .container > .col-xs-12:last-child {
+    background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
+    background-size: cover;
+    height: 1000px;
+    width: calc(100% - (2 *2.5rem));
+    margin: 0 auto;
+    float: none;
+  }
+  .programming-section .container > .col-xs-12:last-child .scroll {
+    margin-left: 30.4%;
+    margin-top: 73.3%;
+    width: 300px;
+    height: 58.8% !important;
+    overflow-y: scroll;
+    float: left;
+  }
+  .programming-section .container > .col-xs-12:last-child .scroll #contenu {
+    width: 76.3%;
+    background: white;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 992px) {
-  .programming-section .container .col-xs-12:last-child {
-    background: url("../images/colonne-deskop.png") no-repeat top center;
+  .programming-section {
+    padding-top: 16rem;
   }
-  .programming-section .container .col-xs-12:last-child .isotope {
+  .programming-section .container {
+    margin: 0;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 {
+    width: 18.66667%;
+    top: 17%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2.is-closed {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2.is-opened {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2.is-opened .btn-control {
+    display: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 .col-xs-2 {
+    display: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #controls {
+    background: transparent;
+    border-radius: none;
+    box-shadow: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:before, .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:after {
+    width: 20%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:before {
+    margin-right: 3rem;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:after {
+    margin-left: 3rem;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li img {
+    margin-bottom: 2rem;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li a {
+    font-size: 20px;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child {
+    background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
+    background-size: cover;
+    height: 1350px;
+    width: 583px;
+    max-width: 58.33333%;
+    margin: 0 auto;
+    margin-left: 35.33333%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll {
+    margin-left: 30.4%;
+    margin-top: 73.3%;
+    width: 300px;
+    height: 58.8% !important;
+    overflow-y: scroll;
+    float: left;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu {
+    width: 76.3%;
+    background: white;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1200px) {
+  .programming-section {
+    padding-top: 16rem;
+  }
+  .programming-section .container {
+    margin: 0;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child {
+    background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
+    background-size: cover;
     height: 1530px;
-    width: 200px;
+    width: 662px;
+    max-width: 58.33333%;
+    margin: 0 auto;
+    margin-left: 35.33333%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll {
+    margin-left: 30.4%;
+    margin-top: 73.3%;
+    width: 330px;
+    height: 58.8% !important;
+    overflow-y: scroll;
+    float: left;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu {
+    width: 78.8%;
+    background: white;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
 
@@ -2971,4 +3541,8 @@ footer .row.partenairs .col-lg-12:nth-child(2) a {
   footer {
     margin-top: 10rem;
   }
+}
+
+#wpadminbar {
+  display: none;
 }

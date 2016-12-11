@@ -1,8 +1,0 @@
-#intro-header .entry-content-thumbnail {
-  position: relative;
-}
-
-#intro-header .entry-content-thumbnail .row {
-  position: absolute;
-  bottom: 0;
-}

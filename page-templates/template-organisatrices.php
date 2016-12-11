@@ -42,7 +42,9 @@ get_header(); ?>
 		        <!-- BLOC ORGANISATRICES MOBILE-->
 		            <div class="row organisatrices">
 										<?php $organisatrices = new WP_Query(array(
-												'post_type' => 'organisatrices'
+												'post_type' => 'organisatrices',
+												'orderby' => 'ID',
+												'order' => 'ASC'
 										));  ?>
 
 										<?php while ($organisatrices->have_posts()) : $organisatrices->the_post(); ?>

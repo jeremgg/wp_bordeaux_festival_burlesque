@@ -50,7 +50,7 @@ get_header(); ?>
 									)); ?>
 
 									<?php $page->the_post(); ?>
-									<h1><?php the_field('titre_secondaire'); ?></h1>
+									<h1><?php the_field('intro'); ?></h1>
 
 									<?php $transports = new WP_Query(array(
 											'post_type' => 'transports',

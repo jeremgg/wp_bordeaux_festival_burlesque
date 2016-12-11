@@ -30,6 +30,7 @@ if ( ! function_exists( 'bfb_custom' ) ) :
 				// Add theme support for Featured Images
         add_theme_support( 'post-thumbnails' );
 
+
 				// Add theme support for Post Formats
         add_theme_support( 'post-formats', array( 'quote', 'gallery', 'image', 'video', 'link', 'aside' ) );
 
@@ -49,9 +50,12 @@ if ( ! function_exists( 'bfb_custom' ) ) :
 
 				// register menu
 				register_nav_menus( array(
+						'translate' => __('bouton de traduction', 'bfb'),
 						'topbar' => __('menu de navigation', 'bfb'),
 						'bottom' => __('menu du bas de page', 'bfb'),
-						'social' => __('réseaux sociaux du menu de navigation', 'bfb')
+						'social' => __('réseaux sociaux du menu de navigation', 'bfb'),
+						/*'social-nav' => __('réseaux sociaux du menu de navigation', 'bfb'),*/
+						'social-bottom' => __('réseaux sociaux du footer', 'bfb')
 				));
 
 				// register widget
@@ -174,6 +178,22 @@ function bfb_custom_scripts() {
 				true
 	  );
 
+		// load strapel js
+		wp_enqueue_script(
+				'bfb_strapel-script',
+				get_template_directory_uri() . '/assets/js/jquery.stapel.js',
+				array(),
+				true
+		);
+
+		// load main js
+		wp_enqueue_script(
+				'bfb_isotope-script',
+				get_template_directory_uri() . '/assets/js/jquery.isotope.min.js',
+				array(),
+				true
+		);
+
 		// load main js
 		wp_enqueue_script(
 				'bfb_main-script',
@@ -184,7 +204,10 @@ function bfb_custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bfb_custom_scripts' );
 
-
+function new_excerpt_length($length) {
+return 21;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
 
 /**
  * Enqueue fonts
@@ -234,3 +257,10 @@ require get_template_directory() . '/includes/jetpack.php';
  * Load custom WordPress nav walker.
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
+
+
+
+
+
+/** Load Custom portfolio WordPress */
+require_once( get_template_directory() . '/portfolio.php' );

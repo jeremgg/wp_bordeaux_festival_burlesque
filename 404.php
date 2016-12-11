@@ -11,15 +11,15 @@ get_header(); ?>
 				<div class="container">
 						<div class="row">
 								<header>
-										<h2 class="page-title"><?php _e( 'Erreur 404, </br>La page demandé n\'existe pas', 'bfb' ); ?></h2>
+										<h2 class="page-title"><?php _e( '<i>Erreur 404, </br>La page demandé n\'existe pas</i>', 'bfb' ); ?></h2>
 								</header>
 
 								<div class="page-content">
-										<img src="http://localhost:8888/Bordeaux-burlesque-festival/site/wp-content/uploads/2016/12/nippiesBFB6.gif" alt="" class="img-responsive nippies">
+										<img src="http://localhost:8888/Bordeaux-burlesque-festival/site/wp-content/uploads/2016/12/nippies404.gif" alt="" class="img-responsive nippies">
 
-										<p><?php _e( 'Mais vous n\'êtes pas venu pour rien !', 'bfb' ); ?></p>
+										<p><?php _e( '<i>Mais vous n\'êtes pas venu pour rien !</i>', 'bfb' ); ?></p>
 
-										<?php get_search_form(); ?>
+										<?php //get_search_form(); ?>
 
 								</div><!-- .page-content -->
 						</div><!--/.row  -->
