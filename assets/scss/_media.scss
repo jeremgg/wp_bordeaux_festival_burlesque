@@ -139,7 +139,7 @@
         .container{
             .row{
                 &:first-child{
-                    margin-top: $margin-large-bigger;
+                  //  margin-top: $margin-large-bigger;
                 }
             }
         }
@@ -153,7 +153,7 @@
 
             .row{
                 &:first-child{
-                    margin-top: $media-bloc-first-margin-top-tablet;
+                    //margin-top: $media-bloc-first-margin-top-tablet;
 
                     .search{
                         display: block;
@@ -201,7 +201,7 @@
 
             .row{
                 &:first-child{
-                    margin-top: $media-bloc-first-margin-top-medium-deskop;
+                    //margin-top: $media-bloc-first-margin-top-medium-deskop;
 
                     .search{
                         display: block;
@@ -249,7 +249,7 @@
 
             .row{
                 &:first-child{
-                    margin-top: $media-bloc-first-margin-top-large-deskop;
+                    //margin-top: $media-bloc-first-margin-top-large-deskop;
                     .search{
                         display: block;
 

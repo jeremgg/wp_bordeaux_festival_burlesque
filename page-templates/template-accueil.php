@@ -33,23 +33,18 @@ get_header(); ?>
 										<div class="entry-content">
 												<?php do_shortcode('[aigpl-gallery-slider]'); ?>
 											<?php the_content(); ?>
-											<?php
-												wp_link_pages( array(
-													'before' => '<div class="page-links">' . __( 'Pages:', '_tk' ),
-													'after'  => '</div>',
-												) );
-											?>
 										</div><!-- .entry-content -->
-										<?php edit_post_link( __( 'Edit', '_tk' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
-									</article><!-- #post-## -->
+								</article><!-- #post-## -->
 						<?php endwhile; // end of the loop. ?>
 							</div>
+
 
 									<!-- DERNIERS BILLETS DU BLOG -->
 									<div class="row blog">
 
 											<?php
 											$args = array(
+													'post_type' => 'post',
 													'showposts' => 2,
 													'orderby'  => 'date', // ordre par date
 											);
@@ -72,17 +67,30 @@ get_header(); ?>
 														</div>
 												</div>
 												<?php endwhile; ?>
+										</div><!-- /.row -->
+
+										<div class="row">
+												<div class="content-title">
+														<?php
+																// Contrôler si ACF est actif
+																if ( !function_exists('get_field') ) return;
+														?>
+
+														<?php $page = new WP_Query(array(
+																'post_type' => 'page',
+														));  ?>
+
+														<h1><?php the_title(); ?></h1>
+														<p><?php the_field('intro'); ?></p>
+												</div>
+										</div>
 
 
-									</div><!-- /.row -->
 
-									<div class="content-title">
-										<?php
-												// Contrôler si ACF est actif
-												if ( !function_exists('get_field') ) return;
-										?>
-										<h1><?php the_field('titre_secondaire'); ?></h1>
-									</div>
+
+
+
+
 				</div><!-- /.container -->
 		</section><!-- /.home-section -->
 
