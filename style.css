@@ -12,84 +12,108 @@ Tags:
 
 
 
-/*--------------------------------------------------------------
-    Portfolio
--------------------------------------------------------------- */
+/* line 11, ../sass/style.scss */
+header.header {
+  width: 240px;
+  position: fixed;
+  background: #91cccb;
+  left: 0;
+  top: 0;
+  height: 100%; }
+  /* line 19, ../sass/style.scss */
+  header.header a.logo {
+    display: block;
+    background: url(../../images/logo.png) no-repeat;
+    width: 240px;
+    height: 160px;
+    text-indent: -99999px; }
+  /* line 27, ../sass/style.scss */
+  header.header .options {
+    float: right;
+    display: block; }
 
-/* Grille portfolio */
-ul#portfolio-list {
-    margin-top: 20px;
-}
-ul#portfolio-list h2 {
-    font-weight: lighter;
-}
-.thumbnail {
-    width: 85%;
-}
-.isotope, .isotope .isotope-item {
-    -webkit-transition: all 0.6s ;
-    -moz-transition: all 0.6s ;
-    -ms-transition: all 0.6s ;
-    -o-transition: all 0.6s ;
-    transition: all 0.6s ;
-}
-.isotope {
-    transition-property: height, width;
-}
+/* line 33, ../sass/style.scss */
+.content {
+  margin-left: 240px; }
+
+/*--------------------------------------------------------------------*/
+/*---------------------------------------->>>>>>>>>>>>>  Photo Gallery*/
+/*--------------------------------------------------------------------*/
+/* line 42, ../sass/style.scss */
+ul.photogal li {
+  width: 19.92%;
+  float: left; }
+  /* line 45, ../sass/style.scss */
+  ul.photogal li a {
+    width: 100.1%;
+    display: block; }
+    /* line 49, ../sass/style.scss */
+    ul.photogal li a img {
+      display: block;
+      max-width: 100.1%;
+      height: auto;
+      width: auto\9;
+      /* ie8 */ }
+
+/* line 60, ../sass/style.scss */
+ul#filters {
+  overflow: hidden;
+  width: 200px;
+  margin: 20px 20px 0px 20px; }
+  /* line 65, ../sass/style.scss */
+  ul#filters li {
+    float: left;
+    margin: 0 0 15px 0; }
+    /* line 69, ../sass/style.scss */
+    ul#filters li a {
+      display: block;
+      background: #fff;
+      padding: 8px 10px;
+      width: 178px;
+      text-decoration: none;
+      border-right: 2px solid #79aeac;
+      border-bottom: 2px solid #79aeac;
+      color: #f87242; }
+      /* line 79, ../sass/style.scss */
+      ul#filters li a:hover {
+        background: #f7f5f2;
+        border-right: 2px solid #82bcba;
+        border-bottom: 2px solid #82bcba; }
+
+/*--------------------------------------------------------------------*/
+/*------------------------------------>>>>>>>>>>>>>  Isotope Animation*/
+/*--------------------------------------------------------------------*/
+/* line 90, ../sass/style.scss */
+.isotope,
 .isotope .isotope-item {
-    transition-property: transform, opacity;
-}
-.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition {
-    transition-duration: 0s;
-}
-ul#portfolio-filter {
-    margin-top: 20px;
-}
-a.thumbnail:hover, a.thumbnail:focus {
-    border-color: #27AAE2;
-    box-shadow: none;
-    outline: 0 none;
-}
-.thumbnail {
-    border: 1px solid #EEEEEE;
-    border-radius: 0 0 0 0;
-    box-shadow: none;
-}
-.single-portfolio header {
-    text-align: center;
-}
-.single-portfolio h1 {
-    margin: 50px auto 0;
-}
-.single-portfolio h2 {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: lighter;
-    margin: 0;
-}
-#bg-portfolio {
-    background: rgb(69,72,77); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-    border-bottom: 1px solid #D4D4D4;
-    border-top: 1px solid #D4D4D4;
-    margin: 20px 0;
-    padding: 50px 0;
-}
-ul#project-details li {
-    margin: 10px 0;
-}
-.single-portfolio .carousel img {
-    height: auto;
-    left: 0;
-    margin: 0 auto;
-    min-width: inherit;
-    position: relative;
-    top: 0;
-}
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+/* line 99, ../sass/style.scss */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width; }
+
+/* line 107, ../sass/style.scss */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity; }
+
+/* line 119, ../sass/style.scss */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s; }
