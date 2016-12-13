@@ -4,10 +4,10 @@
 
  .media-section{
     .container{
-        padding-top: 6rem;
+        padding-top: $margin-large-big;
 
         article{
-            h1{ margin-bottom: 3rem; }
+            h1{ margin-bottom: $margin-medium; }
 
             .entry-content{
                 margin: 0 auto;
@@ -18,34 +18,37 @@
                     width: initial;
 
                     .ngg-album-compact{
-                        background: url('../images/media-album.png') no-repeat;
+                        background: url('../images/media-album.png') no-repeat center;
                         background-size: contain;
-                        float: none;
-                        display: inline-block;
                         position: relative;
-                        //width: 100%;
-                        //max-width: 300px;
+                        height: 225px;
+                        width: 225px;
+                        padding-top: $margin-micro !important;
+                        width: 100%;
+                        margin-bottom: $margin-medium !important;
 
                         .ngg-album-compactbox{
                             border: none;
-                            //display: inline-block;
-                            margin-top: 10.5% !important;
-                            margin-left: 11.5% !important;
-                            width: 100%;
-                            overflow: hidden;
+                            background: $gray-ultra-light;
+                            padding: .7rem;
+                            border-radius: 0;
+                            width: 90%;
+                            max-width: 190px;
+                            display: block;
+                            margin: 0 auto !important;
 
                             &:after,
                             &:before{ display: none; }
 
                             .ngg-album-link{
-                                display: inline-block;
-                                width: 85%;
+                                border: $border-element;
+                                margin: 0;
+                                overflow: hidden;
+                                width: 100%;
 
                                 .gallery_link{
+                                    border: none;
                                     display: block;
-                                    width: 100%;
-                                    overflow: hidden;
-                                    background: $gray-base;
 
                                     &:hover{
                                         img{
@@ -55,13 +58,18 @@
 
                                     img{
                                         border: none !important;
-                                        width: 100%
+                                        margin: 5px !important;
+                                        display: table;
+                                        width: 95%;
                                     }
                                 }
                             }
                         }
 
                         h4{
+                            font-family: $font-family-custom-1;
+                            font-size: $font-size-h3;
+                            text-align: center;
                             margin: 0 !important;
                             position: absolute;
                             top: 50%;
@@ -78,7 +86,10 @@
                         }
 
                         &:hover{
-                            h4{ display: block; }
+                            h4{
+                              display: block;
+                              transition: all 1s;
+                            }
                         }
 
                         p{
@@ -86,7 +97,6 @@
 
                         }
                     }
-
                 }
             }
         }
@@ -102,7 +112,8 @@
         text-transform: capitalize;;
         color: $theme-color;
         font-size: $font-size-h3;
-        font-weight: 300;
+        font-weight: $font-weight-custom-1;
+        margin-bottom: $margin-medium;
 
         li{
             float: none;
@@ -118,44 +129,44 @@
 
         .slideshowlink{
             display: none;
-            a{
-
-            }
         }
 
         .ngg-gallery-thumbnail-box{
-            float: none;
+            width: 100%;
             display: inline-block;
-            margin-right: 7%;
 
-            &:nth-child(2n+1){
-                background: url('../images/MEDIA-album-d.png') no-repeat;
-                background-size: contain;
-                a{
-                    transform: rotate(4.9deg);
-                    margin-top: 8.2%;
-                }
-            }
+            &:nth-child(1n+2){ transform: translateZ(1px) rotate(4.5deg); }
+            &:nth-child(2n+2){ transform: translateZ(1px) rotate(-4.5deg); }
 
-            &:nth-child(2n+2){
-                background: url('../images/MEDIA-album-g.png') no-repeat;
-                background-size: contain;
-                a{
-                    transform: rotate(-4.9deg);
-                    margin-top: 8.3%;
-                }
+            &:nth-child(2n+3){
+                //margin-left: 10rem;
+                //margin-right: 10rem;
             }
 
             .ngg-gallery-thumbnail{
-                background: transparent;
-                border: none;
+                background: $gray-ultra-light;
+                padding: $margin-micro;
+                margin-top: $margin-micro;
+                margin-bottom: $margin-medium ;
                 display: inline-block;
-                width: 87%;
-                margin-left: 5%;
+
                 a{
+                    margin: 0;
+                    border: 1px solid $theme-color;
+                    padding: 5px;
+                    overflow: hidden;
+
+                    &:hover{
+                        opacity: .65;
+
+                        img{
+                            transform: scale(1.5);
+                            transition: all 1s;
+                        }
+                    }
 
                     img{
-
+                        margin: 0;
                     }
                 }
             }
@@ -167,6 +178,69 @@
     .media-section{
         .container{
             padding-top: $media-container-padding-top-tablet;
+
+            article{
+                h1{ margin-bottom: $margin-large; }
+
+                .entry-content{
+                    width: 80%;
+
+                    .ngg-albumoverview{
+                        .ngg-album-compact{
+                            height: 225px;
+                            width: 225px;
+                            padding-top: $margin-micro !important;
+                            width: 50%;
+                            margin-bottom: $margin-semi-large !important;
+
+                            .ngg-album-compactbox{
+                                padding: .7rem !important;
+                                width: 90%;
+                                max-width: 190px;
+
+                                .ngg-album-link{
+                                    .gallery_link{
+                                        img{
+                                            margin: 5px !important;
+                                            display: table;
+                                            width: 95%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            h4{
+                                font-size: $font-size-20;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .media-section{
+       //page interieure
+        .ngg-breadcrumbs{
+            font-size: $font-size-20;
+            margin-bottom: $margin-large;
+        }
+
+        .ngg-galleryoverview{
+            .ngg-gallery-thumbnail-box{
+                width: 50%;
+                display: inline-block;
+
+                .ngg-gallery-thumbnail{
+                    padding: $margin-micro;
+                    margin-top: $margin-micro;
+                    margin-bottom: $margin-large-big;
+
+                    a{
+                      padding: 5px;
+                    }
+                }
+            }
         }
     }
 }
@@ -175,6 +249,47 @@
     .media-section{
         .container{
             padding-top: $media-container-padding-top-medium-deskop;
+
+            article{
+                h1{ margin-bottom: 7.5rem; }
+
+                .entry-content{
+                    margin: 0 auto;
+                    width: 80%;
+
+                    .ngg-albumoverview{
+                        .ngg-album-compact{
+                            height: 225px;
+                            width: 225px;
+                            padding-top: $margin-micro !important;
+                            width: 33.33333%;
+                            margin-bottom: $margin-large !important;
+
+                            h4{
+                                font-size: $font-size-h3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .media-section{
+       //page interieure
+        .ngg-breadcrumbs{
+            font-size: $font-size-h3;
+            margin-bottom: 7.5rem;
+        }
+
+        .ngg-galleryoverview{
+            .ngg-gallery-thumbnail-box{
+                width: 33.3333%;
+
+                .ngg-gallery-thumbnail{
+                    margin-bottom: $margin-large;
+                }
+            }
         }
     }
 }
@@ -184,6 +299,42 @@
     .media-section{
         .container{
             padding-top: $media-container-padding-top-large-deskop;
+
+            article{
+                h1{ margin-bottom: 10rem; }
+
+                .entry-content{
+                    .ngg-albumoverview{
+                        .ngg-album-compact{
+                            height: 225px;
+                            width: 225px;
+                            padding-top: $margin-micro !important;
+                            width: 33.33333%;
+                            margin-bottom: $margin-large !important;
+
+                            h4{
+                                font-size: $font-size-h3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .media-section{
+       //page interieure
+        .ngg-breadcrumbs{
+            font-size: $font-size-h3;
+            margin-bottom: 10rem;
+        }
+
+        .ngg-galleryoverview{
+            .ngg-gallery-thumbnail-box{
+                .ngg-gallery-thumbnail{
+                    margin-bottom: 7.5rem;
+                }
+            }
         }
     }
 }
