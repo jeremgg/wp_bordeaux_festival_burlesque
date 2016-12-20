@@ -55,12 +55,16 @@
                         font-style: normal;
                         margin-bottom: $margin-micro-big;
 
+                        &.liens{
+                            font-size: 13px;
+                        }
+
                         &:first-child{ display: none; }
                         &:last-child{ margin-bottom: 0; }
                     }
 
                     a{
-                        color: $theme-color;
+                        color: $gray-base;
                     }
                 }
              }
@@ -131,13 +135,16 @@
                              font-style: normal;
                              margin-bottom: $margin-micro-big;
 
+                             &.liens{
+                                 font-size: 13px;
+                             }
 
                              &:first-child{ display: none; }
                              &:last-child{ margin-bottom: 0; }
                          }
 
                          a{
-                             color: $theme-color;
+                             color: $gray-base;
                          }
 
                     }
@@ -196,13 +203,17 @@
                               font-style: normal;
                               margin-bottom: $margin-micro-big;
 
+                              &.liens{
+                                  font-size: 14px;
+                              }
+
 
                               &:first-child{ display: none; }
                               &:last-child{ margin-bottom: 0; }
                           }
 
                           a{
-                              color: $theme-color;
+                              color: $gray-base;
                           }
                       }
                }
@@ -254,13 +265,17 @@
                              font-style: normal;
                              margin-bottom: $margin-semi-medium-big;
 
+                             &.liens{
+                                 font-size: 14px;
+                             }
+
 
                              &:first-child{ display: none; }
                              &:last-child{ margin-bottom: 0; }
                          }
 
                          a{
-                             color: $theme-color;
+                             color: $gray-base;
                          }
                       }
 

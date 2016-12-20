@@ -57,15 +57,15 @@ get_header(); ?>
 				                        <h2><?php the_title(); ?></h2>
 				                        <div class="bg-content">
 																	<p><?php the_content(); ?></p>
-																	<?php $link_1 = get_field('lien_1'); if (!empty($link_1)): ?>
-																			<p><a href="<?php the_field('lien_1'); ?>" target="_blank"><?php the_field('lien_1'); ?></a></p>
-																	<?php endif; ?>
-																	<?php $link_2 = get_field('lien_2'); if (!empty($link_2)): ?>
-																			<p><a href="<?php the_field('lien_2'); ?>" target="_blank"><?php the_field('lien_2'); ?></a></p>
-																	<?php endif; ?>
-																	<?php $link_3 = get_field('lien_3'); if (!empty($link_3)): ?>
-																			<p><a href="<?php the_field('lien_3'); ?>" target="_blank"><?php the_field('lien_3'); ?></a></p>
-																	<?php endif; ?>
+																	<!-- <?php //$link_1 = get_field('lien_1'); if (!empty($link_1)): ?>
+																			<p class='liens'><a href="<?php //the_field('lien_1'); ?>" target="_blank"><?php //the_field('lien_1'); ?></a></p>
+																	<?php //endif; ?>
+																	<?php //$link_2 = get_field('lien_2'); if (!empty($link_2)): ?>
+																			<p class='liens'><a href="<?php //the_field('lien_2'); ?>" target="_blank"><?php //the_field('lien_2'); ?></a></p>
+																	<?php //endif; ?>
+																	<?php //$link_3 = get_field('lien_3'); if (!empty($link_3)): ?>
+																			<p class='liens'><a href="<?php //the_field('lien_3'); ?>" target="_blank"><?php //the_field('lien_3'); ?></a></p>
+																	<?php //endif; ?> -->
 																</div>
 				                    </div>
 														<?php endif ?>
@@ -99,15 +99,15 @@ get_header(); ?>
 																<h2><?php the_title(); ?></h2>
 																<div class="bg-content">
 																		<p><?php the_content(); ?></p>
-																		<?php $link_1 = get_field('lien_1'); if (!empty($link_1)): ?>
-																				<p><a href="<?php the_field('lien_1'); ?>" target="_blank"><?php the_field('lien_1'); ?></a></p>
-																		<?php endif; ?>
-																		<?php $link_2 = get_field('lien_2'); if (!empty($link_2)): ?>
-																				<p><a href="<?php the_field('lien_2'); ?>" target="_blank"><?php the_field('lien_2'); ?></a></p>
-																		<?php endif; ?>
-																		<?php $link_3 = get_field('lien_3'); if (!empty($link_3)): ?>
-																				<p><a href="<?php the_field('lien_3'); ?>" target="_blank"><?php the_field('lien_3'); ?></a></p>
-																		<?php endif; ?>
+																		<!-- <?php //$link_1 = get_field('lien_1'); if (!empty($link_1)): ?>
+																				<p class='liens'><a href="<?php //the_field('lien_1'); ?>" target="_blank"><?php the_field('lien_1'); ?></a></p>
+																		<?php //endif; ?>
+																		<?php //$link_2 = get_field('lien_2'); if (!empty($link_2)): ?>
+																				<p class='liens'><a href="<?php //the_field('lien_2'); ?>" target="_blank"><?php the_field('lien_2'); ?></a></p>
+																		<?php //endif; ?>
+																		<?php //$link_3 = get_field('lien_3'); if (!empty($link_3)): ?>
+																				<p class='liens'><a href="<?php //the_field('lien_3'); ?>" target="_blank"><?php the_field('lien_3'); ?></a></p>
+																		<?php //endif; ?> -->
 																</div>
 				                    </div><!-- /.col-lg-4 -->
 												<?php endwhile; ?>

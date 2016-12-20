@@ -12,7 +12,7 @@ get_header(); ?>
 						<div class="row">
 								<div class="col-lg-12">
 									<div class="entry-content-thumbnail">
-										<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive']); ?>
+										<?php echo do_shortcode("[huge_it_maps id='1']"); ?>
 									</div>
 								</div>
 						</div>

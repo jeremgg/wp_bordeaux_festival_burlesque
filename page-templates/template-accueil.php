@@ -80,8 +80,8 @@ get_header(); ?>
 																'post_type' => 'page',
 														));  ?>
 
-														<h1><?php the_title(); ?></h1>
-														<p><?php the_field('intro'); ?></p>
+														<h1>Le premier festival néo-burLesque :</h1>
+														<p>Enfin Bordeaux compte parmi ses festivals de renom un festival de burlesque d’envergure international et bla bla bla bla blla benefici liberalesque sumus, non ut exigamus gratiam (neque enim beneficium faeneramur sed natura propensi ad liberalitatem sumus), sic amicitiam non spe mercedis adducti sed quod omnis eius fructus in ipso amore inest</p>
 												</div>
 										</div>
 

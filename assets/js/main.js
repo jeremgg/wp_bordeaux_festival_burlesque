@@ -55,3 +55,18 @@
         		}
       	})
     });
+
+
+    //PROGRAMMATION
+        $(document).ready(function() {
+            $('.btn-control').click(function(e){
+                e.preventDefault();
+                $this = $('#menu-controls');
+                if($this.hasClass('is-opened')){
+                     $this.addClass('is-closed').removeClass('is-opened');
+                }
+                else{
+                     $this.removeClass('is-closed').addClass('is-opened');
+                }
+            })
+        });

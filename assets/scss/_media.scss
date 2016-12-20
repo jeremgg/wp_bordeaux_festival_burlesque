@@ -79,7 +79,7 @@
                             display: none;
 
                             a{
-                                color: $theme-color;
+                                color: $body-bg;
                                 height: auto;
                                 text-decoration: none;
                             }
@@ -251,7 +251,7 @@
             padding-top: $media-container-padding-top-medium-deskop;
 
             article{
-                h1{ margin-bottom: 7.5rem; }
+                h1{ margin-bottom: 4rem; }
 
                 .entry-content{
                     margin: 0 auto;
@@ -279,7 +279,7 @@
        //page interieure
         .ngg-breadcrumbs{
             font-size: $font-size-h3;
-            margin-bottom: 7.5rem;
+            margin-bottom: 5rem;
         }
 
         .ngg-galleryoverview{
@@ -326,7 +326,7 @@
        //page interieure
         .ngg-breadcrumbs{
             font-size: $font-size-h3;
-            margin-bottom: 10rem;
+            margin-bottom: 5rem;
         }
 
         .ngg-galleryoverview{
