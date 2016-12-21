@@ -2317,78 +2317,8 @@ section p {
   }
 }
 
-/*.programming-section{
-    padding-top: 3.5rem;
-
-    .container{
-        margin-top: 1.5rem;
-
-        .col-xs-12{
-            #controls{
-                button{
-                    background: none;
-                    color: $gray-ultra-light;
-                    font-family: $font-family-custom-2;
-                    text-transform: capitalize;
-                    font-size: 18px;
-                    font-weight: $font-weight-custom-1;
-                    border: none;
-                    display: block;
-                    text-align: center;
-                    margin: 0 auto;
-
-                    &:hover,
-                    &:focus,
-                    &:active{
-                        outline: none;
-                        border: none;
-                    }
-                }
-            }
-
-            &:last-child{
-                margin-top: $margin-medium;
-                background: url('../images/colonne-mobile.png') no-repeat top center ;
-                background-size: cover;
-
-                .isotope{
-                    height: 900px;
-                    width: 200px;
-                    margin: 0 auto;
-                    display: block;
-
-                    .scroll{
-                        width: 230px;
-                        height: 500px;
-                        margin-left: 10%;
-                        background: red;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-@media (min-width: $screen-md-min) {
-    .programming-section{
-        .container{
-            .col-xs-12{
-                &:last-child{
-                    background: url('../images/colonne-deskop.png') no-repeat top center ;
-
-                    .isotope{
-                        height: 1530px;
-                        width: 200px;
-                    }
-                }
-            }
-        }
-    }
-}
-*/
 .programming-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 .programming-section .container {
@@ -2406,18 +2336,18 @@ section p {
   -webkit-transform: translateX(104%);
       -ms-transform: translateX(104%);
           transform: translateX(104%);
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .programming-section .container .row > .col-xs-12:first-child.is-opened {
   -webkit-transform: translateX(20%);
       -ms-transform: translateX(20%);
           transform: translateX(20%);
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .programming-section .container .row > .col-xs-12:first-child.is-opened .btn-control img {
@@ -2430,7 +2360,7 @@ section p {
 .programming-section .container .row > .col-xs-12:first-child .col-xs-2 {
   background: #1c1c3e;
   width: 7.667%;
-  height: 11rem;
+  height: 19rem;
   position: relative;
   text-align: initial;
 }
@@ -2445,7 +2375,7 @@ section p {
   margin: 0 auto;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #controls {
+.programming-section .container .row > .col-xs-12:first-child #options {
   background: #0c0c1b;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28283d+13,28283d+13,121121+100 */
   background: #28283d;
@@ -2460,55 +2390,59 @@ section p {
   border-radius: 0 0 0 10px;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #controls ul {
+.programming-section .container .row > .col-xs-12:first-child #options #filters {
   margin-top: 3rem;
-  padding: 0;
+  padding: 3rem 0;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #controls ul li {
+.programming-section .container .row > .col-xs-12:first-child #options #filters li {
   list-style: none;
+  margin-bottom: 1.5rem;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:before, .programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:after {
-  content: '';
-  background: #cf9702;
-  height: 2px;
-  width: 25%;
-  display: inline-block;
+.programming-section .container .row > .col-xs-12:first-child #options #filters li:nth-child(4) {
+  margin-bottom: 0;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:before {
-  margin-right: 2rem;
-}
-
-.programming-section .container .row > .col-xs-12:first-child #controls ul li:first-child:after {
-  margin-left: 2rem;
-}
-
-.programming-section .container .row > .col-xs-12:first-child #controls ul li img {
-  margin-bottom: 2rem;
-  width: 50px;
-  height: 50px;
-}
-
-.programming-section .container .row > .col-xs-12:first-child #controls ul li a {
+.programming-section .container .row > .col-xs-12:first-child #options #filters li a {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   color: #fff;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #controls ul li a:hover {
+.programming-section .container .row > .col-xs-12:first-child #options #filters li a:hover {
   color: #cf9702;
   text-decoration: none;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #controls ul:last-child {
-  margin-top: -1rem;
-  margin-bottom: 3rem;
+.programming-section .container .row > .col-xs-12:first-child #options #filters li a.selected {
+  text-decoration: none;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo:before, .programming-section .container .row > .col-xs-12:first-child #options #filters li.logo:after {
+  content: '';
+  background: #cf9702;
+  height: 2px;
+  width: 25%;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo:after {
+  margin-right: 0;
+  margin-left: 2rem;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #options #filters img {
+  max-width: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  display: inline-block;
 }
 
 .programming-section .container .row > .col-xs-12:last-child {
-  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/column-mobile.png") no-repeat;
+  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-mobile.png") no-repeat;
   background-size: cover;
   height: 1053px;
   width: 350px;
@@ -2531,67 +2465,75 @@ section p {
   overflow: hidden;
 }
 
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc {
-  position: relative !important;
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal {
+  padding: 0;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li {
   width: 100%;
+  position: relative;
 }
 
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc img {
-  margin-top: 1rem;
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li a img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .content {
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block {
   position: absolute !important;
-  top: 100% !important;
+  bottom: 1rem;
   background: rgba(255, 255, 255, 0.65);
   padding: 1rem;
-  -webkit-transform: translateY(-100%) !important;
-      -ms-transform: translateY(-100%) !important;
-          transform: translateY(-100%) !important;
   width: 100%;
+  text-align: right;
 }
 
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc:before {
-  content: '.';
-  color: #000;
-  font-size: 4rem;
-  font-family: "Playfair Display", serif;
-  line-height: .4;
-  margin-bottom: 1rem;
-}
-
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
-  margin: 0;
-}
-
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .date {
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .event-title {
   font-family: "Playfair Display", serif;
   font-size: 14px;
+  font-weight: 700;
   color: #000;
-  margin: 1rem 0 1.5rem 0;
-  width: 100%;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  display: block;
 }
 
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .plus {
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .event-title:hover {
+  background: transparent;
+  color: #cf9702;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .date {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  color: #000;
+  margin: .5rem 0 1.5rem 0;
+  width: 100%;
+  font-style: normal;
+  text-align: center;
+}
+
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .plus {
   background: #000;
   border-radius: 100%;
   color: white;
-  padding: 5px;
+  padding: 4px 6px;
   margin-right: 1rem;
 }
 
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc .reserve {
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .reserve {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
   background: #000;
   border-radius: 5px;
   color: white;
-  padding: 5px;
+  padding: 3px 8px;
+  margin-right: 1rem;
 }
 
-.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .content-bloc a:hover {
+.programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block a:hover, .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block a:focus {
   background: #cf9702;
   color: white;
   text-decoration: none;
@@ -2622,7 +2564,7 @@ section p {
 
 @media (min-width: 768px) {
   .programming-section {
-    padding-top: 10rem;
+    padding-top: 7.5rem;
   }
   .programming-section .container {
     margin-top: 3rem;
@@ -2652,11 +2594,23 @@ section p {
     margin: 0 auto;
     overflow: hidden;
   }
+  .programming-section .container > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .event-title {
+    font-size: 14px;
+  }
+  .programming-section .container > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .date {
+    font-size: 14px;
+  }
+  .programming-section .container > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .plus {
+    padding: 4px 6px;
+  }
+  .programming-section .container > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .reserve {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 992px) {
   .programming-section {
-    padding-top: 16rem;
+    padding-top: 10rem;
   }
   .programming-section .container {
     margin: 0;
@@ -2711,7 +2665,7 @@ section p {
     margin-left: 35.33333%;
   }
   .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll {
-    margin-left: 30.4%;
+    margin-left: 30%;
     margin-top: 73.3%;
     width: 300px;
     height: 58.8% !important;
@@ -2719,21 +2673,33 @@ section p {
     float: left;
   }
   .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu {
-    width: 76.3%;
+    width: 77.4%;
     background: white;
     margin: 0 auto;
     overflow: hidden;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .event-title {
+    font-size: 18px;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .date {
+    font-size: 16px;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .plus {
+    padding: 4px 6px;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .reserve {
+    font-size: 14px;
   }
 }
 
 @media (min-width: 1200px) {
   .programming-section {
-    padding-top: 16rem;
+    padding-top: 10rem;
   }
   .programming-section .container {
     margin: 0;
   }
-  .programming-section .container .row > .col-xs-12.col-md-7:last-child {
+  .programming-section .container .row > .col-xs-12:last-child {
     background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
     background-size: cover;
     height: 1530px;
@@ -2742,19 +2708,31 @@ section p {
     margin: 0 auto;
     margin-left: 35.33333%;
   }
-  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll {
-    margin-left: 30.4%;
+  .programming-section .container .row > .col-xs-12:last-child .scroll {
+    margin-left: 30%;
     margin-top: 73.3%;
     width: 330px;
     height: 58.8% !important;
     overflow-y: scroll;
     float: left;
   }
-  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu {
-    width: 78.8%;
+  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu {
+    width: 79.9%;
     background: white;
     margin: 0 auto;
     overflow: hidden;
+  }
+  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .event-title {
+    font-size: 18px;
+  }
+  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .date {
+    font-size: 16px;
+  }
+  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .plus {
+    padding: 4px 6px;
+  }
+  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .reserve {
+    font-size: 14px;
   }
 }
 

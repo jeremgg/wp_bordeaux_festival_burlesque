@@ -185,14 +185,6 @@ function bfb_custom_scripts() {
 				true
 	  );
 
-		// load strapel js
-		wp_enqueue_script(
-				'bfb_strapel-script',
-				get_template_directory_uri() . '/assets/js/pluie.js',
-				array(),
-				true
-		);
-
 		// load main js
 		wp_enqueue_script(
 				'bfb_main-script',

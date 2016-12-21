@@ -5,7 +5,7 @@ $j(document).ready(function() {
 	//----------------------------------------------
 	//--------------------------------------fancybox
 	//----------------------------------------------
-	
+
 	//simple fancybox start
 	$j('.fancybox').fancybox({
 		//make sure fancybox knows we are loading images from wordpress
@@ -39,13 +39,13 @@ $j(document).ready(function() {
 				//we want 5 columns
 	            columnWidth: $container.width() / 5
 	        }
-			
+
 		});
 	});
 	//tell isotope our filters are in the options id & links
 	var $optionSets = $j('#options'),
 	$optionLinks = $optionSets.find('a');
-		
+
 	//click function to sort by data
 	$optionLinks.click(function(){
     	var $this = $j(this);

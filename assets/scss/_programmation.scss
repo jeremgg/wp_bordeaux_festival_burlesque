@@ -1,83 +1,6 @@
-/*.programming-section{
-    padding-top: 3.5rem;
-
-    .container{
-        margin-top: 1.5rem;
-
-        .col-xs-12{
-            #controls{
-                button{
-                    background: none;
-                    color: $gray-ultra-light;
-                    font-family: $font-family-custom-2;
-                    text-transform: capitalize;
-                    font-size: 18px;
-                    font-weight: $font-weight-custom-1;
-                    border: none;
-                    display: block;
-                    text-align: center;
-                    margin: 0 auto;
-
-                    &:hover,
-                    &:focus,
-                    &:active{
-                        outline: none;
-                        border: none;
-                    }
-                }
-            }
-
-            &:last-child{
-                margin-top: $margin-medium;
-                background: url('../images/colonne-mobile.png') no-repeat top center ;
-                background-size: cover;
-
-                .isotope{
-                    height: 900px;
-                    width: 200px;
-                    margin: 0 auto;
-                    display: block;
-
-                    .scroll{
-                        width: 230px;
-                        height: 500px;
-                        margin-left: 10%;
-                        background: red;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-@media (min-width: $screen-md-min) {
-    .programming-section{
-        .container{
-            .col-xs-12{
-                &:last-child{
-                    background: url('../images/colonne-deskop.png') no-repeat top center ;
-
-                    .isotope{
-                        height: 1530px;
-                        width: 200px;
-                    }
-                }
-            }
-        }
-    }
-}
-*/
-
-
-
-
-
-
-
 //programmation 2
 .programming-section{
-    padding-top: 10rem;
+    padding-top: 5rem;
 
     .container{
         margin-top: 3rem;
@@ -90,15 +13,15 @@
                   top: 15%;
                   z-index: 1;
 
-                  &.is-closed{ transform: translateX(104%); transition: transform .5s; }
-                  &.is-opened{ transform: translateX(20%); transition: transform .5s;
+                  &.is-closed{ transform: translateX(104%); transition: transform .3s; }
+                  &.is-opened{ transform: translateX(20%); transition: transform .3s;
                       .btn-control img{ transform: rotate(180deg) translateY(50%) translateX(50%); transition: all .5s; }
                   }
 
                   .col-xs-2{
                       background: lighten($body-bg, 10%);
                       width: 7.667%;
-                      height: 11rem;
+                      height: 19rem;
                       position: relative;
                       text-align: initial;
 
@@ -111,7 +34,7 @@
                       }
                   }
 
-                  #controls{
+                  #options{
                       background: $body-bg;
                       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28283d+13,28283d+13,121121+100 */
                       background: #28283d; /* Old browsers */
@@ -123,32 +46,15 @@
                       box-shadow: -3px -3px 20px 3px #000000;
                       border-radius: 0 0 0 10px;
 
-                      ul{
+                      #filters{
                           margin-top: 3rem;
-                          padding: 0;
+                          padding: 3rem 0;
 
                           li{
                               list-style: none;
+                              margin-bottom: 1.5rem;
 
-                              &:first-child{
-                                  &:before,
-                                  &:after{
-                                      content: '';
-                                      background: $theme-color;
-                                      height: 2px;
-                                      width: 25%;
-                                      display: inline-block;
-                                  }
-
-                                  &:before{ margin-right: 2rem; }
-                                  &:after{ margin-left: 2rem; }
-                              }
-
-                              img{
-                                  margin-bottom: 2rem;
-                                  width: 50px;
-                                  height: 50px;
-                              }
+                              &:nth-child(4){ margin-bottom: 0;}
 
                               a{
                                   font-family: $font-family-custom-2;
@@ -159,19 +65,41 @@
                                       color: $theme-color;
                                       text-decoration: none;
                                   }
+
+                                  &.selected{ text-decoration: none;}
+                              }
+
+                              &.logo{
+                                  &:before,
+                                  &:after{
+                                      content: '';
+                                      background: $theme-color;
+                                      height: 2px;
+                                      width: 25%;
+                                      display: inline-block;
+                                      margin-right: 2rem;
+                                  }
+
+                                  &:after{
+                                      margin-right: 0;
+                                      margin-left: 2rem;
+                                  }
                               }
                           }
 
-                          &:last-child{
-                              margin-top: -1rem;
-                              margin-bottom: 3rem;
+                          img{
+                              max-width: 50px;
+                              margin: 0 auto;
+                              margin-bottom: 20px;
+                              margin-top: 30px;
+                              display: inline-block;
                           }
                       }
                   }
               }
 
               &:last-child{
-                    background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/column-mobile.png') no-repeat;
+                    background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-mobile.png') no-repeat;
                     background-size: cover;
                     height: 1053px;
                     //width: calc(100% - (2 *2.5rem));
@@ -195,76 +123,110 @@
                             overflow: hidden;
 
 
-                            .content-bloc{
-                                position: relative !important;
-                                width: 100%;
+                            .photogal{
+                                padding: 0;
 
-                                img{
-                                    margin-top: 1rem;
-                                }
-
-                                .content{
-                                    position: absolute !important;
-                                    top: 100% !important;
-                                    background: rgba(255, 255, 255, .65);
-                                    padding: 1rem;
-                                    transform: translateY(-100%) !important;
+                                li {
                                     width: 100%;
+                                    position: relative;
+
+                                    a {
+                                        // width: 100%;
+                                        // display: block;
+
+                                        img {
+                                            display: block;
+                                            width: 100%;
+                                            height: auto;
+                                        }
+                                    }
+
+                                    .content-block{
+                                        position: absolute !important;
+                                        //top: 100% !important;
+                                        bottom: 1rem;
+                                        background: rgba(255, 255, 255, .65);
+                                        padding: 1rem;
+                                        //transform: translateY(-100%) !important;
+                                        width: 100%;
+                                        text-align: right;
+
+                                        .event-title{
+                                            font-family: $font-family-custom-1;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                            color: $gray-base;
+                                            text-transform: uppercase;
+                                            margin: 0;
+                                            text-align: center;
+                                            display: block;
+
+                                            &:hover{
+                                                background: transparent;
+                                                color: $theme-color;
+                                            }
+                                        }
+
+                                        .date{
+                                            font-family: $font-family-custom-1;
+                                            font-size: 12px;
+                                            color: $gray-base;
+                                            margin: .5rem 0 1.5rem 0;
+                                            width: 100%;
+                                            font-style: normal;
+                                            text-align: center;
+                                        }
+
+                                        .plus{
+                                            background: $gray-base;
+                                            border-radius: 100%;
+                                            color: $gray-ultra-light;
+                                            padding: 4px 6px;
+                                            margin-right: 1rem;
+                                            // display: inline-block;
+                                        }
+
+                                        .reserve{
+                                            font-family: $font-family-custom-1;
+                                            font-size: 14px;
+                                            background: $gray-base;
+                                            border-radius: 5px;
+                                            color: $gray-ultra-light;
+                                            padding: 3px 8px;
+                                            margin-right: 1rem;
+                                            // display: inline-block;
+                                        }
+
+                                        a{
+                                            &:hover,
+                                            &:focus{
+                                                background: $theme-color;
+                                                color: $gray-ultra-light;
+                                                text-decoration: none;
+                                            }
+                                        }
+                                    }
                                 }
 
-                                &:before{
-                                    content: '.';
-                                    color: $gray-base;
-                                    font-size: 4rem;
-                                    font-family: $font-family-custom-1;
-                                    line-height: .4;
-                                    margin-bottom: 1rem;
-                                }
+                                // &:before{
+                                //     content: '.';
+                                //     color: $gray-base;
+                                //     font-size: 4rem;
+                                //     font-family: $font-family-custom-1;
+                                //     line-height: .4;
+                                //     margin-bottom: 1rem;
+                                // }
 
-                                h2{
-                                  font-family: $font-family-custom-1;
-                                  font-size: 16px;
-                                  font-weight: 700;
-                                  color: $gray-base;
-                                  margin: 0;
-                                }
-
-                                .date{
-                                    font-family: $font-family-custom-1;
-                                    font-size: 14px;
-                                    color: $gray-base;
-                                    margin: 1rem 0 1.5rem 0;
-                                    width: 100%;
-                                }
-
-                                .plus{
-                                    background: $gray-base;
-                                    border-radius: 100%;
-                                    color: $gray-ultra-light;
-                                    padding: 5px;
-                                    margin-right: 1rem;
-                                }
-
-                                .reserve{
-                                    background: $gray-base;
-                                    border-radius: 5px;
-                                    color: $gray-ultra-light;
-                                    padding: 5px;
-                                }
-
-                                a:hover{
-                                    background: $theme-color;
-                                    color: $gray-ultra-light;
-                                    text-decoration: none;
+                                &:first-child{
+                                    //top: -20px;
                                 }
                             }
                         }
                     }
-                  }
                 }
             }
         }
-
+    }
 }
 
 @media (min-width: 440px) {
@@ -304,7 +266,7 @@
 
 @media (min-width:$screen-sm-min) {
     .programming-section{
-        padding-top: 10rem;
+        padding-top: 7.5rem;
 
         .container{
             margin-top: 3rem;
@@ -333,6 +295,28 @@
                             background: $gray-ultra-light;
                             margin: 0 auto;
                             overflow: hidden;
+
+                            .photogal{
+                                li {
+                                    .content-block{
+                                        .event-title{
+                                            font-size: 14px;
+                                        }
+
+                                        .date{
+                                            font-size: 14px;
+                                        }
+
+                                        .plus{
+                                            padding: 4px 6px;
+                                        }
+
+                                        .reserve{
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -344,7 +328,7 @@
 
 @media (min-width:$screen-md-min) {
     .programming-section{
-        padding-top: 16rem;
+        padding-top: 10rem;
 
         .container{
             margin: 0;
@@ -402,7 +386,7 @@
                         //float: left;
 
                         .scroll{
-                            margin-left: 30.4%;
+                            margin-left: 30%;
                             margin-top: 73.3%;
                             width: 300px;
                             height: 58.8% !important;
@@ -410,11 +394,33 @@
                             float: left;
 
                             #contenu{
-                                width: 76.3%;
+                                width: 77.4%;
                                 //height: 100% !important;
                                 background: $gray-ultra-light;
                                 margin: 0 auto;
                                 overflow: hidden;
+
+                                .photogal{
+                                    li {
+                                        .content-block{
+                                            .event-title{
+                                                font-size: 18px;
+                                            }
+
+                                            .date{
+                                                font-size: 16px;
+                                            }
+
+                                            .plus{
+                                                padding: 4px 6px;
+                                            }
+
+                                            .reserve{
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -427,13 +433,15 @@
 
 @media (min-width:$screen-lg-min) {
     .programming-section{
-        padding-top: 16rem;
+        padding-top: 10rem;
 
         .container{
             margin: 0;
 
             .row{
-                > .col-xs-12.col-md-7{
+                > .col-xs-12{
+
+
                     &:last-child{
                         background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png') no-repeat;
                         background-size: cover;
@@ -446,7 +454,7 @@
                         //float: left;
 
                         .scroll{
-                            margin-left: 30.4%;
+                            margin-left: 30%;
                             margin-top: 73.3%;
                             width: 330px;
                             height: 58.8% !important;
@@ -454,11 +462,33 @@
                             float: left;
 
                             #contenu{
-                                width: 78.8%;
+                                width: 79.9%;
                                 //height: 100% !important;
                                 background: $gray-ultra-light;
                                 margin: 0 auto;
                                 overflow: hidden;
+
+                                .photogal{
+                                    li {
+                                        .content-block{
+                                            .event-title{
+                                                font-size: 18px;
+                                            }
+
+                                            .date{
+                                                font-size: 16px;
+                                            }
+
+                                            .plus{
+                                                padding: 4px 6px;
+                                            }
+
+                                            .reserve{
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

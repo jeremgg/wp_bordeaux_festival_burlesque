@@ -39,32 +39,29 @@ header.header {
 /*--------------------------------------------------------------------*/
 /*---------------------------------------->>>>>>>>>>>>>  Photo Gallery*/
 /*--------------------------------------------------------------------*/
-/* line 42, ../sass/style.scss */
-ul.photogal li {
-  width: 19.92%;
-  float: left; }
-  /* line 45, ../sass/style.scss */
-  ul.photogal li a {
-    width: 100.1%;
-    display: block; }
-    /* line 49, ../sass/style.scss */
-    ul.photogal li a img {
-      display: block;
-      max-width: 100.1%;
-      height: auto;
-      width: auto\9;
-      /* ie8 */ }
 
-/* line 60, ../sass/style.scss */
+
+  /*ul.photogal li p{
+    color: #000;
+  }
+
+
 ul#filters {
   overflow: hidden;
   width: 200px;
   margin: 20px 20px 0px 20px; }
-  /* line 65, ../sass/style.scss */
+
   ul#filters li {
     float: left;
     margin: 0 0 15px 0; }
-    /* line 69, ../sass/style.scss */
+
+
+    ul#filters li:nth-child(4) {
+      background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/goussettransparent-1.gif') no-repeat;
+      width: 100%;
+      height: 100px;
+    }
+
     ul#filters li a {
       display: block;
       background: #fff;
@@ -74,11 +71,11 @@ ul#filters {
       border-right: 2px solid #79aeac;
       border-bottom: 2px solid #79aeac;
       color: #f87242; }
-      /* line 79, ../sass/style.scss */
+
       ul#filters li a:hover {
         background: #f7f5f2;
         border-right: 2px solid #82bcba;
-        border-bottom: 2px solid #82bcba; }
+        border-bottom: 2px solid #82bcba; }*/
 
 /*--------------------------------------------------------------------*/
 /*------------------------------------>>>>>>>>>>>>>  Isotope Animation*/
