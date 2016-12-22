@@ -47,7 +47,7 @@
                       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28283d', endColorstr='#121121',GradientType=1 ); /* IE6-9 */
 
                       box-shadow: -3px -3px 20px 3px #000000;
-                      border-radius: 0 0 0 10px;
+                      border-radius: 0 0 0 1rem;
                       width: 91%;
 
                       #filters{
@@ -55,15 +55,15 @@
 
                           li{
                               list-style: none;
-                              margin-bottom: 1.5rem;
+                              margin-bottom: $margin-micro-big;
 
                               &:first-child{ display: none; }
                               &:nth-child(4){ margin-bottom: 0;}
 
                               a{
                                   font-family: $font-family-custom-2;
-                                  font-size: 16px;
-                                  color: #fff;
+                                  font-size: $font-size-medium;
+                                  color: $gray-ultra-light;
 
                                   &:hover{
                                       color: $theme-color;
@@ -82,8 +82,8 @@
                                       width: 29.33333%;
                                       height: 50px;
                                       display: inline-block;
-                                      border-bottom: 2px solid $theme-color;
-                                      margin-top: 2rem;
+                                      border-bottom: $border-element;
+                                      margin-top: $margin-semi-medium;
 
                                       &:nth-child(2){ border: none; }
                                       &:first-child{ margin-right: 5%; }
@@ -108,7 +108,7 @@
                     //width: calc(100% - (2 *2.5rem));
                     width: 350px;
                     max-width: 420px;
-                    margin: 0 2.5rem;
+                    margin: $margin-semi-medium-full;
 
 
                     .scroll{
@@ -147,17 +147,17 @@
                                     .content-block{
                                         position: absolute !important;
                                         //top: 100% !important;
-                                        bottom: 1rem;
+                                        bottom: $margin-micro;
                                         background: rgba(255, 255, 255, .65);
-                                        padding: 1rem;
+                                        padding: $margin-micro;
                                         //transform: translateY(-100%) !important;
                                         width: 100%;
                                         text-align: right;
 
                                         .event-title{
                                             font-family: $font-family-custom-1;
-                                            font-size: 14px;
-                                            font-weight: 700;
+                                            font-size: $font-size-base;
+                                            font-weight: $font-weight-custom-2;
                                             color: $gray-base;
                                             text-transform: uppercase;
                                             margin: 0;
@@ -172,7 +172,7 @@
 
                                         .date{
                                             font-family: $font-family-custom-1;
-                                            font-size: 12px;
+                                            font-size: $font-size-12;
                                             color: $gray-base;
                                             margin: .5rem 0 1.5rem 0;
                                             width: 100%;
@@ -185,18 +185,18 @@
                                             border-radius: 100%;
                                             color: $gray-ultra-light;
                                             padding: 4px 6px;
-                                            margin-right: 1rem;
+                                            margin-right: $margin-micro;
                                             // display: inline-block;
                                         }
 
                                         .reserve{
                                             font-family: $font-family-custom-1;
-                                            font-size: 14px;
+                                            font-size: $font-size-base;
                                             background: $gray-base;
                                             border-radius: 5px;
                                             color: $gray-ultra-light;
                                             padding: 3px 8px;
-                                            margin-right: 1rem;
+                                            margin-right: $margin-micro;
                                             // display: inline-block;
                                         }
 
@@ -269,10 +269,10 @@
 
 @media (min-width:$screen-sm-min) {
     .programming-section{
-        padding-top: 7.5rem;
+        padding-top: $margin-top-medium-deskop;
 
         .container{
-            margin-top: 3rem;
+            margin-top: $margin-medium;
 
             >.col-xs-12{
                 &:first-child{ height: 100px;}
@@ -280,7 +280,7 @@
                     background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png') no-repeat;
                     background-size: cover;
                     height: 1000px;
-                    width: calc(100% - (2 *2.5rem));
+                    width: calc(100% - (2 * 2.5rem));
                     margin: 0 auto;
                     float: none;
 
@@ -303,11 +303,11 @@
                                 li {
                                     .content-block{
                                         .event-title{
-                                            font-size: 14px;
+                                            font-size: $font-size-base;
                                         }
 
                                         .date{
-                                            font-size: 14px;
+                                            font-size: $font-size-base;
                                         }
 
                                         .plus{
@@ -315,7 +315,7 @@
                                         }
 
                                         .reserve{
-                                            font-size: 14px;
+                                            font-size: $font-size-base;
                                         }
                                     }
                                 }
@@ -331,7 +331,7 @@
 
 @media (min-width:$screen-md-min) {
     .programming-section{
-        padding-top: 10rem;
+        padding-top: $margin-top-large-deskop;
 
         .container{
             margin: 0;
@@ -365,11 +365,11 @@
                               padding: 0;
 
                               li{
-                                  a{ font-size: 16px; }
+                                  a{ font-size: $font-size-medium; }
 
                                   &.logo{
                                       &.logo2{
-                                          img{ margin-top: 24px; }
+                                          img{ margin-top: $font-size-h3; }
                                       }
 
                                       &:before,
@@ -383,8 +383,8 @@
                                   width: 29.33333%;
                                   height: 50px;
                                   display: inline-block;
-                                  border-bottom: 2px solid $theme-color;
-                                  margin-top: 2rem;
+                                  border-bottom: $border-element;
+                                  margin-top: $margin-semi-medium;
 
                                   &:nth-child(2){ border: none; }
                                   &:first-child{ margin-right: 5%; }
@@ -432,11 +432,11 @@
                                     li {
                                         .content-block{
                                             .event-title{
-                                                font-size: 18px;
+                                                font-size: $font-size-large;
                                             }
 
                                             .date{
-                                                font-size: 16px;
+                                                font-size: $font-size-medium;
                                             }
 
                                             .plus{
@@ -444,7 +444,7 @@
                                             }
 
                                             .reserve{
-                                                font-size: 14px;
+                                                font-size: $font-size-base;
                                             }
                                         }
                                     }
@@ -461,7 +461,7 @@
 
 @media (min-width:$screen-lg-min) {
     .programming-section{
-        padding-top: 10rem;
+        padding-top: $margin-top-large-deskop;
 
         .container{
             margin: 0;
@@ -491,11 +491,11 @@
                               padding: 0;
 
                               li{
-                                  a{ font-size: 16px; }
+                                  a{ font-size: $font-size-medium; }
 
                                   &.logo{
                                       &.logo2{
-                                          img{ margin-top: 24px; }
+                                          img{ margin-top: $font-size-h3; }
                                       }
                                   }
                               }
@@ -504,8 +504,7 @@
                                   width: 29.33333%;
                                   height: 50px;
                                   display: inline-block;
-                                  border-bottom: 2px solid $theme-color;
-                                  margin-top: 2rem;
+                                  margin-top: $margin-semi-medium;
 
                                   &:nth-child(2){ border: none; }
                                   &:first-child{ margin-right: 5%; }
@@ -553,19 +552,15 @@
                                     li {
                                         .content-block{
                                             .event-title{
-                                                font-size: 18px;
+                                                font-size: $font-size-large;
                                             }
 
                                             .date{
-                                                font-size: 16px;
-                                            }
-
-                                            .plus{
-                                                padding: 4px 6px;
+                                                font-size: $font-size-medium;
                                             }
 
                                             .reserve{
-                                                font-size: 14px;
+                                                font-size: $font-size-base;
                                             }
                                         }
                                     }
