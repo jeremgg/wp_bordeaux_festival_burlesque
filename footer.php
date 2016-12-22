@@ -55,9 +55,24 @@
 					<?php endif; ?>
 
 						<!-- MENTIONS LEGALES -->
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<a href="#">mentions légales</a>
-						</div>
+						<?php
+								wp_nav_menu(array(
+										'theme_location' 	=> 'bottom',
+										'container'         => 'div',
+										'container_id'      => 'mentions',
+										'container_class'   => 'col-xs-12 col-sm-12 col-md-12 col-lg-12 mentions',
+										'menu_class' 		=> 'navbar-mentions',
+										'menu_id'			=> 'navbar-mentions',
+										'walker' 			=> ''
+								));
+						?>
+
+						<div class="navbar-center">
+								<!-- navigation menu -->
+
+
+
+						</div><!--/.navbar-center -->
 
 				</div><!-- /.row partenairs -->
 		</div><!-- /.container -->

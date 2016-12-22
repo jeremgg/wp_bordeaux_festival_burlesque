@@ -72,11 +72,25 @@
             }
 
             .col-lg-12:nth-child(2){
-                a{
-                    font-family: $font-family-custom-2;
-                    font-size: $font-size-small;
-                    font-style: italic;
+                ul{
+                    li{
+                        list-style: none;
+
+                        a{
+                            font-family: $font-family-custom-2;
+                            font-size: $font-size-small;
+                            font-style: italic;
+
+                            &:hover{
+                                color: $theme-color;
+                                text-decoration: none;
+                                font-size: $font-size-base;
+                            }
+                        }
+                    }
                 }
+
+
             }
         }
     }
