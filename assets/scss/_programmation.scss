@@ -12,15 +12,16 @@
                   position: fixed;
                   top: 15%;
                   z-index: 1;
+                  max-width: 360px;
 
-                  &.is-closed{ transform: translateX(104%); transition: transform .3s; }
-                  &.is-opened{ transform: translateX(20%); transition: transform .3s;
+                  &.is-closed{ right: -328px; transition: transform .5s; }
+                  &.is-opened{ right: 0; transition: transform .5s;
                       .btn-control img{ transform: rotate(180deg) translateY(50%) translateX(50%); transition: all .5s; }
                   }
 
                   .col-xs-2{
-                      background: lighten($body-bg, 10%);
-                      width: 7.667%;
+                      background: #28283d;
+                      width: 9%;
                       height: 19rem;
                       position: relative;
                       text-align: initial;
@@ -29,6 +30,8 @@
                           position: absolute;
                           top: 50%;
                           left: 50%;
+                          width: 20px;
+                          height: auto;
                           transform: translateY(-50%) translateX(-50%);
                           margin: 0 auto;
                       }
@@ -45,15 +48,16 @@
 
                       box-shadow: -3px -3px 20px 3px #000000;
                       border-radius: 0 0 0 10px;
+                      width: 91%;
 
                       #filters{
-                          margin-top: 3rem;
-                          padding: 3rem 0;
+                          padding: 1rem 3rem;
 
                           li{
                               list-style: none;
                               margin-bottom: 1.5rem;
 
+                              &:first-child{ display: none; }
                               &:nth-child(4){ margin-bottom: 0;}
 
                               a{
@@ -70,29 +74,28 @@
                               }
 
                               &.logo{
-                                  &:before,
-                                  &:after{
-                                      content: '';
-                                      background: $theme-color;
-                                      height: 2px;
-                                      width: 25%;
-                                      display: inline-block;
-                                      margin-right: 2rem;
+                                  &.logo2{
+                                      img{ margin-top: 24px; }
                                   }
 
-                                  &:after{
-                                      margin-right: 0;
-                                      margin-left: 2rem;
+                                  div{
+                                      width: 29.33333%;
+                                      height: 50px;
+                                      display: inline-block;
+                                      border-bottom: 2px solid $theme-color;
+                                      margin-top: 2rem;
+
+                                      &:nth-child(2){ border: none; }
+                                      &:first-child{ margin-right: 5%; }
+                                      &:last-child{ margin-left: 5%; }
+                                  }
+
+                                  img{
+                                      display: block;
+                                      max-width: 50px;
+                                      margin: 0 auto;
                                   }
                               }
-                          }
-
-                          img{
-                              max-width: 50px;
-                              margin: 0 auto;
-                              margin-bottom: 20px;
-                              margin-top: 30px;
-                              display: inline-block;
                           }
                       }
                   }
@@ -335,12 +338,16 @@
 
             .row{
               > .col-xs-12.col-md-2{
-                  width: 18.66667%;
+                  width: 20.66667%;
                   top: 17%;
                   //position: static;
 
-                      &.is-closed{ transform: translateX(0); }
-                      &.is-opened{ transform: translateX(0);
+                  &.col-md-offset-2{
+                      margin-left: 14.66667%;
+                  }
+
+                      &.is-closed{ transform: translateX(0); right: auto; }
+                      &.is-opened{ transform: translateX(0); right: auto;
                           .btn-control{ display: none; }
                       }
 
@@ -348,30 +355,51 @@
                           display: none;
                       }
 
-                      #controls{
+                      #options{
                           background: transparent;
-                          border-radius: none;
                           box-shadow: none;
+                          border-radius: none;
 
-                          ul{
+                          #filters{
+                              margin-top: 0rem;
+                              padding: 0;
+
                               li{
-                                  &:first-child{
-                                      &:before,
-                                      &:after{
+                                  a{ font-size: 16px; }
 
-                                          width: 20%;
+                                  &.logo{
+                                      &.logo2{
+                                          img{ margin-top: 24px; }
                                       }
 
-                                      &:before{ margin-right: 3rem; }
-                                      &:after{ margin-left: 3rem; }
+                                      &:before,
+                                      &:after{
+                                          display: none;
+                                      }
                                   }
+                              }
 
-                                  img{ margin-bottom: 2rem; }
-                                  a{  font-size: 20px; }
+                              div{
+                                  width: 29.33333%;
+                                  height: 50px;
+                                  display: inline-block;
+                                  border-bottom: 2px solid $theme-color;
+                                  margin-top: 2rem;
+
+                                  &:nth-child(2){ border: none; }
+                                  &:first-child{ margin-right: 5%; }
+                                  &:last-child{ margin-left: 5%; }
+                              }
+
+                              img{
+                                  display: block;
+                                  margin-bottom: 0rem;
+                                  margin-top: 0rem;
                               }
                           }
                       }
-                }
+                  }
+
 
                 > .col-xs-12.col-md-7{
                     &:last-child{
@@ -439,9 +467,62 @@
             margin: 0;
 
             .row{
-                > .col-xs-12{
+              > .col-xs-12.col-md-2{
+                  width: 18.66667%;
+                  top: 17%;
+                  //position: static;
+
+                      &.is-closed{ transform: translateX(0); right: auto; }
+                      &.is-opened{ transform: translateX(0); right: auto;
+                          .btn-control{ display: none; }
+                      }
+
+                      .col-xs-2{
+                          display: none;
+                      }
+
+                      #options{
+                          background: transparent;
+                          box-shadow: none;
+                          border-radius: none;
+
+                          #filters{
+                              margin-top: 0rem;
+                              padding: 0;
+
+                              li{
+                                  a{ font-size: 16px; }
+
+                                  &.logo{
+                                      &.logo2{
+                                          img{ margin-top: 24px; }
+                                      }
+                                  }
+                              }
+
+                              div{
+                                  width: 29.33333%;
+                                  height: 50px;
+                                  display: inline-block;
+                                  border-bottom: 2px solid $theme-color;
+                                  margin-top: 2rem;
+
+                                  &:nth-child(2){ border: none; }
+                                  &:first-child{ margin-right: 5%; }
+                                  &:last-child{ margin-left: 5%; }
+                              }
+
+                              img{
+                                  display: block;
+                                  margin-bottom: 0rem;
+                                  margin-top: 0rem;
+                              }
+                          }
+                      }
+                  }
 
 
+                > .col-xs-12.col-md-7{
                     &:last-child{
                         background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png') no-repeat;
                         background-size: cover;

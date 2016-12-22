@@ -79,8 +79,8 @@
             })
 
 
-            jQuery('#filters li:nth-child(2)').before("<li class='logo'><img src='/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/goussettransparent-2.gif' class='img-responsive'/></li>");
-            jQuery('#filters li:nth-child(5)').before("<li class='logo'><img src='/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/eventailtransparent-1.gif' class='img-responsive'/></li>");
+            jQuery('#filters li:nth-child(2)').before("<li class='logo'><div class='left'></div><div class='image'><img src='/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/goussettransparent-2.gif' class='img-responsive'/></div><div class='right'></div></li>");
+            jQuery('#filters li:nth-child(5)').before("<li class='logo logo2'><div class='left'></div><div class='image'><img src='/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/eventailtransparent-1-1.gif' class='img-responsive'/></div><div class='right'></div></li>");
 
 
         });

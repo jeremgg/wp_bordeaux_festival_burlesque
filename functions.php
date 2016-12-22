@@ -549,8 +549,6 @@ function jss_tag_cloud( $args = '' ) {
 	    'echo' => true, //touch this and it all blows up
 	    'link' => 'view',
 			'orderby' => 'ID',
-			'order' => 'DESC',
-			'posts_per_page' => 3
 	);
 
 	//use wp_parse to merge the argus and default values

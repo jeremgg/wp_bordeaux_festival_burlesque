@@ -2330,24 +2330,21 @@ section p {
   position: fixed;
   top: 15%;
   z-index: 1;
+  max-width: 360px;
 }
 
 .programming-section .container .row > .col-xs-12:first-child.is-closed {
-  -webkit-transform: translateX(104%);
-      -ms-transform: translateX(104%);
-          transform: translateX(104%);
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  right: -328px;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 .programming-section .container .row > .col-xs-12:first-child.is-opened {
-  -webkit-transform: translateX(20%);
-      -ms-transform: translateX(20%);
-          transform: translateX(20%);
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  right: 0;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 .programming-section .container .row > .col-xs-12:first-child.is-opened .btn-control img {
@@ -2358,8 +2355,8 @@ section p {
 }
 
 .programming-section .container .row > .col-xs-12:first-child .col-xs-2 {
-  background: #1c1c3e;
-  width: 7.667%;
+  background: #28283d;
+  width: 9%;
   height: 19rem;
   position: relative;
   text-align: initial;
@@ -2369,6 +2366,8 @@ section p {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 20px;
+  height: auto;
   -webkit-transform: translateY(-50%) translateX(-50%);
       -ms-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
@@ -2388,16 +2387,20 @@ section p {
   /* IE6-9 */
   box-shadow: -3px -3px 20px 3px #000000;
   border-radius: 0 0 0 10px;
+  width: 91%;
 }
 
 .programming-section .container .row > .col-xs-12:first-child #options #filters {
-  margin-top: 3rem;
-  padding: 3rem 0;
+  padding: 1rem 3rem;
 }
 
 .programming-section .container .row > .col-xs-12:first-child #options #filters li {
   list-style: none;
   margin-bottom: 1.5rem;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #options #filters li:first-child {
+  display: none;
 }
 
 .programming-section .container .row > .col-xs-12:first-child #options #filters li:nth-child(4) {
@@ -2419,26 +2422,34 @@ section p {
   text-decoration: none;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo:before, .programming-section .container .row > .col-xs-12:first-child #options #filters li.logo:after {
-  content: '';
-  background: #cf9702;
-  height: 2px;
-  width: 25%;
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo.logo2 img {
+  margin-top: 24px;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo div {
+  width: 29.33333%;
+  height: 50px;
   display: inline-block;
-  margin-right: 2rem;
+  border-bottom: 2px solid #cf9702;
+  margin-top: 2rem;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo:after {
-  margin-right: 0;
-  margin-left: 2rem;
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo div:nth-child(2) {
+  border: none;
 }
 
-.programming-section .container .row > .col-xs-12:first-child #options #filters img {
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo div:first-child {
+  margin-right: 5%;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo div:last-child {
+  margin-left: 5%;
+}
+
+.programming-section .container .row > .col-xs-12:first-child #options #filters li.logo img {
+  display: block;
   max-width: 50px;
   margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  display: inline-block;
 }
 
 .programming-section .container .row > .col-xs-12:last-child {
@@ -2616,18 +2627,23 @@ section p {
     margin: 0;
   }
   .programming-section .container .row > .col-xs-12.col-md-2 {
-    width: 18.66667%;
+    width: 20.66667%;
     top: 17%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2.col-md-offset-2 {
+    margin-left: 14.66667%;
   }
   .programming-section .container .row > .col-xs-12.col-md-2.is-closed {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
+    right: auto;
   }
   .programming-section .container .row > .col-xs-12.col-md-2.is-opened {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
+    right: auto;
   }
   .programming-section .container .row > .col-xs-12.col-md-2.is-opened .btn-control {
     display: none;
@@ -2635,25 +2651,44 @@ section p {
   .programming-section .container .row > .col-xs-12.col-md-2 .col-xs-2 {
     display: none;
   }
-  .programming-section .container .row > .col-xs-12.col-md-2 #controls {
+  .programming-section .container .row > .col-xs-12.col-md-2 #options {
     background: transparent;
-    border-radius: none;
     box-shadow: none;
+    border-radius: none;
   }
-  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:before, .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:after {
-    width: 20%;
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters {
+    margin-top: 0rem;
+    padding: 0;
   }
-  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:before {
-    margin-right: 3rem;
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters li a {
+    font-size: 16px;
   }
-  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li:first-child:after {
-    margin-left: 3rem;
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters li.logo.logo2 img {
+    margin-top: 24px;
   }
-  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li img {
-    margin-bottom: 2rem;
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters li.logo:before, .programming-section .container .row > .col-xs-12.col-md-2 #options #filters li.logo:after {
+    display: none;
   }
-  .programming-section .container .row > .col-xs-12.col-md-2 #controls ul li a {
-    font-size: 20px;
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div {
+    width: 29.33333%;
+    height: 50px;
+    display: inline-block;
+    border-bottom: 2px solid #cf9702;
+    margin-top: 2rem;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div:nth-child(2) {
+    border: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div:first-child {
+    margin-right: 5%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div:last-child {
+    margin-left: 5%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters img {
+    display: block;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
   }
   .programming-section .container .row > .col-xs-12.col-md-7:last-child {
     background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
@@ -2699,7 +2734,65 @@ section p {
   .programming-section .container {
     margin: 0;
   }
-  .programming-section .container .row > .col-xs-12:last-child {
+  .programming-section .container .row > .col-xs-12.col-md-2 {
+    width: 18.66667%;
+    top: 17%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2.is-closed {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    right: auto;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2.is-opened {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    right: auto;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2.is-opened .btn-control {
+    display: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 .col-xs-2 {
+    display: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options {
+    background: transparent;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters {
+    margin-top: 0rem;
+    padding: 0;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters li a {
+    font-size: 16px;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters li.logo.logo2 img {
+    margin-top: 24px;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div {
+    width: 29.33333%;
+    height: 50px;
+    display: inline-block;
+    border-bottom: 2px solid #cf9702;
+    margin-top: 2rem;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div:nth-child(2) {
+    border: none;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div:first-child {
+    margin-right: 5%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div:last-child {
+    margin-left: 5%;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-2 #options #filters img {
+    display: block;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+  }
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child {
     background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
     background-size: cover;
     height: 1530px;
@@ -2708,7 +2801,7 @@ section p {
     margin: 0 auto;
     margin-left: 35.33333%;
   }
-  .programming-section .container .row > .col-xs-12:last-child .scroll {
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll {
     margin-left: 30%;
     margin-top: 73.3%;
     width: 330px;
@@ -2716,22 +2809,22 @@ section p {
     overflow-y: scroll;
     float: left;
   }
-  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu {
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu {
     width: 79.9%;
     background: white;
     margin: 0 auto;
     overflow: hidden;
   }
-  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .event-title {
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .event-title {
     font-size: 18px;
   }
-  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .date {
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .date {
     font-size: 16px;
   }
-  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .plus {
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .plus {
     padding: 4px 6px;
   }
-  .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .reserve {
+  .programming-section .container .row > .col-xs-12.col-md-7:last-child .scroll #contenu .photogal li .content-block .reserve {
     font-size: 14px;
   }
 }

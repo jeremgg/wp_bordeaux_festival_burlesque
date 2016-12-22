@@ -24,7 +24,7 @@ get_header(); ?>
 											<a class="btn-control" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron-g.png" alt=""></a>
 									</div>
 
-										<div id="options" class="col-xs-10 col-md-2">
+										<div id="options" class="col-xs-10 col-md-12">
 												<?php
 														//check to see if our custom tag cloud exists and display it
 														if( function_exists( 'jss_tag_cloud' )) {
