@@ -1,0 +1,176 @@
+$blog-gray-base: #000 !default;
+$blog-gray:                   lighten($gray-base, 40%) !default; // #666
+$blog-gray-medium:                   lighten($gray-base, 13.2%) !default; // #222
+$blog-gray-light: lighten($blog-gray-base, 53.5%) !default; // #888
+$blog-gray-lighter:    lighten($gray-base, 93.5%) !default; // #eee
+$blog-gray-lighterC:    lighten($gray-base, 75.3%) !default; // #ccc
+$blog-gray-xtra-lighter:    lighten($gray-base, 94.6%) !default; // #f1f1f1;
+$blog-gray-ultra-light: lighten($gray-base, 100%) !default;
+
+$blog-text-color-theme: #0c0c1b;
+$blog-color-second: #2c2d42;
+$blog-color-theme: #d39951;
+
+$blog-font-family-default: 'Open Sans', sans-serif;
+$blog-font-family-custom-1: "Playfair Display", serif !default;
+$blog-font-family-custom-2: "Roboto Condensed", sans-serif !default;
+
+$blog-font-size-base:     14px !default;
+$blog-font-size-small:   ceil(($font-size-base * 0.86)); // ~12px
+$blog-font-size-medium:   ceil(($font-size-base * 1.14)); // ~16px
+$blog-font-size-large:       ceil(($font-size-base * 1.25)) !default; // ~18px
+
+$blog-font-size-h1:       ceil(($blog-font-size-base * 2.6)) !default; // 36px
+$blog-font-size-h1-5:       ceil(($blog-font-size-base * 2.2)) !default; // 30px
+$blog-font-size-h2:       ceil(($blog-font-size-base * 2)) !default; // 28px
+$blog-font-size-h4:       ceil(($font-size-base * 1.7)) !default; // ~24px
+$blog-font-size-h5:       ceil(($font-size-base * 1.5)) !default; // ~21px
+$blog-font-size-h6-5:     ceil(($font-size-base * 1.07)) !default; // ~15px
+$blog-font-size-h6:       ceil(($font-size-base * 0.78)) !default; // ~11px
+
+
+$blog-font-weight-base: bold;
+$blog-font-weight-light: 300;
+$blog-font-weight-lighter: 400;
+$blog-font-weight-semi-medium: 600;
+$blog-font-weight-medium: 700;
+
+$blog-line-height-base: 1;
+$blog-line-height-medium: 120%;
+$blog-line-height-large: 160%;
+
+$blog-letter-spacing-base: 1px;
+
+$blog-border-height-base: 1px;
+$blog-border-type-base: solid;
+$blog-border-color-base: #ddd;
+
+$blog-transition-duration: 0.3s;
+$blog-transition-delay:  ease-in-out;
+
+
+$blog-sidebar-max-width: 350px;
+
+$blog-container-size-xs: 100%;
+$blog-container-size-md: calc(100% - 350px);
+
+$blog-container-margin-left-md: $blog-sidebar-max-width;   //350px
+
+$blog-border-radius-light: 3px;
+$blog-border-radius-medium: 6px;
+$blog-border-radius-circle: 999px;
+
+
+$blog-section-inner-xs: 88%;
+$blog-section-inner-640: 84%;
+
+
+$screen-small-phone: 300px;
+$screen-small-tablet: 640px;
+
+$blog-middle-translate-y: translateY(-50%);
+
+
+
+
+/*************************
+      TITLE: PAGE
+*************************/
+
+$blog-padding-title-page-xs-min: 1rem 0;
+$blog-padding-title-page-xs: 1.5rem 0;
+$blog-padding-title-page-md: 3rem 0;
+
+
+
+/*************************
+        ARTICLES
+*************************/
+
+$blog-list-article-margin-xs-min: 2.5rem 2.5rem 0 2.5rem;
+$blog-list-article-margin-xs: 2rem 2rem 0 2rem;
+$blog-list-article-margin-640: 3rem 3rem 0 3rem;
+$blog-list-article-margin-md: 3.5rem 3.5rem 0 3.5rem;
+$blog-list-article-margin-lg: 4rem 4rem 0 4rem;
+
+$blog-list-article-a-padding-xs-standard: 4rem 1.5rem;
+$blog-list-article-a-padding-xs: 1.5rem;
+$blog-list-article-a-padding-md: 3rem;
+
+$blog-list-article-post-header-width: 50%;
+
+
+$blog-list-article-bloc-content-width: 90%;
+
+
+$blog-text-shadow-light: 1px 1px 0 rgba(0,0,0,0.1);
+$blog-text-shadow-small: 2px 2px 0 rgba(0,0,0,0.1);
+
+
+$blog-article-width-md: calc( 100% - (4rem * 2 ));
+
+
+/*************************
+        LINKS
+*************************/
+
+$blog-list-article-hover-color: rgba(211, 156, 68, 0.5);
+
+
+
+/*************************
+        NAV BLOG
+*************************/
+$blog-navigation-margin-top-xs: 3rem;
+$blog-navigation-margin-top-640: 4rem;
+
+$blog-navigation-link-padding-xs: 3rem 0;
+$blog-navigation-link-padding-640: 4rem 0;
+$blog-navigation-link-padding-sm: 4.5rem 0;
+$blog-navigation-link-padding-md: 5rem 0;
+
+$blog-navigation-link-width: 50%;
+
+
+
+/*************************
+        FORMULAIRE
+*************************/
+$blog-respond-margin-md: 0 4rem;
+$blog-respond-width-md: $blog-article-width-md;
+
+$blog-respond-h3-margin-bottom-xs: 1.5rem;
+$blog-respond-h3-margin-bottom-640: 2rem;
+
+$blog-form-texarea-height: 200px;
+$blog-form-texarea-height-sm: 250px;
+
+$blog-form-input-padding-xs: 1.2rem 1.6rem;
+$blog-form-input-padding-sm: 1.5rem 2rem;
+
+$blog-form-thirds-margin-top-xs: .65rem;
+$blog-form-thirds-margin-top-sm: 1.5rem;
+
+$blog-form-thirds-margin-bottom-xs: .65rem;
+$blog-form-thirds-margin-bottom-sm: 3rem;
+
+
+
+/*************************
+        SINGLE
+*************************/
+$blog-article-background-size: 16px auto;
+$blog-article-background-repeat: no-repeat;
+$blog-article-ico-size: 32px;
+
+$blog-single-article-margin-xs: 2rem;
+$blog-single-article-margin-sm: 4rem;
+
+$blog-article-header-width: 85%;
+
+$blog-article-header-left-xs: 5%;
+$blog-article-header-left-sm: 7.5%;
+
+$blog-article-post-content-width: 90%;
+
+$blog-article-post-content-header-large: 90%;

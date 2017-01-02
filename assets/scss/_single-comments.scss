@@ -1,0 +1,398 @@
+/**************************************
+          COMMENTAIRES
+**************************************/
+.container-single{
+    width: $blog-container-size-xs;
+
+    .comments{
+        margin: 0;
+        width: 100%;
+
+         &.bg-grey{
+             padding: 3rem 0;
+             background: $blog-gray-xtra-lighter;
+
+             .comments-inner{
+                 &.section-inner{
+                     margin: 0 auto;
+                     width: $blog-section-inner-xs;
+
+                     .comments-title-container{
+                         margin-bottom: 3rem;
+                         padding-bottom: 1rem;
+                         border-bottom: $blog-border-height-base $blog-border-type-base $blog-border-color-base;
+
+                         h2{
+                             font-family: $blog-font-family-custom-1;
+                             color: $blog-gray-medium;
+                             font-style: italic !important;
+                             font-size: $blog-font-size-large;
+                             font-weight: $blog-font-weight-medium;
+                             text-transform: uppercase;
+                             text-align: center;
+                             margin: 0;
+                             padding: 0;
+
+                             &.fleft{ float: left; }
+                         }
+
+                         h4{
+                             font-family: $blog-font-family-custom-2;
+                             font-size: $blog-font-size-small;
+                             font-weight: $blog-font-weight-base;
+                             text-transform: uppercase;
+                             margin-top: .9rem;
+                             margin-bottom: 0;
+                             color: $blog-gray-medium;
+
+                             &.fright{ float: right; }
+
+                             a{
+                                 color: $blog-color-theme;
+                                 font-weight: 400;
+                             }
+                         }
+                     }
+
+                     .commentlist{
+                         margin:0;
+                         padding:0;
+                         list-style: none;
+
+                         li{
+                             position: relative;
+                             margin-top: 3rem;
+
+                             &:first-child{ margin-top: 0; }
+
+                             .comment{
+                                 .avatar{
+                                     position: absolute;
+                                     display: none;
+                                     max-width: 60px;
+                                     height: auto;
+                                     border-radius: $blog-border-radius-circle;
+                                     top: 0;
+                                     left: 0;
+                                 }
+
+                                 .by-post-author{
+                                     position: absolute;
+                                     width: $blog-article-ico-size;
+                                     height: $blog-article-ico-size;
+                                     border-radius: 99px;
+                                     background: #ca2017 url(../images/icons/1x/author-w.png) no-repeat center 7px;
+                                     background-size: $blog-article-background-size;
+                                     text-indent: -9999px;
+                                     z-index: 10;
+                                     top: -6px;
+                                     left: -6px;
+                                     transition: all 0.2s ease-in-out;
+                                 }
+
+                                 .comment-inner{
+                                     position: relative;
+                                     padding: 2rem;
+                                     background: $blog-gray-ultra-light;
+                                     border-radius: $blog-border-radius-medium;
+
+                                     &:after{
+                                         content: "";
+                                         position: absolute;
+                                         display: none;
+                                         border: 12px solid transparent;
+                                         border-right-color: $blog-gray-ultra-light;
+                                         top: 28px;
+                                         left: -24px;
+                                     }
+
+                                     .comment-header{
+                                         margin-bottom: 2rem;
+
+                                         cite{
+                                             font-family: $blog-font-family-custom-2;
+                                             color: $blog-gray-medium;
+                                             font-size: $blog-font-size-base;
+                                             font-weight: $blog-font-weight-medium;
+                                             font-style: normal;
+                                             text-transform: capitalize;
+                                         }
+
+                                         span{
+                                             display: block;
+                                             font-family: $blog-font-family-custom-2;
+                                             color: $blog-gray-lighterC;
+                                             font-size: 10px;
+                                             font-style: normal;
+                                             font-weight: normal;
+                                             text-transform: uppercase;
+                                             margin: 0;
+
+                                             a{
+                                                 color: $blog-gray-lighterC;
+                                                 text-decoration: none;
+
+                                                 &:hover{
+                                                     color: $blog-color-theme;
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+
+                                 .comment-content{
+                                     font-family: $blog-font-family-custom-2;
+                                     font-size: $blog-font-size-medium;
+                                     color: $blog-gray-medium;
+
+                                     .comment-content *:first-child{ margin-top: 0; }
+                                     .comment-content *:last-child{ margin-bottom: 0; }
+
+                                     p{
+                                         font-family: $blog-font-family-custom-2;
+                                         color: $blog-gray-medium;
+                                         font-size: $blog-font-size-medium;
+                                         font-style: normal;
+                                         font-weight: lighter;
+                                         line-height: 140%;
+                                         margin: 0;
+                                     }
+                                 }
+
+                                 .comment-actions{
+                                     font-family: $blog-font-family-custom-2;
+                                     font-size: $blog-font-size-small;
+                                     margin-top: 2rem;
+
+                                     a{
+                                         font-family: $blog-font-family-custom-2;
+                                         font-size: $blog-font-size-h6;
+                                         color: $blog-color-theme;
+                                         font-weight: normal;
+                                         text-transform: uppercase;
+
+                                         &:last-child{
+                                             margin-left: 10px;
+                                         }
+
+                                         &:first-child{
+                                             margin-left: 0;
+                                         }
+
+                                         &:hover{
+                                             text-decoration: underline;
+                                         }
+                                     }
+                                 }
+                             }
+
+                             ul{
+                                 &.children{
+                                     margin-left: 5%;
+                                     padding: 0;
+                                     list-style: none;
+
+                                     li{
+                                         position: relative;
+                                         list-style: none;
+                                         margin-top: 3rem;
+
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+    }
+}
+
+
+ @media(min-width:500px) {
+     .container-single{
+         .comments{
+             &.bg-grey{
+                 .comments-inner{
+                     &.section-inner{
+                         .commentlist{
+                             li{
+                                 .comment{
+                                     .avatar{
+                                         display: block;
+                                     }
+
+                                     .comment-inner{
+                                         margin-left: 8rem;
+
+
+                                         &:after{
+                                             display: block;
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+
+ @media(min-width:$screen-small-tablet) {
+     .container-single{
+         .comments{
+             &.bg-grey{
+                 padding: 3.5rem 0 4rem 0;
+
+                 .comments-inner{
+                     &.section-inner{
+                         width: $blog-section-inner-640;
+
+                         .comments-title-container{
+                             margin-bottom: 4rem;
+                             padding-bottom: 1.5rem;
+
+                             h2{ font-size: 20px; }
+                         }
+
+                         .commentlist{
+                             li{
+                                 margin-top: 4rem;
+
+                                 ul{
+                                     &.children{
+                                         li{
+                                             margin-top: 4rem;
+
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+
+
+
+ @media(min-width:$screen-sm) {
+     .container-single{
+         .comments{
+             &.bg-grey{
+                 .comments-inner{
+                     &.section-inner{
+                         .comments-title-container{
+                             padding-bottom: 2rem;
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+
+ @media(min-width:$screen-md) {
+     .container-single{
+         margin-left: $blog-container-margin-left-md;
+         width: $blog-container-size-md;
+
+         .comments{
+             margin: $blog-respond-margin-md;
+             width: $blog-respond-width-md;
+
+             &.bg-grey{
+                 padding: 4rem 0 3.5rem;
+
+                 .comments-inner{
+                     &.section-inner{
+                         .comments-title-container{
+                             margin-bottom: 6rem;
+                             padding-bottom: 2rem;
+
+                             h2{
+                                 font-size: 22px;
+                             }
+
+                             h4{
+                                 font-size: $blog-font-size-base;
+                             }
+                         }
+
+                         .commentlist{
+                             li{
+                                 margin-top: 4.5rem;
+
+                                 ul{
+                                     &.children{
+                                         li{
+                                             margin-top: 4.5rem;
+
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+
+
+
+@media(min-width:$screen-lg) {
+     .container-single{
+         .comments{
+             margin: $blog-respond-margin-md;
+             width: $blog-respond-width-md;
+
+             &.bg-grey{
+                 padding: 5rem 0 4rem;
+
+                 .comments-inner{
+                     &.section-inner{
+                         .comments-title-container{
+                            margin-bottom: 8rem;
+                            padding-bottom: 2rem;
+
+                             h2{
+                                 font-size: $blog-font-size-h4;
+                             }
+                         }
+
+                         .commentlist{
+                             li{
+                                 margin-top: 5rem;
+
+                                 .comment{
+                                     .comment-inner{
+                                         margin-left: 10rem;
+                                     }
+                                 }
+
+                                 ul{
+                                     &.children{
+                                         li{
+                                             margin-top: 5rem;
+
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }

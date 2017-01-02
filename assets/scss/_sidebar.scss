@@ -1,0 +1,176 @@
+.sidebar{
+    width: 100%;
+    background: $blog-gray-ultra-light;
+    padding: 1.5rem;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow-y: auto;
+    float: none;
+
+    .navbar-brand{
+        display: block;
+        float: none;
+        height: auto;
+        padding: 0;
+
+        img{
+            margin: 0 auto;
+            width: 230px;
+            height: auto;
+        }
+    }
+
+    .sidebar-menu{
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        padding: 0;
+        list-style: none;
+
+        .menu-item{
+            margin: 0 auto;
+            text-align: center;
+            list-style: none;
+
+            a{
+                display: inline-block;
+                font-family: $blog-font-family-custom-2;
+                font-size: $blog-font-size-small;
+                font-weight: $blog-font-weight-medium;
+                letter-spacing: $blog-letter-spacing-base;
+                text-transform: uppercase;
+                border-radius: $blog-border-radius-light;
+                background: $blog-color-second;
+                color: $blog-gray-ultra-light;
+                padding: 1rem 1.5rem;
+                margin: 0 auto;
+                transition: all 0.2s ease-in-out;
+
+                &:hover,
+                &:focus{
+                    background: $blog-color-theme;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .sidebar-padder{
+        display: none;
+    }
+}
+
+
+
+
+@media(min-width:$screen-md) {
+    .sidebar{
+        max-width: $blog-sidebar-max-width;
+        height: 100%;
+        padding-top: 3.5rem;
+        margin: 0;
+        float: left;
+        position: fixed;
+
+        .sidebar-menu{
+            margin-bottom: 2.5rem;
+            margin-top: 1.5rem;
+            padding: 0;
+
+            .menu-item{
+                margin: 0 auto;
+
+                a{
+                    font-size: $blog-font-size-base;
+                    font-weight: 400;
+                    border-radius: $blog-border-radius-light;
+                    padding: 1rem 1.5rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .sidebar-padder{
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            margin-bottom: 35px;
+
+            .widget{
+                list-style: none;
+                margin-top: 3.6rem;
+
+                &:first-child{
+                    margin-top: 0;
+                }
+
+                h2{
+                    font-family: $blog-font-family-custom-2;
+                    font-size: $blog-font-size-base;
+                    line-height: $blog-line-height-base;
+                    font-style: italic;
+                    color: $blog-gray-medium;
+                    font-weight: $blog-font-weight-medium;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin: 0;
+                    padding-bottom: 1.4rem;
+                    border-bottom: 2px solid $blog-text-color-theme;
+                }
+
+                ul{
+                    list-style: none;
+                    line-height: 150%;
+                    margin: 0;
+                    padding: 2rem;
+                    text-align: left;
+
+                    li{
+                        position: relative;
+                        padding-left: 21px;
+                        font-family: $blog-font-family-custom-2;
+                        font-size: $blog-font-size-large;
+                        line-height: 133%;
+                        color: $blog-text-color-theme;
+                        margin-top: 0;
+                        margin-bottom: 1.5rem;
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+
+                        &::before{
+                            content: "»";
+                            position: absolute;
+                            display: block;
+                            color: #999;
+                            padding-left: .4em;
+                            left: 0;
+                            top: 0;
+
+                        }
+
+                        a{
+                            font-family: $blog-font-family-custom-2;
+                            font-size: $blog-font-size-large;
+                            text-decoration: none;
+                            color: $blog-text-color-theme;
+                            padding-left: .4rem;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            cursor: url(../images/curseurBFB.png), auto;
+
+                            &:hover{
+                                text-decoration: none;
+                                color: $blog-color-theme;
+                                cursor: url(../images/curseurBFB.png), auto;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.container-blog,
+.container-archive{
+    .archive-nav{
+        background: $blog-gray-lighter;
+        margin-top: $blog-navigation-margin-top-xs;
+        margin-left: 5px;
+
+        a{
+            display: block;
+            background: $blog-gray-lighter;
+            font-family: $blog-font-family-default;
+            color: $blog-text-color-theme;
+            font-size: $blog-font-size-h6;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: $blog-font-weight-medium;
+            letter-spacing: $blog-letter-spacing-base;
+            width: $blog-navigation-link-width;
+            padding: $blog-navigation-link-padding-xs;
+            transition: all $blog-transition-duration $blog-transition-delay;
+
+            &.nav-next{ float: left; }
+            &.nav-previous{ float: right; }
+
+            &:hover{
+                background: $blog-color-theme;
+                color: $blog-gray-ultra-light;
+                text-decoration: none;
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-small-tablet) {
+    .container-blog,
+    .container-archive{
+        .archive-nav{
+            margin-top: $blog-navigation-margin-top-640;
+
+            a{
+                padding: $blog-navigation-link-padding-640;
+                font-size: $blog-font-size-h6-5;
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-sm) {
+    .container-blog,
+    .container-archive{
+        .archive-nav{
+            a{
+                font-size: $blog-font-size-h6-5;
+                padding: $blog-navigation-link-padding-sm;
+            }
+        }
+    }
+}
+
+
+
+@media(min-width:$screen-md) {
+    .container-blog,
+    .container-archive{
+        .archive-nav{
+            margin-top: $blog-navigation-margin-top-640;
+
+            a{
+                font-size: $blog-font-size-large;
+                padding: $blog-navigation-link-padding-md;
+            }
+        }
+    }
+}
+
+
+
+@media(min-width:$screen-lg) {
+    .container-blog,
+    .container-archive{
+        .archive-nav{
+            margin-top: $blog-navigation-margin-top-640;
+
+            a{
+                font-size: $blog-font-size-large;
+                padding: $blog-navigation-link-padding-md;
+            }
+        }
+    }
+}

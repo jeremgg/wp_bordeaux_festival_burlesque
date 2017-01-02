@@ -112,9 +112,10 @@
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
             z-index: 10000;
+            overflow: hidden;
 
             img{
-                width: 68%;
+                width: 100%;
                 height: auto;
                 margin: 0 auto;
                 margin-top: -8px;
@@ -271,7 +272,6 @@
                 top: 108%;
 
                 img{
-                    width: 65%;
                     height: auto;
                     margin-top: -5px;
                     padding-left: $margin-semi-micro;
@@ -376,7 +376,6 @@
                 z-index: 0;
 
                 img{
-                    width: 63%;
                     margin-top: 0;
                 }
             }

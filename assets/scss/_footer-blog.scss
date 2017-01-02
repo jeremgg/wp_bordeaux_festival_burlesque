@@ -1,0 +1,72 @@
+/**************************************
+          FOOTER BLOG
+**************************************/
+.container-blog,
+.container-single,
+.container-archive{
+    width: $blog-container-size-xs;
+
+    .credits{
+        font-family: $blog-font-family-custom-2;
+        font-size: $blog-font-size-base;
+        color: $blog-gray-light;
+        padding: 1.5rem 0;
+        border-top: none;
+
+        .credits-inner{
+            margin: 0 auto;
+            width: $blog-section-inner-xs;
+
+            p{
+                font-family: $blog-font-family-custom-2;
+                color: $blog-gray-light;
+                font-style: normal;
+                font-weight: normal;
+                font-size: $blog-font-size-h6;
+                text-transform: uppercase;
+                margin: 0;
+
+                &.fleft{ float: left; }
+                &.fright{ float: right; }
+
+                a{
+                    color: $blog-gray-light;
+
+                    &:hover{
+                        color: $blog-color-theme;
+                        text-decoration: none;
+                    }
+
+                    &:focus{
+                        color: $blog-gray-light;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-sm) {
+    .container-blog,
+    .container-single,
+    .container-archive{
+        .credits{
+            .credits-inner{
+                margin: 0 auto;
+                width: $blog-section-inner-640;
+            }
+        }
+    }
+}
+
+
+@media(min-width:$screen-md) {
+    .container-blog,
+    .container-single,
+    .container-archive{
+        margin-left: $blog-container-margin-left-md;
+        width: $blog-container-size-md;
+    }
+}

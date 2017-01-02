@@ -9,13 +9,18 @@
 
 get_header(); ?>
 
+<?php get_sidebar(); ?>
+
+
 	<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
-	<div class="content-padder">
+	<div class="container-archive">
+			<div class="col-lg-12 posts">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header>
-				<h1 class="page-title">
+			<header class="page-title section light-padding">
+				<div class="section-inner">
+						<h1 class="title-page">
 					<?php
 						if ( is_category() ) :
 							single_cat_title();
@@ -28,7 +33,7 @@ get_header(); ?>
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author: %s', '_tk' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'bfb' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
@@ -36,35 +41,36 @@ get_header(); ?>
 							rewind_posts();
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', '_tk' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'bfb' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', '_tk' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( 'Month: %s', 'bfb' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', '_tk' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( 'Year: %s', 'bfb' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', '_tk' );
+							_e( 'Asides', 'bfb' );
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', '_tk');
+							_e( 'Images', 'bfb');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', '_tk' );
+							_e( 'Videos', 'bfb' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', '_tk' );
+							_e( 'Quotes', 'bfb' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', '_tk' );
+							_e( 'Links', 'bfb' );
 
 						else :
-							_e( 'Archives', '_tk' );
+							_e( 'Archives', 'bfb' );
 
 						endif;
 					?>
 				</h1>
+				</div>
 				<?php
 					// Show an optional term description.
 					$term_description = term_description();
@@ -82,12 +88,39 @@ get_header(); ?>
 					 * If you want to overload this in a child theme then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'content', get_post_format() );
+					//get_template_part( 'content', get_post_format() );
 				?>
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-12'); ?>>
+						<div class="post-image">
+								<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive']); ?>
+						</div>
+
+						<div class="post-header section medium-padding">
+								<a href="<?php the_permalink(); ?>">
+										<h1 class="post-title"><?php the_title(); ?></h1>
+
+										<div class="entry-meta">
+												<span class="posted-on"><?php the_date(); ?></span>
+												<?php if ( comments_open() ) : echo '<span class="nb-comments">/</span> '; ?>
+														<?php  if ( is_single() ) : comments_popup_link( '0 commentaire', '1 commentaire', '% commentaires', 'post-comments' ); ?>
+														<?php else : comments_number( '0 commentaire', '1 commentaire', '% commentaires' ); ?>
+														<?php endif; ?>
+											<?php endif; ?>
+
+										</div><!-- .entry-meta -->
+
+										<div class="entry-summary">
+											<?php the_excerpt(); ?>
+										</div><!-- .entry-summary -->
+
+								</a>
+						</div><!-- .post-header section medium-padding -->
+				</article><!-- #post-## -->
 
 			<?php endwhile; ?>
 
-			<?php _tk_content_nav( 'nav-below' ); ?>
+			<?php _tk_content_nav( 'archive-nav' ); ?>
 
 		<?php else : ?>
 
@@ -95,7 +128,22 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-	</div><!-- .content-padder -->
+		</div><!-- .posts -->
 
-<?php get_sidebar(); ?>
+		<div class="credits section">
+				<div class="credits-inner section-inner">
+						<p class="fleft">
+								&copy; <?php echo date("Y") ?> <a href="<?php echo home_url(); ?>" title="<?php esc_attr( bloginfo('name') ); ?>"><?php bloginfo('name'); ?></a>
+						</p>
+
+						<p class="fright">
+								<a title="<?php _e('To the top', 'radcliffe'); ?>" href="#" class="tothetop"><?php _e('Up', 'radcliffe' ); ?> &uarr;</a>
+						</p>
+
+						<div class="clear"></div>
+				</div> <!-- /credits-inner -->
+		</div> <!-- /credits -->
+
+</div><!-- .container -->
+
 <?php get_footer(); ?>

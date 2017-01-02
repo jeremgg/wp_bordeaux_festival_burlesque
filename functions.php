@@ -54,6 +54,7 @@ if ( ! function_exists( 'bfb_custom' ) ) :
 						'topbar' => __('menu de navigation', 'bfb'),
 						'bottom' => __('menu du bas de page', 'bfb'),
 						'social' => __('réseaux sociaux du menu de navigation', 'bfb'),
+						'formulaire' => __('formulaire', 'bfb'),
 						/*'social-nav' => __('réseaux sociaux du menu de navigation', 'bfb'),*/
 						'social-bottom' => __('réseaux sociaux du footer', 'bfb')
 				));
@@ -185,6 +186,14 @@ function bfb_custom_scripts() {
 				true
 	  );
 
+		// load bootstrap js
+		wp_enqueue_script(
+				'bfb_pluie-script',
+			 	get_template_directory_uri() . '/assets/js/pluie.js',
+				array(),
+				true
+	  );
+
 		// load main js
 		wp_enqueue_script(
 				'bfb_main-script',
@@ -196,7 +205,7 @@ function bfb_custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'bfb_custom_scripts' );
 
 function new_excerpt_length($length) {
-return 21;
+return 30;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
@@ -620,4 +629,82 @@ function jss_taxonomy_name(){
 					echo ' '.$termphoto->name;
 				}
 }
+
+
+
+//********************
+//********************
+
+// Radcliffe comment function
+if ( ! function_exists( 'radcliffe_comment' ) ) :
+function radcliffe_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) :
+		case 'pingback' :
+		case 'trackback' :
+	?>
+
+	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+
+		<?php __( 'Pingback:', 'radcliffe' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'radcliffe' ), '<span class="edit-link">', '</span>' ); ?>
+
+	</li>
+	<?php
+			break;
+		default :
+		global $post;
+	?>
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+
+		<div id="comment-<?php comment_ID(); ?>" class="comment">
+
+			<?php echo get_avatar( $comment, 150 ); ?>
+
+			<?php
+				static $comment_number; $comment_number ++;
+				$comment_number = str_pad($comment_number, 2, '0', STR_PAD_LEFT);
+			?>
+
+			<?php if ( $comment->user_id === $post->post_author ) { echo '<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '" title="' . __('Comment by post author','radcliffe') . '" class="by-post-author"> ' . __( '(Post author)', 'radcliffe' ) . '</a>'; } ?>
+
+			<div class="comment-inner">
+
+				<div class="comment-header">
+
+					<cite><?php echo get_comment_author_link(); ?></cite>
+
+					<span><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php echo get_comment_date() . ' &mdash; ' . get_comment_time() ?></a></span>
+
+				</div>
+
+				<div class="comment-content">
+
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+
+						<p class="comment-awaiting-moderation"><?php __( 'Your comment is awaiting moderation.', 'radcliffe' ); ?></p>
+
+					<?php endif; ?>
+
+					<?php comment_text(); ?>
+
+				</div><!-- /comment-content -->
+
+				<div class="comment-actions">
+
+					<?php edit_comment_link( __( 'Edit', 'radcliffe' ), '', '' ); ?>
+
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'radcliffe' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+
+				</div> <!-- /comment-actions -->
+
+			</div> <!-- /comment-inner -->
+
+		</div><!-- /comment-## -->
+
+	<?php
+		break;
+	endswitch;
+}
+endif;
+
 ?>

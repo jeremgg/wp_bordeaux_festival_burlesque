@@ -1,4 +1,4 @@
-var colour=macouleur;
+var colour="#d8a038";
 var sparkles=50;
 var x=ox=400;
 var y=oy=300;
