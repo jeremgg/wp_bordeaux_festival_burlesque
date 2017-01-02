@@ -17,10 +17,43 @@
 @import "404";
 @import "search";
 
+
+@import "variables-blog";
+@import "sidebar";
+@import "single";
+@import "single-meta";
+@import "single-form";
+@import "single-comments";
+@import "archives";
+@import "nav-blog";
+@import "footer-blog";
+
 @import "footer";
 @import "mentions";
 
+//
+// #wpadminbar{
+//     display: none;
+// }
 
-#wpadminbar{
-    display: none;
+body{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c2d42+0,0c0c1b+80 */
+    background: $theme-color-third; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  $theme-color-third 0%, $theme-color-second 80%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  $theme-color-third 0%,$theme-color-second 80%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  $theme-color-third 0%,$theme-color-second 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$theme-color-third', endColorstr='$theme-color-second',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    	background-size: auto;
+    	background-repeat: no-repeat;
+    	background-attachment: fixed;
+
+      cursor: url(../images/curseurBFB.png), auto;
+}
+
+a{
+    cursor: url(../images/curseurBFB.png), auto;
 }

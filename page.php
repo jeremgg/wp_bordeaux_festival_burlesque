@@ -13,6 +13,8 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'content', 'nav' ); ?>
+
 <?php if (is_page( 'mapage' )) : ?>
 
 		<section id="programming" class="programming-section">

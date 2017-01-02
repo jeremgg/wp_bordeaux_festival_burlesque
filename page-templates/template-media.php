@@ -6,6 +6,8 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'content', 'nav' ); ?>
+
 <!-- INFOS PRATIQUES SECTION -->
 <section id="media" class="media-section">
     <div class="container">
@@ -24,7 +26,7 @@ get_header(); ?>
                       		<?php the_content(); ?>
                       		<?php
                       			wp_link_pages( array(
-                      				'before' => '<div class="page-links">' . __( 'Pages:', '_tk' ),
+                      				'before' => '<div class="page-links">' . __( 'Pages:', 'bfb' ),
                       				'after'  => '</div>',
                       			) );
                       		?>
@@ -37,6 +39,6 @@ get_header(); ?>
     </div><!-- /.container -->
 </section><!-- /.infos-section -->
 
-
+<?php get_template_part( 'content', 'footer' ); ?>
 
 <?php get_footer(); ?>

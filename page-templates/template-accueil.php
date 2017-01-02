@@ -6,6 +6,8 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'content', 'nav' ); ?>
+
 <!-- INTRO SECTION -->
 		<section id="intro" class="intro-section">
 				<div class="container">
@@ -97,5 +99,7 @@ get_header(); ?>
 
 				</div><!-- /.container -->
 		</section><!-- /.home-section -->
+
+		<?php get_template_part( 'content', 'footer' ); ?>
 
 <?php get_footer(); ?>

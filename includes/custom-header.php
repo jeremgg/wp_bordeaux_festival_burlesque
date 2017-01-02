@@ -25,7 +25,7 @@
  *
  * @package _tk
  */
-function _tk_custom_header_setup() {
+function bfb_custom_header_setup() {
 	if ( function_exists( 'add_theme_support' ) ) {
 		add_theme_support( 'custom-header', apply_filters( '_tk_custom_header_args', array(
 			'default-image'          => '',
@@ -39,7 +39,7 @@ function _tk_custom_header_setup() {
 		) ) );
 	}
 }
-add_action( 'after_setup_theme', '_tk_custom_header_setup' );
+add_action( 'after_setup_theme', 'bfb_custom_header_setup' );
 
 if ( ! function_exists( '_tk_header_style' ) ) :
 /**

@@ -27,35 +27,45 @@ function _tk_content_nav( $nav_id ) {
 	if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
 		return;
 
-	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
+	$nav_class = ( is_single() ) ? 'post-navigation' : 'archive-nav';
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', '_tk' ); ?></h1>
-		<ul class="pager">
 
 		<?php if ( is_single() ) : // navigation links for single posts ?>
 
-			<?php previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', '_tk' ) . '</span> %title' ); ?>
-			<?php next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', '_tk' ) . '</span>' ); ?>
+			<?php previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'bfb' ) . '</span> %title' ); ?>
+			<?php next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'bfb' ) . '</span>' ); ?>
 
 		<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', '_tk' ) ); ?></li>
+			<?php next_posts_link( __( '« Older posts', 'bfb' ) ); ?></a>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', '_tk' ) ); ?></li>
+			<?php previous_posts_link( __( 'Newer posts »', 'bfb' ) ); ?></a>
 			<?php endif; ?>
+			<div class="clear"></div>
 
 		<?php endif; ?>
 
-		</ul>
 	</nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
 	<?php
 }
 endif; // _tk_content_nav
+
+add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'previous_posts_link_attributes');
+
+function next_posts_link_attributes() {
+    return 'class="nav-next"';
+}
+
+function previous_posts_link_attributes() {
+    return 'class="nav-previous"';
+}
+
 
 if ( ! function_exists( '_tk_comment' ) ) :
 /**
@@ -196,7 +206,7 @@ function _tk_posted_on() {
 		$time_string
 	);
 
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ){
+	/*if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ){
 		$time_string_update = '<time class="updated" datetime="%1$s">%2$s</time>';
 		$time_string_update = sprintf( $time_string_update,
 			esc_attr( get_the_modified_date( 'c' ) ),
@@ -208,9 +218,9 @@ function _tk_posted_on() {
 			$time_string_update
 		);
 		$time_string .= __(', updated on ', '_tk') . $time_string_update;
-	}
+	}*/
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', '_tk' ),
+	printf( __( '<span class="posted-on">%1$s /</span><span class="byline"> %2$s</span>', '_tk' ),
 		$time_string,
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),

@@ -11,30 +11,71 @@
  * @package _tk
  */
 
-get_header(); ?>
+ get_header(); ?>
 
-	<?php if ( have_posts() ) : ?>
+ <?php get_sidebar(); ?>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
+ <div class="container-blog">
+     <div class="col-lg-12 posts">
 
-			<?php
-				/* Include the Post-Format-specific template for the content.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-			?>
+         <?php if (have_posts()) : ?>
 
-		<?php endwhile; ?>
+             <?php /* Start the Loop */ ?>
+             <?php while (have_posts()) : the_post(); ?>
 
-		<?php _tk_content_nav( 'nav-below' ); ?>
+                 <article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-12'); ?>>
+                   	<div class="post-image">
+                   			<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive']); ?>
+                   	</div>
 
-	<?php else : ?>
+                   	<div class="post-header section medium-padding">
+                   			<a href="<?php the_permalink(); ?>">
+                   					<h1 class="post-title"><?php the_title(); ?></h1>
 
-		<?php get_template_part( 'no-results', 'index' ); ?>
+                   					<div class="entry-meta">
+                   							<span class="posted-on"><?php the_date(); ?></span>
+                   							<?php if ( comments_open() ) : echo '<span class="nb-comments">/</span> '; ?>
+                                     <?php  if ( is_single() ) : comments_popup_link( '0 commentaire', '1 commentaire', '% commentaires', 'post-comments' ); ?>
+                                     <?php else : comments_number( '0 commentaire', '1 commentaire', '% commentaires' ); ?>
+                                     <?php endif; ?>
+                               <?php endif; ?>
 
-	<?php endif; ?>
+                   					</div><!-- .entry-meta -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+                   					<div class="entry-summary">
+                   						<?php the_excerpt(); ?>
+                   					</div><!-- .entry-summary -->
+
+                   			</a>
+                   	</div><!-- .post-header section medium-padding -->
+                 </article><!-- #post-## -->
+
+             <?php endwhile; ?>
+
+             <?php _tk_content_nav( 'nav-below' ); ?>
+
+         <?php else : ?>
+
+           <?php get_template_part( 'no-results', 'archive' ); ?>
+         <?php endif; ?>
+
+     </div><!-- .posts -->
+
+     <div class="credits section">
+         <div class="credits-inner section-inner">
+             <p class="fleft">
+                 &copy; <?php echo date("Y") ?> <a href="<?php echo home_url(); ?>" title="<?php esc_attr( bloginfo('name') ); ?>"><?php bloginfo('name'); ?></a>
+             </p>
+
+             <p class="fright">
+                 <a title="<?php _e('To the top', 'bfb'); ?>" href="#" class="tothetop"><?php _e('Up', 'bfb' ); ?> &uarr;</a>
+             </p>
+
+             <div class="clear"></div>
+         </div> <!-- /credits-inner -->
+     </div> <!-- /credits -->
+
+ </div><!-- .container -->
+
+
+ <?php get_footer(); ?>

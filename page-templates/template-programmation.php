@@ -7,6 +7,8 @@
 
 <?php get_header(); ?>
 
+<?php get_template_part( 'content', 'nav' ); ?>
+
 <!-- PROGRAMMATION SECTION -->
 <section id="programming" class="programming-section">
 		<div class="container">
@@ -66,5 +68,7 @@
 				</div>
 		</div>
 </section><!--/.intro-section  -->
+
+<?php get_template_part( 'content', 'footer' ); ?>
 
 <?php get_footer(); ?>
