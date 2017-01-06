@@ -106,6 +106,10 @@
            text-align: center;
            img{ display: inline-block; }
 
+           &.col-md-pull-1{
+               right: 4.33333%;
+           }
+
            a{
                font-family: $font-family-custom-1;
            }

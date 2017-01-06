@@ -23,7 +23,14 @@ get_header(); ?>
                     	</header><!-- .entry-header -->
 
                     	<div class="entry-content">
-                      		<?php the_content(); ?>
+                      		<?php
+                              $content = get_the_content();
+                              if(empty($content)) : ?>
+                                  <h2>COMING SOON</h2>
+                              <?php else :
+                                  the_content();
+                              endif;
+                          ?>
                       		<?php
                       			wp_link_pages( array(
                       				'before' => '<div class="page-links">' . __( 'Pages:', 'bfb' ),

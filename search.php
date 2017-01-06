@@ -1,14 +1,12 @@
 <?php
 /**
  * The template for displaying Search Results pages.
- *
- * @package _tk
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
 
-	<?php if ( have_posts() ) : ?>
-
+<?php if ( have_posts() ) : ?>
 		<section id="intro" class="intro-section results-found">
 				<div class="container">
 						<div class="row">
@@ -24,15 +22,11 @@ get_header(); ?>
 				</div>
 		</section>
 
-
-
 		<?php _tk_content_nav( 'nav-below' ); ?>
 
-	<?php else : ?>
-
+<?php else : ?>
 		<?php get_template_part( 'no-results', 'search' ); ?>
 
-	<?php endif; // end of loop. ?>
-
+<?php endif; // end of loop. ?>
 
 <?php get_footer(); ?>

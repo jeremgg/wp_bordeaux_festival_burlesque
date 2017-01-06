@@ -26,7 +26,7 @@
 				<div class="clear"></div>
 
 				<ol class="commentlist">
-				    <?php wp_list_comments( array( 'type' => 'comment', 'callback' => 'radcliffe_comment' ) ); ?>
+				    <?php wp_list_comments( array( 'type' => 'comment', 'callback' => 'bfb_comment' ) ); ?>
 				</ol>
 
 				<?php if (!empty($comments_by_type['pings'])) : ?>
@@ -43,7 +43,7 @@
 							</h3>
 
 							<ol class="pingbacklist">
-							    <?php wp_list_comments( array( 'type' => 'pings', 'callback' => 'radcliffe_comment' ) ); ?>
+							    <?php wp_list_comments( array( 'type' => 'pings', 'callback' => 'bfb_comment' ) ); ?>
 							</ol>
 
 						</div>

@@ -1,0 +1,162 @@
+.container-page{
+    article{
+        &.col-lg-8{
+            padding-bottom: 10rem;
+            margin-bottom: 0;
+
+            .entry-content{
+                header{
+                    .post-header{
+                        padding: 10rem 0;
+
+                        h1{
+                            font-size: 42px;
+                        }
+                    }
+                }
+
+                .content-single-f{
+                    .post-content{
+                        background: $blog-gray-ultra-light;
+                        font-family: $blog-font-family-custom-2;
+                        margin: 0 auto;
+                        width: $blog-article-post-content-width;
+                        padding: 0;
+
+                        h1, h2, h3{
+                          margin-bottom: 2rem;
+                          margin-top: 3.5rem;
+                        }
+
+                        h4, h5, h6{
+                          margin: 0;
+                          margin-bottom: 1rem;
+                        }
+
+                        h1{
+                            font-family: $blog-font-family-custom-1;
+                            color: $blog-gray-medium;
+                            font-size: $blog-font-size-h2;
+                            letter-spacing: $blog-letter-spacing-base;
+                            font-weight: normal;
+                            font-style: normal;
+                            text-transform: none;
+                        }
+
+                        h2{
+                            margin-top: 6rem;
+                            margin-bottom: 3rem;
+                        }
+                        h3{
+                            display: block;
+                            font-family: $blog-font-family-custom-1;
+                            color: $blog-gray-medium;
+                            font-size: 20px;
+                            line-height: $blog-line-height-medium;
+                            text-transform: none;
+                            font-weight: normal;
+                            font-style: normal;
+                        }
+
+                        h4{
+                            margin-top: 6rem;
+                            margin-bottom: 3rem;
+                        }
+
+                        h5{
+                           font-family: $blog-font-family-custom-1;
+                           color: $blog-gray-medium;
+                           font-size: $blog-font-size-h6-5;
+                           text-transform: none;
+                           line-height: $blog-line-height-medium;
+                           letter-spacing: $blog-letter-spacing-base;
+                           font-weight: normal;
+                           font-style: normal;
+                           line-height: $blog-line-height-base;
+                        }
+
+
+                        h6{
+                            font-family: $blog-font-family-custom-1;
+                            color: $blog-gray-medium;
+                            font-size: 13px;
+                            text-transform: none;
+                            line-height: $blog-line-height-medium;
+                            letter-spacing: $blog-letter-spacing-base;
+                            font-weight: normal;
+                            font-style: normal;
+                        }
+
+                        p{
+                            font-size: 18px;
+                            font-weight: lighter;
+                            margin-bottom: 2rem;
+                        }
+
+                        ul{
+                            display: block;
+                            font-family: $blog-font-family-custom-2;
+                            color: $blog-gray-medium;
+                            font-size: $blog-font-size-medium;
+                            line-height: $blog-line-height-large;
+                            font-weight: normal;
+                            font-style: normal;
+                            margin: 0;
+                            margin: 0 0 2rem 2.5rem;
+                            padding-left: 0;
+                            list-style: circle;
+                            font-weight: lighter;
+
+                            li{
+                                font-family: $blog-font-family-custom-2;
+                                color: $blog-gray-medium;
+                                font-size: 18px;
+                                line-height: $blog-line-height-large;
+                                font-weight: normal;
+                                font-style: normal;
+                                margin: 0;
+                                margin-bottom: 1rem;
+                                list-style: disc;
+                                font-weight: lighter;
+
+                                a{
+                                    color: $blog-color-theme;
+                                }
+                            }
+                        }
+
+                        .wp-caption{
+                            max-width: 100%;
+                            margin-left: auto;
+                            margin-right: auto;
+
+                            img{
+                                display: block;
+                                max-width: 100%;
+                                height: auto;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+
+                            p{
+                                font-family: $blog-font-family-custom-2;
+                                color: $blog-gray-light;
+                                font-size: $blog-font-size-base;
+                                font-style: normal;
+                                line-height: $blog-line-height-large;
+                                text-align: center;
+                                font-weight: 500;
+                                 padding-top: 1.5rem;
+                                 margin-bottom: 2rem;
+
+                                a{
+                                    color: $blog-color-theme;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

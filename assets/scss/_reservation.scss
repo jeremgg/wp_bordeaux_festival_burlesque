@@ -34,6 +34,48 @@
 }
 
 
+@media(max-width:767px) {
+  .booking-section{
+      .booking{
+          margin: $booking-margin;
+
+          img{ margin: 0 auto; }
+
+          /*&:last-child{
+              margin-top: 0;
+              margin-bottom: 0;
+          }*/
+
+          > .col-xs-6{
+              .col-lg-4{
+                   display: block;
+                   border: none;
+                   margin: 0 auto;
+                   padding-bottom: 0;
+                   width: 75%;
+                   max-width: 100px;
+                   max-height: 20px;
+                   text-align: center;
+
+                   &.links{
+                       padding: 0;
+                       text-align: center;
+                       margin-top: 1.5rem;
+
+                       a{
+                          margin: 0 auto;
+                          display: inline-block;
+
+                          img{ margin: 0; }
+                      }
+                   }
+               }
+            }
+        }
+    }
+}
+
+
 @media(max-width:$screen-lg) {
     #about{
         .container{

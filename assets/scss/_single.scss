@@ -8,7 +8,8 @@ html{
 
 
 
-.container-single{
+.container-single,
+.container-page{
      width: $blog-container-size-xs;
 
      article{
@@ -92,15 +93,15 @@ html{
                              margin-top: 0;
                          }
 
-                         h1, h2, h3{
-                           margin-bottom: 2rem;
-                           margin-top: 3.5rem;
-                         }
-
-                         h4, h5, h6{
-                           margin: 0;
-                           margin-bottom: 1rem;
-                         }
+                        //  h1, h2, h3{
+                        //    margin-bottom: 2rem;
+                        //    margin-top: 3.5rem;
+                        //  }
+                         //
+                        //  h4, h5, h6{
+                        //    margin: 0;
+                        //    margin-bottom: 1rem;
+                        //  }
 
                          h1{
                              font-family: $blog-font-family-custom-1;
@@ -110,6 +111,8 @@ html{
                              font-weight: normal;
                              font-style: normal;
                              text-transform: none;
+                             margin-top: 6rem;
+                             margin-bottom: 3rem;
                          }
 
                          h2{
@@ -120,6 +123,8 @@ html{
                              font-weight: normal;
                              font-style: normal;
                              text-transform: none;
+                             margin-top: 6rem;
+                             margin-bottom: 3rem;
                          }
 
                          h3{
@@ -131,6 +136,8 @@ html{
                              text-transform: none;
                              font-weight: normal;
                              font-style: normal;
+                             margin-top: 6rem;
+                             margin-bottom: 3rem;
                          }
 
                          h4{
@@ -142,6 +149,7 @@ html{
                              letter-spacing: $blog-letter-spacing-base;
                              font-weight: normal;
                              font-style: normal;
+                             margin-bottom: 1rem;
                          }
 
                          h5{
@@ -154,6 +162,7 @@ html{
                             font-weight: normal;
                             font-style: normal;
                             line-height: $blog-line-height-base;
+                            margin-bottom: 1rem;
                          }
 
 
@@ -166,6 +175,7 @@ html{
                              letter-spacing: $blog-letter-spacing-base;
                              font-weight: normal;
                              font-style: normal;
+                             margin-bottom: 1rem;
                          }
 
                          p{
@@ -177,10 +187,16 @@ html{
                              font-weight: normal;
                              font-style: normal;
                              margin: 0;
+                             margin-bottom: 2.5rem;
 
                              a{
                                  color: $blog-color-theme;
                              }
+                         }
+
+                         iframe{
+                             width: 100%;
+                             margin-bottom: 1rem;
                          }
 
                          .wp-caption{
@@ -204,13 +220,19 @@ html{
                                  line-height: $blog-line-height-large;
                                  text-align: center;
                                  font-weight: 500;
-                                  padding-top: 1.5rem;
-                                  margin-bottom: 2rem;
+                                 padding-top: 1.5rem;
+                                 margin-bottom: 2rem;
 
                                  a{
                                      color: $blog-color-theme;
                                  }
                              }
+                         }
+
+                         h1+h1, h1+h2, h1+h3, h1+h4, h1+h5, h1+h6, h2+h1, h2+h2, h2+h3, h2+h4, h2+h5, h2+h6,
+                         h3+h1, h3+h2, h3+h3, h3+h4, h3+h5, h3+h6, h4+h1, h4+h2, h4+h3, h4+h4, h4+h5, h4+h6,
+                         h5+h1, h5+h2, h5+h3, h5+h4, h5+h5, h5+h6, h6+h1, h6+h2, h6+h3, h6+h4, h6+h5, h6+h6{
+                             margin-top: 2.5rem;
                          }
                      }
                  }
@@ -221,7 +243,8 @@ html{
 
 
 @media(min-width:480px) {
-    .container-single{
+    .container-single,
+    .container-page{
          article{
              &.col-lg-8{
                  .entry-content{
@@ -243,7 +266,8 @@ html{
 
 
 @media(min-width:600px) {
-    .container-single{
+    .container-single,
+    .container-page{
          article{
              &.col-lg-8{
                  .entry-content{
@@ -287,7 +311,8 @@ html{
 
 
  @media(min-width:$screen-sm) {
-     .container-single{
+     .container-single,
+     .container-page{
          article{
              &.col-lg-8{
                  margin-bottom: $blog-single-article-margin-sm;
@@ -315,8 +340,8 @@ html{
                              padding-top: 4.8rem;
 
                              h1, h2, h3{
-                                 margin-bottom: 2rem;
-                                 margin-top: 3.5rem;
+                                //  margin-bottom: 2rem;
+                                //  margin-top: 3.5rem;
                              }
 
 
@@ -330,7 +355,8 @@ html{
 
 
  @media(min-width:$screen-md) {
-     .container-single{
+     .container-single,
+     .container-page{
          margin-left: $blog-container-margin-left-md;
          width: $blog-container-size-md;
 
@@ -363,7 +389,8 @@ html{
 
 
  @media(min-width:$screen-lg) {
-     .container-single{
+     .container-single,
+     .container-page{
          article{
              &.col-lg-8{
                  .entry-content{
@@ -388,8 +415,8 @@ html{
                              padding-top: 4.8rem;
 
                              h1, h2, h3{
-                                 margin-bottom: 3rem;
-                                 margin-top: 6rem;
+                                //  margin-bottom: 3rem;
+                                //  margin-top: 6rem;
                              }
                          }
                      }
@@ -404,7 +431,8 @@ html{
 /**************************************
           ARTICLES GALLERY
 **************************************/
-.container-single{
+.container-single,
+.container-page{
      article{
          &.col-lg-8{
             background: $blog-gray-ultra-light;
@@ -433,7 +461,7 @@ html{
                      .content-single-f{
                          .post-content{
                              padding: 0 2.5rem;
-                             padding-top: 12rem;
+                             padding-top: 15rem;
                          }
                      }
                  }
@@ -445,7 +473,8 @@ html{
 
 
 @media(min-width:600px) {
-     .container-single{
+     .container-single,
+     .container-page{
          article{
              &.col-lg-8{
                &.format-gallery{
@@ -476,7 +505,8 @@ html{
 
 
  @media(min-width:$screen-sm) {
-     .container-single{
+     .container-single,
+     .container-page{
          article{
              &.col-lg-8{
                  margin-bottom: $blog-single-article-margin-sm;
@@ -508,7 +538,8 @@ html{
 
 
  @media(min-width:$screen-md) {
-     .container-single{
+     .container-single,
+     .container-page{
          margin-left: $blog-container-margin-left-md;
          width: $blog-container-size-md;
 
@@ -541,7 +572,8 @@ html{
 
 
  @media(min-width:$screen-lg) {
-     .container-single{
+     .container-single,
+     .container-page{
          article{
              &.col-lg-8{
                  &.format-gallery{

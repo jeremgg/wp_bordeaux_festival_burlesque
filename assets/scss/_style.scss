@@ -26,19 +26,22 @@
 @import "single-comments";
 @import "archives";
 @import "nav-blog";
+@import "single-page";
+
 @import "footer-blog";
 
 @import "footer";
 @import "mentions";
 
-//
-// #wpadminbar{
-//     display: none;
-// }
+
+#wpadminbar{
+    display: none;
+}
 
 body{
     width: 100%;
     max-width: 1280px;
+    height: auto;
     margin: 0 auto;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c2d42+0,0c0c1b+80 */
@@ -56,4 +59,12 @@ body{
 
 a{
     cursor: url(../images/curseurBFB.png), auto;
+
+    &:hover{
+        cursor: url(../images/curseurBFB-hover.png), auto;
+    }
+}
+
+#fancybox-overlay{
+    background-color: rgba(0, 0, 0, .7) !important;
 }

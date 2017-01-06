@@ -29,18 +29,47 @@ get_header(); ?>
 								<!-- BLOC ADRESSE -->
 								<div class="row lieu">
 										<?php $adresse = new WP_Query(array(
-												'post_type' => 'lieux'
+												'post_type' => 'lieux',
+												'showposts' => 3,
 										));  ?>
 
+
+                    <?php $count = wp_count_posts('lieux')->publish; ?>
+
 										<?php while ($adresse->have_posts()) : $adresse->the_post(); ?>
-												<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-														<h2><?php the_title(); ?></h2>
-														<p>
-																<?php the_field('adresse'); ?><br>
-																<a href="<?php the_field('site_web'); ?>" target="_blank"><?php the_field('site_web'); ?></a><br>
-																<?php the_field('telephone'); ?>
-														</p>
-												</div><!-- /.col-lg-4 -->
+								            <?php if($count == 1){  ?>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+																    <h2><?php the_title(); ?></h2>
+																    <p>
+																        <?php the_field('adresse'); ?><br>
+																        <a href="<?php the_field('site_web'); ?>" target="_blank"><?php the_field('site_web'); ?></a><br>
+																        <?php the_field('telephone'); ?>
+																    </p>
+																</div><!-- /.col-lg-4 -->
+                            <?php } ?>
+
+                            <?php if($count == 2){  ?>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+																    <h2><?php the_title(); ?></h2>
+																    <p>
+																        <?php the_field('adresse'); ?><br>
+																        <a href="<?php the_field('site_web'); ?>" target="_blank"><?php the_field('site_web'); ?></a><br>
+																        <?php the_field('telephone'); ?>
+																    </p>
+																</div><!-- /.col-lg-4 -->
+                            <?php } ?>
+
+                            <?php if($count == 3){  ?>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+																    <h2><?php the_title(); ?></h2>
+																    <p>
+																        <?php the_field('adresse'); ?><br>
+																        <a href="<?php the_field('site_web'); ?>" target="_blank"><?php the_field('site_web'); ?></a><br>
+																        <?php the_field('telephone'); ?>
+																    </p>
+																</div><!-- /.col-lg-4 -->
+                            <?php } ?>
+
 										<?php endwhile; ?>
 								</div><!-- /.row lieu -->
 
@@ -48,7 +77,7 @@ get_header(); ?>
 
 							<div class="row pratique">
 									<?php $page = new WP_Query(array(
-											'post_type' => 'pages'
+											'post_type' => 'pages',
 									)); ?>
 
 									<?php $page->the_post(); ?>
@@ -56,6 +85,7 @@ get_header(); ?>
 
 									<?php $transports = new WP_Query(array(
 											'post_type' => 'transports',
+											'showposts' => 4,
 											'orderby'  => 'order', // ordre par date
 											//'order'  => 'desc', // ordre décendant
 									));  ?>

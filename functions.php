@@ -1,8 +1,6 @@
 <?php
 /**
- * _tk functions and definitions
- *
- * @package _tk
+ * functions and definitions
  */
 
 /**
@@ -13,7 +11,9 @@ if ( ! isset( $content_width ) )
 
 if ( ! function_exists( 'bfb_custom' ) ) :
 
-		// Register Theme Features
+		//----------------------------------------------
+		//	Register Theme Features
+		//----------------------------------------------
 		function bfb_custom() {
 
 				global $cap, $content_width;
@@ -28,8 +28,11 @@ if ( ! function_exists( 'bfb_custom' ) ) :
 				add_theme_support( 'automatic-feed-links' );
 
 				// Add theme support for Featured Images
-        add_theme_support( 'post-thumbnails' );
-
+				if ( function_exists( 'add_theme_support')){
+					add_theme_support( 'post-thumbnails' );
+				}
+				add_image_size( 'admin-list-thumb', 80, 80, true); //admin thumbnail preview
+				add_image_size( 'album-grid', 450, 450, true );
 
 				// Add theme support for Post Formats
         add_theme_support( 'post-formats', array( 'quote', 'gallery', 'image', 'video', 'link', 'aside' ) );
@@ -98,9 +101,10 @@ endif; // bfb_setup
 add_action( 'after_setup_theme', 'bfb_custom' );
 
 
-/**
- *  add the logo
- */
+
+//----------------------------------------------
+//	add the logo
+//----------------------------------------------
 
 function bfb_the_custom_logo() {
 		if ( function_exists( 'the_custom_logo' ) ) {
@@ -117,9 +121,19 @@ add_filter('get_custom_logo','bfb_change_logo_class');
 
 
 
-/**
- * Enqueue styles
- */
+//----------------------------------------------
+// 	Define the number of words in the summary
+//----------------------------------------------
+
+function new_excerpt_length($length) {
+return 30;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+
+//----------------------------------------------
+//	Enqueue styles
+//----------------------------------------------
 
 function bfb_custom_styles() {
 
@@ -155,20 +169,15 @@ add_action( 'wp_enqueue_scripts', 'bfb_custom_styles' );
 
 
 
-/**
- * Enqueue scripts
- */
+//----------------------------------------------
+//	Enqueue scripts
+//----------------------------------------------
 
 function bfb_custom_scripts() {
 		//load jquery
-		wp_enqueue_script('jquery');
-
-		wp_enqueue_script(
-				'bfb_jquery-script',
-				get_template_directory_uri() . '/assets/js/vendor/jquery-3.1.1.min.js',
-				array(),
-				true
-		);
+		wp_deregister_script( 'jquery' );
+		wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/vendor/jquery-3.1.1.min.js',  array(), false, true );
+		wp_enqueue_script( 'jquery' );
 
 		// load bootstrap js
 		wp_enqueue_script(
@@ -186,7 +195,30 @@ function bfb_custom_scripts() {
 				true
 	  );
 
-		// load bootstrap js
+		//register fancybox. change this to your local file.
+		wp_deregister_script( 'fancybox' );
+		wp_register_script( 'fancybox', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.pack.js",  array(), false, true );
+		wp_enqueue_script( 'fancybox' );
+
+		//register modernizr. change this to your local file.
+		wp_deregister_script( 'modernizr' );
+		wp_register_script( 'modernizr', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js",  array(), false, true );
+		wp_enqueue_script( 'modernizr' );
+
+		//register isotope. change this to your local file.
+		wp_deregister_script( 'isotope' );
+		wp_register_script( 'isotope', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js",  array(), false, true );
+		wp_enqueue_script( 'isotope' );
+
+		//general
+		wp_register_script( 'general', get_template_directory_uri() . '/includes/js/general.js',  array(), false, true );
+		wp_enqueue_script( 'general' );
+
+		//iso
+		wp_register_script( 'iso', get_template_directory_uri() . '/includes/js/isotope.pkgd.min.js',  array(), false, true );
+		wp_enqueue_script( 'iso' );
+
+		//load bootstrap js
 		wp_enqueue_script(
 				'bfb_pluie-script',
 			 	get_template_directory_uri() . '/assets/js/pluie.js',
@@ -204,14 +236,11 @@ function bfb_custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bfb_custom_scripts' );
 
-function new_excerpt_length($length) {
-return 30;
-}
-add_filter('excerpt_length', 'new_excerpt_length');
 
-/**
- * Enqueue fonts
- */
+
+//----------------------------------------------
+//	Enqueue fonts
+//----------------------------------------------
 
 function bfb_custom_fonts() {
 		//load google-fonts
@@ -262,38 +291,28 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 
 
 
-/** Load Custom portfolio WordPress */
-require_once( get_template_directory() . '/filtres.php' );
-
 
 /*************************************************
+                    PROGRAMMATION
 *************************************************/
 
-
 //----------------------------------------------
-//--------------add theme support for thumbnails
-//----------------------------------------------
-if ( function_exists( 'add_theme_support')){
-	add_theme_support( 'post-thumbnails' );
-}
-add_image_size( 'admin-list-thumb', 80, 80, true); //admin thumbnail preview
-add_image_size( 'album-grid', 450, 450, true );
-
-//----------------------------------------------
-//----------register and label gallery post type
+//  register post type
 //----------------------------------------------
 $gallery_labels = array(
 	'name' => _x('Gallery', 'post type general name'),
 	'singular_name' => _x('Gallery', 'post type singular name'),
-	'add_new' => _x('Add New', 'gallery'),
-	'add_new_item' => __("Add New Gallery"),
-	'edit_item' => __("Edit Gallery"),
+	'add_new' => _x('Ajouter', 'gallery'),
+	'add_new_item' => __("Ajouter un nouvel évènement"),
+	'edit_item' => __("Modifier l'évènement"),
 	'new_item' => __("New Gallery"),
-	'view_item' => __("View Gallery"),
-	'search_items' => __("Search Gallery"),
-	'not_found' =>  __('No galleries found'),
-	'not_found_in_trash' => __('No galleries found in Trash'),
+	'view_item' => __("Voir l'évènement"),
+	'all_items' => __( "Tous les évènements"),
+	'search_items' => __("Rechercher un évènement"),
+	'not_found' =>  __('Aucun résultats'),
+	'not_found_in_trash' => __('Aucuns résultats dans la corbeille'),
 	'parent_item_colon' => ''
+
 
 );
 $gallery_args = array(
@@ -312,8 +331,9 @@ $gallery_args = array(
 register_post_type('gallery', $gallery_args);
 
 
+
 //----------------------------------------------
-//------------------------create custom taxonomy
+//  create custom taxonomy
 //----------------------------------------------
 add_action( 'init', 'jss_create_gallery_taxonomies', 0);
 
@@ -322,15 +342,17 @@ function jss_create_gallery_taxonomies(){
 		'phototype', 'gallery',
 		array(
 			'hierarchical'=> true,
-			'label' => 'Photo Types',
-			'singular_label' => 'Photo Type',
+			'label' => 'Catégories',
+			'singular_label' => 'Catégorie',
 			'rewrite' => true
 		)
 	);
 }
 
+
+
 //----------------------------------------------
-//--------------------------admin custom columns
+//  admin custom columns
 //----------------------------------------------
 //admin_init
 add_action('manage_posts_custom_column', 'jss_custom_columns');
@@ -339,10 +361,10 @@ add_filter('manage_edit-gallery_columns', 'jss_add_new_gallery_columns');
 function jss_add_new_gallery_columns( $columns ){
 	$columns = array(
 		'cb'				=>		'<input type="checkbox">',
-		'jss_post_thumb'	=>		'Thumbnail',
-		'title'				=>		'Photo Title',
-		'phototype'			=>		'Photo Type',
-		'author'			=>		'Author',
+		'jss_post_thumb'	=>		'Miniature',
+		'title'				=>		'Titre',
+		'phototype'			=>		'Catégorie',
+		'author'			=>		'Auteur',
 		'date'				=>		'Date'
 
 	);
@@ -359,7 +381,11 @@ function jss_custom_columns( $column ){
 	}
 }
 
-//add thumbnail images to column
+
+
+//----------------------------------------------
+//  add thumbnail images to column
+//----------------------------------------------
 add_filter('manage_posts_columns', 'jss_add_post_thumbnail_column', 5);
 add_filter('manage_pages_columns', 'jss_add_post_thumbnail_column', 5);
 add_filter('manage_custom_post_columns', 'jss_add_post_thumbnail_column', 5);
@@ -381,46 +407,6 @@ function jss_display_post_thumbnail_column($col, $id){
   }
 }
 
-////////////////////////////////
-////////// NEW CODE BELOW //////
-////////////////////////////////
-
-
-//----------------------------------------------
-//------------------------------------enqueue js
-//----------------------------------------------
-function jss_load_scripts(){
-
-	//deregister for google jQuery cdn
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js",  array(), false, true );
-	wp_enqueue_script( 'jquery' );
-
-	//register fancybox. change this to your local file.
-	wp_deregister_script( 'fancybox' );
-	wp_register_script( 'fancybox', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.pack.js",  array(), false, true );
-	wp_enqueue_script( 'fancybox' );
-
-	//register modernizr. change this to your local file.
-	wp_deregister_script( 'modernizr' );
-	wp_register_script( 'modernizr', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js",  array(), false, true );
-	wp_enqueue_script( 'modernizr' );
-
-	//register isotope. change this to your local file.
-	wp_deregister_script( 'isotope' );
-	wp_register_script( 'isotope', "http" . ( $_SERVER['SERVER_PORT'] == 443 ? "s" : "" ) . "://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js",  array(), false, true );
-	wp_enqueue_script( 'isotope' );
-
-	//general
-	wp_register_script( 'general', get_template_directory_uri() . '/includes/js/general.js',  array(), false, true );
-	wp_enqueue_script( 'general' );
-
-	wp_register_script( 'iso', get_template_directory_uri() . '/includes/js/isotope.pkgd.min.js',  array(), false, true );
-	wp_enqueue_script( 'iso' );
-}
-//set it off
-add_action( 'wp_enqueue_scripts', 'jss_load_scripts' );
-
 
 //----------------------------------------------
 //-------------------custom tag cloud generation
@@ -432,7 +418,7 @@ function jss_generate_tag_cloud( $tags, $args = '' ) {
 	//don't touch these defaults or the sky will fall
 	$defaults = array(
 		'smallest' => 8, 'largest' => 22, 'unit' => 'pt', 'number' => 0,
-		'format' => 'flat', 'separator' => "\n", 'orderby' => 'name', 'order' => 'ASC',
+		'format' => 'flat', 'separator' => "\n", 'orderby' => 'term_id', 'order' => 'ASC',
 		'topic_count_text_callback' => 'default_topic_count_text',
 		'topic_count_scale_callback' => 'default_topic_count_scale', 'filter' => 1
 	);
@@ -468,8 +454,8 @@ function jss_generate_tag_cloud( $tags, $args = '' ) {
             shuffle($tags);
         } else {
             // SQL cannot save you
-            if ( 'name' == $orderby )
-                uasort( $tags, create_function('$a, $b', 'return strnatcasecmp($a->name, $b->name);') );
+            if ( 'term_id' == $orderby )
+                uasort( $tags, create_function('$a, $b', 'return strnatcasecmp($a->term_id, $b->term_id);') );
             else
                 uasort( $tags, create_function('$a, $b', 'return ($a->count > $b->count);') );
 
@@ -544,27 +530,28 @@ function jss_generate_tag_cloud( $tags, $args = '' ) {
         return apply_filters( 'jss_generate_tag_cloud', $return, $tags, $args );
 }
 
-//----------------------------------------------
-//---------------------custom tag cloud function
-//----------------------------------------------
 
+
+//----------------------------------------------
+//  custom tag cloud function
+//----------------------------------------------
 //the function below is very similar to 'wp_tag_cloud()' currently located in: 'wp-includes/category-template.php'
 function jss_tag_cloud( $args = '' ) {
 	//set some default
 	$defaults = array(
 	    'format' => 'list', //display as list
 	    'taxonomy' => 'phototype', //our custom post type taxonomy
-		'hide_empty' => 'true',
+			'hide_empty' => 'true',
 	    'echo' => true, //touch this and it all blows up
 	    'link' => 'view',
-			'orderby' => 'ID',
+			'orderby' => 'term_id',
 	);
 
 	//use wp_parse to merge the argus and default values
 	$args = wp_parse_args( $args, $defaults );
 
 	//go fetch the terms of our custom taxonomy. query by descending and order by most posts
-	$tags = get_terms( $args['taxonomy'], array_merge( $args, array( 'orderby' => 'count', 'order' => 'DESC' ) ) );
+	$tags = get_terms( $args['taxonomy'], array_merge( $args, array( 'orderby' => 'term_id', 'order' => 'DESC' ) ) );
 
 	//if there are no tags then end function
 	if ( empty( $tags ))
@@ -615,96 +602,83 @@ function jss_tag_cloud( $args = '' ) {
 //hook function to filter
 add_filter('wp_tag_cloud', 'jss_tag_cloud');
 
+
+
 //----------------------------------------------
-//-------------------------get CPT taxonomy name
+//  get CPT taxonomy name
 //----------------------------------------------
 function jss_taxonomy_name(){
-	 global $post;
+    global $post;
 
 	//get terms for CPT
 	$terms = get_the_terms( $post->ID , 'phototype' );
-				//iterate through array
-				foreach ( $terms as $termphoto ) {
-					//echo taxonomy name as class
-					echo ' '.$termphoto->name;
-				}
+        //iterate through array
+        foreach ( $terms as $termphoto ) {
+            //echo taxonomy name as class
+            echo ' '.$termphoto->name;
+        }
 }
 
 
 
-//********************
-//********************
+//----------------------------------------------
+//  comment function
+//----------------------------------------------
+if ( ! function_exists( 'bfb_comment' ) ) :
+		function bfb_comment( $comment, $args, $depth ) {
+				$GLOBALS['comment'] = $comment;
+				switch ( $comment->comment_type ) :
+						case 'pingback' :
+						case 'trackback' :
+				?>
 
-// Radcliffe comment function
-if ( ! function_exists( 'radcliffe_comment' ) ) :
-function radcliffe_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
-		case 'pingback' :
-		case 'trackback' :
-	?>
+				<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+						<?php __( 'Pingback:', 'bfb' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'bfb' ), '<span class="edit-link">', '</span>' ); ?>
+				</li>
 
-	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+				<?php
+						break;
+						default :
+							global $post;
+				?>
 
-		<?php __( 'Pingback:', 'radcliffe' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'radcliffe' ), '<span class="edit-link">', '</span>' ); ?>
+				<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+						<div id="comment-<?php comment_ID(); ?>" class="comment">
+								<?php echo get_avatar( $comment, 150 ); ?>
+								<?php
+										static $comment_number; $comment_number ++;
+										$comment_number = str_pad($comment_number, 2, '0', STR_PAD_LEFT);
+								?>
 
-	</li>
-	<?php
-			break;
-		default :
-		global $post;
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+								<?php if ( $comment->user_id === $post->post_author ) { echo '<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '" title="' . __('Comment by post author','bfb') . '" class="by-post-author"> ' . __( '(Post author)', 'bfb' ) . '</a>'; } ?>
 
-		<div id="comment-<?php comment_ID(); ?>" class="comment">
+								<div class="comment-inner">
+										<div class="comment-header">
+												<cite><?php echo get_comment_author_link(); ?></cite>
+												<span><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php echo get_comment_date() . ' &mdash; ' . get_comment_time() ?></a></span>
+								  	</div>
 
-			<?php echo get_avatar( $comment, 150 ); ?>
+										<div class="comment-content">
+												<?php if ( '0' == $comment->comment_approved ) : ?>
+														<p class="comment-awaiting-moderation"><?php __( 'Your comment is awaiting moderation.', 'bfb' ); ?></p>
+												<?php endif; ?>
+												<?php comment_text(); ?>
 
-			<?php
-				static $comment_number; $comment_number ++;
-				$comment_number = str_pad($comment_number, 2, '0', STR_PAD_LEFT);
-			?>
+										</div><!-- /comment-content -->
 
-			<?php if ( $comment->user_id === $post->post_author ) { echo '<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '" title="' . __('Comment by post author','radcliffe') . '" class="by-post-author"> ' . __( '(Post author)', 'radcliffe' ) . '</a>'; } ?>
+										<div class="comment-actions">
+												<?php edit_comment_link( __( 'Edit', 'bfb' ), '', '' ); ?>
+												<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'bfb' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+										</div> <!-- /comment-actions -->
 
-			<div class="comment-inner">
+								</div> <!-- /comment-inner -->
 
-				<div class="comment-header">
+						</div><!-- /comment-## -->
 
-					<cite><?php echo get_comment_author_link(); ?></cite>
-
-					<span><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php echo get_comment_date() . ' &mdash; ' . get_comment_time() ?></a></span>
-
-				</div>
-
-				<div class="comment-content">
-
-					<?php if ( '0' == $comment->comment_approved ) : ?>
-
-						<p class="comment-awaiting-moderation"><?php __( 'Your comment is awaiting moderation.', 'radcliffe' ); ?></p>
-
-					<?php endif; ?>
-
-					<?php comment_text(); ?>
-
-				</div><!-- /comment-content -->
-
-				<div class="comment-actions">
-
-					<?php edit_comment_link( __( 'Edit', 'radcliffe' ), '', '' ); ?>
-
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'radcliffe' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-
-				</div> <!-- /comment-actions -->
-
-			</div> <!-- /comment-inner -->
-
-		</div><!-- /comment-## -->
-
-	<?php
-		break;
-	endswitch;
-}
+				<?php
+					break;
+				endswitch;
+		}
 endif;
 
 ?>

@@ -44,7 +44,7 @@
 											<?php endif; ?>
 										</a>
 								</div>
-								<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+								<div class="col-xs-12 col-md-pull-1 col-sm-2 col-md-2 col-lg-2">
 										<a href="<?php the_field('lien_4'); ?>" target="_blank">
 											<?php $logo4 = get_field('logo_4'); if (!empty($logo4)): ?>
 													<img src="<?php echo $logo4['url']; ?>" class="img-responsive" alt="Responsive image">

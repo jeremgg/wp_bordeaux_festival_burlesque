@@ -3,7 +3,8 @@
 **************************************/
 .container-blog,
 .container-single,
-.container-archive{
+.container-archive,
+.container-page{
     width: $blog-container-size-xs;
 
     .credits{
@@ -51,7 +52,8 @@
 @media(min-width:$screen-sm) {
     .container-blog,
     .container-single,
-    .container-archive{
+    .container-archive,
+    .container-page{
         .credits{
             .credits-inner{
                 margin: 0 auto;
@@ -65,7 +67,8 @@
 @media(min-width:$screen-md) {
     .container-blog,
     .container-single,
-    .container-archive{
+    .container-archive,
+    .container-page{
         margin-left: $blog-container-margin-left-md;
         width: $blog-container-size-md;
     }

@@ -37,6 +37,8 @@
              h1{
                  font-size: 24px;
                  margin: 0;
+                 border-bottom: $border-element;
+                 padding-bottom: $infos-pratique-h1-padding-mobile;
              }
 
              .row{
@@ -79,6 +81,7 @@
 
 
 
+
  @media(min-width:$screen-sm) {
      .map{
          height: 700px;
@@ -104,8 +107,7 @@
              &.pratique{
                  h1{
                      font-size: $font-size-30;
-                     padding-bottom: $infos-pratique-h1-padding-tablet;
-                     border-bottom: $border-element;
+                     
                  }
 
                  .row{

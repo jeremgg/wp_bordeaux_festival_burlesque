@@ -2,27 +2,26 @@
 /**
  * The Header for our theme.
  */
+?>
 
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<head>
+				<meta charset="<?php bloginfo( 'charset' ); ?>">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><?php bloginfo( 'name' ); ?></title>
+				<title><?php bloginfo( 'name' ); ?></title>
 
-		<link rel="profile" href="http://gmpg.org/xfn/11">
+				<link rel="profile" href="http://gmpg.org/xfn/11">
 
-		<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
-				<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-		<?php endif; ?>
+				<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+						<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+				<?php endif; ?>
 
-		<?php wp_head(); ?>
-</head>
+				<?php wp_head(); ?>
+		</head>
 
-<body <?php body_class(); ?>>
+		<body <?php body_class(); ?>>
 
-		<?php do_action( 'before' ); ?>
-
-		
+				<?php do_action( 'before' ); ?>

@@ -1,14 +1,10 @@
 <?php
 /**
  * The template for displaying Archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package _tk
  */
+?>
 
-get_header(); ?>
-
+<?php get_header(); ?>
 <?php get_sidebar(); ?>
 
 
@@ -23,7 +19,7 @@ get_header(); ?>
 						<h1 class="title-page">
 					<?php
 						if ( is_category() ) :
-							single_cat_title();
+							single_cat_title( __( 'Catégorie : ', 'bfb' ) );
 
 						elseif ( is_tag() ) :
 							single_tag_title();
@@ -33,7 +29,7 @@ get_header(); ?>
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author: %s', 'bfb' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Auteur : %s', 'bfb' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
@@ -41,13 +37,13 @@ get_header(); ?>
 							rewind_posts();
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'bfb' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Date : %s', 'bfb' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'bfb' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( 'Mois : %s', 'bfb' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'bfb' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( 'Année : %s', 'bfb' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', 'bfb' );
@@ -123,26 +119,16 @@ get_header(); ?>
 			<?php _tk_content_nav( 'archive-nav' ); ?>
 
 		<?php else : ?>
-
 			<?php get_template_part( 'no-results', 'archive' ); ?>
 
 		<?php endif; ?>
 
 		</div><!-- .posts -->
 
-		<div class="credits section">
-				<div class="credits-inner section-inner">
-						<p class="fleft">
-								&copy; <?php echo date("Y") ?> <a href="<?php echo home_url(); ?>" title="<?php esc_attr( bloginfo('name') ); ?>"><?php bloginfo('name'); ?></a>
-						</p>
-
-						<p class="fright">
-								<a title="<?php _e('To the top', 'radcliffe'); ?>" href="#" class="tothetop"><?php _e('Up', 'radcliffe' ); ?> &uarr;</a>
-						</p>
-
-						<div class="clear"></div>
-				</div> <!-- /credits-inner -->
-		</div> <!-- /credits -->
+		<?php
+				//credit display in the footer
+				get_template_part( 'content', 'credits' );
+		?>
 
 </div><!-- .container -->
 

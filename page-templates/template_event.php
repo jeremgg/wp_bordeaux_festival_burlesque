@@ -64,7 +64,7 @@ get_header(); ?>
 
 												<div class="row">
 														<div class="col-xs-4 prev">
-																<?php previous_post_link('%link', '<img src="http://localhost:8888/Bordeaux-burlesque-festival/site/wp-content/uploads/2016/11/chevron-g.png">'); ?>
+																<?php previous_post_link('%link', '<img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron-g.png">'); ?>
 														</div>
 														<div class="col-xs-4">
 																<a href="/Bordeaux-burlesque-festival/site2/reservation/" class="interessed">Je veux y aller</a>

@@ -45,6 +45,7 @@ get_header(); ?>
 		            <div class="row organisatrices">
 										<?php $organisatrices = new WP_Query(array(
 												'post_type' => 'organisatrices',
+												'showposts' => 3,
 												'orderby' => 'ID',
 												'order' => 'ASC'
 										));  ?>
@@ -78,6 +79,7 @@ get_header(); ?>
 
 										<?php $organisatrices = new WP_Query(array(
 												'post_type' => 'organisatrices',
+												'showposts' => 3,
 												'orderby' => 'ID',
 												'order' => 'ASC'
 										));  ?>
