@@ -220,6 +220,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
                     }
 
                     &.format-gallery{
+                        .post-image{
+                            .img-responsive{
+                                max-height: 500px;
+                            }
+                        }
                         .post-header{
                             a{
                                 .post-title{
@@ -278,6 +283,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
                     }
 
                     &.format-gallery{
+                        .post-image{
+                            .img-responsive{
+                                max-height: 500px;
+                            }
+                        }
+                        
                         .post-header{
                             position: absolute;
                             background: rgba(238, 238, 238, .6);
@@ -339,6 +350,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
                     }
 
                     &.format-gallery{
+                        .post-image{
+                            .img-responsive{
+                                max-height: 500px;
+                            }
+                        }
+                        
                         .post-header{
                             a{
                                 .post-title{

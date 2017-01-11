@@ -96,7 +96,7 @@ get_header(); ?>
 																	<img class="img-responsive" src="<?php echo $image['url']; ?>" alt="" />
 															</div>
 															<div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1">
-																	<span>en <?php the_field('vehicule'); ?></span>
+																	<span><?php the_field('vehicule'); ?> : </span>
 																	<p><?php the_field('adresse'); ?></p>
 															</div>
 													<?php endif ?>

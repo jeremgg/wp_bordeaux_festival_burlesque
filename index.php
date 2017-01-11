@@ -13,7 +13,9 @@
 
  get_header(); ?>
 
- <?php get_sidebar(); ?>
+ <?php get_template_part( 'content', 'nav' ); ?>
+
+ <?php //get_sidebar(); ?>
 
  <div class="container-blog">
      <div class="col-lg-12 posts">
@@ -77,5 +79,5 @@
 
  </div><!-- .container -->
 
-
+<?php get_template_part( 'content', 'footer' ); ?>
  <?php get_footer(); ?>

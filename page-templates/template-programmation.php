@@ -81,7 +81,7 @@
 
 																						<p class="date"><em><?php echo date_i18n('l d F / ', $time_d); the_field('horaire'); ?></em></p>
 																						<a href="<?php the_permalink(); ?>" class="plus"><i class="fa fa-plus"></i></a>
-																						<a href="/Bordeaux-burlesque-festival/site2/reservation/" class="reserve">je réserve !</i></a>
+																						<a href="<?php get_template_directory_uri() .  the_field('lien_reservation'); ?>" class="reserve">je réserve !</i></a>
 																		</div>
 																</li><!--end li-->
 

@@ -38,13 +38,13 @@
 h1 {
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
-  color: #cf9702;
+  color: #d39951;
 }
 
 h2 {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
-  color: #cf9702;
+  color: #d39951;
   font-weight: 300;
 }
 
@@ -73,22 +73,22 @@ p {
  ================================== */
 .intro-section {
   text-align: center;
-  margin-top: 0.9rem;
+  margin-top: 9.5rem;
 }
 
 .intro-section img {
-  border-bottom: 1px solid #cf9702;
+  border-bottom: 1px solid #d39951;
 }
 
 @media (min-width: 768px) {
   .intro-section {
-    margin-top: 1rem;
+    margin-top: 9.5rem;
   }
 }
 
 @media (min-width: 992px) {
   .intro-section {
-    margin-top: 5.4rem;
+    margin-top: 11rem;
   }
   .error404 .intro-section {
     margin-top: 10.7rem;
@@ -97,7 +97,7 @@ p {
 
 @media (min-width: 1200px) {
   .intro-section {
-    margin-top: 5.4rem;
+    margin-top: 11rem;
   }
   .intro-section img {
     width: 100%;
@@ -126,7 +126,7 @@ section {
 section h1 {
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
-  color: #cf9702;
+  color: #d39951;
   font-size: 24px;
   margin: 1.5rem 0;
 }
@@ -333,7 +333,7 @@ section p {
 
 .navbar .navbar-header #translate:nth-child(1) ul li a {
   padding: 1rem .5rem;
-  color: #cf9702;
+  color: #d39951;
 }
 
 .navbar .navbar-header #translate:nth-child(1) ul li a:hover {
@@ -354,7 +354,7 @@ section p {
 .navbar .navbar-header button .menu-icon span {
   position: absolute;
   display: block;
-  background: #cf9702;
+  background: #d39951;
   width: 2.2rem;
   height: 0.2rem;
   top: 50%;
@@ -367,7 +367,7 @@ section p {
 
 .navbar .navbar-header button .menu-icon span:after, .navbar .navbar-header button .menu-icon span:before {
   content: '';
-  background: #cf9702;
+  background: #d39951;
   position: absolute;
   top: 0;
   left: 0;
@@ -423,7 +423,7 @@ section p {
   opacity: 0;
   fill: transparent;
   stroke-width: 0.2rem;
-  stroke: #cf9702;
+  stroke: #d39951;
   stroke-dasharray: 22 230;
   transition: stroke-dashoffset 0.5s, stroke-dasharray 0.5s, opacity 0.5s steps(1, end);
 }
@@ -491,7 +491,7 @@ section p {
   height: 0.2rem;
   bottom: 0.8rem;
   left: 0;
-  background-color: #cf9702;
+  background-color: #d39951;
   visibility: hidden;
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
@@ -514,7 +514,7 @@ section p {
   margin: 0 30%;
   bottom: 0.8rem;
   left: 0;
-  background-color: #cf9702;
+  background-color: #d39951;
   visibility: visible;
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
@@ -543,7 +543,7 @@ section p {
 
 .navbar .navbar-center #navbar ul li:last-child > a:hover,
 .navbar .navbar-center #navbar ul li:nth-last-child(2) > a:hover {
-  color: #cf9702;
+  color: #d39951;
 }
 
 .navbar .navbar-center #navbar ul li:nth-last-child(2) > a {
@@ -664,7 +664,7 @@ section p {
   }
   .navbar .navbar-center #translate:nth-child(1) ul li a {
     padding: 1rem .5rem;
-    color: #cf9702;
+    color: #d39951;
   }
   .navbar .navbar-center #translate:nth-child(1) ul li a:hover {
     color: #000;
@@ -711,7 +711,7 @@ section p {
     display: none;
   }
   .navbar .navbar-center #navbar ul li:last-child > a:hover, .navbar .navbar-center #navbar ul li:nth-last-child(2) > a:hover {
-    color: #cf9702;
+    color: #d39951;
   }
   .navbar .navbar-center #navbar ul li:nth-last-child(2) > a {
     margin-right: 1rem;
@@ -791,8 +791,8 @@ section p {
   color: white;
   font-size: 20px;
   position: absolute;
-  bottom: 1%;
-  left: 30%;
+  bottom: -1.5%;
+  left: 29%;
 }
 
 .home-section {
@@ -1069,7 +1069,7 @@ section p {
 .home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 {
   width: 55%;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.8);
   text-align: right;
   padding-top: 0;
   top: 50%;
@@ -1104,7 +1104,7 @@ section p {
 }
 
 .home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 .date {
-  color: #cf9702;
+  color: #d39951;
   font-family: "Playfair Display", serif;
   font-size: 7px;
   text-align: center;
@@ -1125,7 +1125,7 @@ section p {
 }
 
 .home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 a {
-  color: #cf9702;
+  color: #d39951;
   margin-left: auto;
   border-radius: 1rem;
   padding: 6px 10px;
@@ -1134,8 +1134,8 @@ section p {
 }
 
 .home-section .row.blog .col-xs-12 .col-xs-12 .col-lg-6 a:hover {
-  background: #cf9702;
-  border-color: #cf9702;
+  background: #d39951;
+  border-color: #d39951;
   color: white;
 }
 
@@ -1146,7 +1146,7 @@ section p {
 .home-section .content-title h1 {
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
-  color: #cf9702;
+  color: #d39951;
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 2rem;
@@ -1164,8 +1164,14 @@ section p {
 @media (max-width: 420px) {
   .home .intro-section .col-lg-12 h2 {
     font-size: 18px;
-    bottom: 1%;
-    left: 30%;
+    bottom: -1.5%;
+    left: 26%;
+  }
+  .home .home-section .row.blog {
+    margin-top: 3rem;
+  }
+  .home .home-section .row.blog .col-xs-12 .col-xs-12 {
+    height: 168px;
   }
 }
 
@@ -1314,7 +1320,7 @@ section p {
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery .slick-list .slick-track .aigpl-slider-slide:nth-child(3n+1) {
-  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-1.png") no-repeat;
+  background: url("../images/home-mascaron-1.png") no-repeat;
   background-size: contain;
 }
 
@@ -1342,7 +1348,7 @@ section p {
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery .slick-list .slick-track .aigpl-slider-slide:nth-child(3n+2) {
-  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-3.png") no-repeat;
+  background: url("../images/home-mascaron-3.png") no-repeat;
   background-size: contain;
 }
 
@@ -1370,7 +1376,7 @@ section p {
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery .slick-list .slick-track .aigpl-slider-slide:nth-child(3n+3) {
-  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-2.png") no-repeat;
+  background: url("../images/home-mascaron-2.png") no-repeat;
   background-size: contain;
 }
 
@@ -1402,11 +1408,11 @@ section p {
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery > button.slick-prev {
-  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-g.png") no-repeat !important;
+  background: url("../images/chevron-g.png") no-repeat !important;
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery > button.slick-next {
-  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-d.png") no-repeat !important;
+  background: url("../images/chevron-d.png") no-repeat !important;
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery .slick-dots {
@@ -1414,12 +1420,12 @@ section p {
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery .slick-dots li button {
-  border: 1px solid #cf9702;
+  border: 1px solid #d39951;
   background: transparent !important;
 }
 
 .home-section .row article .entry-content .aigpl-gallery-slider-wrp .aigpl-gallery .slick-dots li.slick-active button {
-  background: #cf9702 !important;
+  background: #d39951 !important;
 }
 
 @media (min-width: 768px) {
@@ -1465,7 +1471,7 @@ section p {
 }
 
 .booking-section .booking > .col-xs-6 {
-  border: 1px solid #cf9702;
+  border: 1px solid #d39951;
   padding: 1.5rem;
   margin-right: 0;
   width: calc(50% - .5rem);
@@ -1663,7 +1669,7 @@ section p {
 
 .presentation-section .organisatrices .photos .col-xs-12:nth-child(1):after {
   content: "";
-  border-bottom: 1px solid #cf9702;
+  border-bottom: 1px solid #d39951;
   margin: 1.5rem auto;
   display: block;
   width: 50%;
@@ -1679,7 +1685,7 @@ section p {
 
 .presentation-section .organisatrices .photos .col-xs-12 .bg-content {
   background: white;
-  border: 2px solid #cf9702;
+  border: 2px solid #d39951;
   border-radius: 1rem;
   padding: 4rem;
   margin: 1.5rem auto;
@@ -1712,7 +1718,7 @@ section p {
 }
 
 .presentation-section .organisatrices .photos .col-xs-12 .bg-content a:hover {
-  color: #cf9702;
+  color: #d39951;
   text-decoration: none;
 }
 
@@ -1731,7 +1737,7 @@ section p {
   }
   .presentation-section .row.photos-deskop .col-lg-4:after {
     content: "";
-    border-bottom: 1px solid #cf9702;
+    border-bottom: 1px solid #d39951;
     margin: 1.5rem auto;
     display: block;
     width: 45%;
@@ -1781,7 +1787,7 @@ section p {
     color: #000;
   }
   .presentation-section .row.bio-deskop .col-lg-4 .bg-content a:hover {
-    color: #cf9702;
+    color: #d39951;
     text-decoration: none;
   }
 }
@@ -1797,7 +1803,7 @@ section p {
     border-radius: 112.5px / 133px;
   }
   .presentation-section .row.photos-deskop .col-lg-4:after {
-    border-bottom: 1px solid #cf9702;
+    border-bottom: 1px solid #d39951;
     margin: 2rem auto;
     width: 45%;
   }
@@ -1908,7 +1914,7 @@ section p {
 }
 
 .infos-section .row.lieu .col-xs-12 h2 {
-  color: #cf9702;
+  color: #d39951;
   font-size: 16px;
   text-align: center;
   font-weight: 300;
@@ -1928,7 +1934,7 @@ section p {
 .infos-section .row.pratique h1 {
   font-size: 24px;
   margin: 0;
-  border-bottom: 1px solid #cf9702;
+  border-bottom: 1px solid #d39951;
   padding-bottom: 1.5rem;
 }
 
@@ -1949,7 +1955,7 @@ section p {
 
 .infos-section .row.pratique .row.transport .col-xs-12 span {
   font-family: "Playfair Display", serif;
-  color: #cf9702;
+  color: #d39951;
   font-size: 16px;
   text-align: center;
   font-weight: 700;
@@ -2133,7 +2139,7 @@ section p {
 }
 
 .media-section .container article .entry-content .ngg-albumoverview .ngg-album-compact .ngg-album-compactbox .ngg-album-link {
-  border: 1px solid #cf9702;
+  border: 1px solid #d39951;
   margin: 0;
   overflow: hidden;
   width: 100%;
@@ -2190,7 +2196,7 @@ section p {
   text-align: center;
   font-family: "Playfair Display", serif;
   text-transform: capitalize;
-  color: #cf9702;
+  color: #d39951;
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 3rem;
@@ -2238,7 +2244,7 @@ section p {
 
 .media-section .ngg-galleryoverview .ngg-gallery-thumbnail-box .ngg-gallery-thumbnail a {
   margin: 0;
-  border: 1px solid #cf9702;
+  border: 1px solid #d39951;
   padding: 5px;
   overflow: hidden;
 }
@@ -2462,7 +2468,7 @@ section p {
 }
 
 .programming-section .container .row > .col-xs-12:first-child #options #filters li a:hover {
-  color: #cf9702;
+  color: #d39951;
   text-decoration: none;
 }
 
@@ -2478,7 +2484,7 @@ section p {
   width: 29.33333%;
   height: 50px;
   display: inline-block;
-  border-bottom: 1px solid #cf9702;
+  border-bottom: 1px solid #d39951;
   margin-top: 2rem;
 }
 
@@ -2501,7 +2507,7 @@ section p {
 }
 
 .programming-section .container .row > .col-xs-12:last-child {
-  background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-mobile.png") no-repeat;
+  background: url("../images/colonne-mobile.png") no-repeat;
   background-size: cover;
   height: 1053px;
   width: 350px;
@@ -2561,7 +2567,7 @@ section p {
 
 .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .event-title:hover {
   background: transparent;
-  color: #cf9702;
+  color: #d39951;
 }
 
 .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block .date {
@@ -2593,7 +2599,7 @@ section p {
 }
 
 .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block a:hover, .programming-section .container .row > .col-xs-12:last-child .scroll #contenu .photogal li .content-block a:focus {
-  background: #cf9702;
+  background: #d39951;
   color: white;
   text-decoration: none;
 }
@@ -2632,7 +2638,7 @@ section p {
     height: 100px;
   }
   .programming-section .container > .col-xs-12:last-child {
-    background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
+    background: url("../images/colonne-deskop.png") no-repeat;
     background-size: cover;
     height: 1000px;
     width: calc(100% - (2 * 2.5rem));
@@ -2721,7 +2727,7 @@ section p {
     width: 29.33333%;
     height: 50px;
     display: inline-block;
-    border-bottom: 1px solid #cf9702;
+    border-bottom: 1px solid #d39951;
     margin-top: 2rem;
   }
   .programming-section .container .row > .col-xs-12.col-md-2 #options #filters div:nth-child(2) {
@@ -2739,7 +2745,7 @@ section p {
     margin-top: 0rem;
   }
   .programming-section .container .row > .col-xs-12.col-md-7:last-child {
-    background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
+    background: url("../images/colonne-deskop.png") no-repeat;
     background-size: cover;
     height: 1350px;
     width: 583px;
@@ -2840,7 +2846,7 @@ section p {
     margin-top: 0rem;
   }
   .programming-section .container .row > .col-xs-12.col-md-7:last-child {
-    background: url("/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/12/colonne-deskop.png") no-repeat;
+    background: url("../images/colonne-deskop.png") no-repeat;
     background-size: cover;
     height: 1530px;
     width: 662px;
@@ -3001,7 +3007,7 @@ section p {
 
 .event-section .row .col-xs-12 .row .col-xs-4 a.interessed {
   background: #000;
-  color: #cf9702;
+  color: #d39951;
   font-family: "Playfair Display", serif;
   font-size: 12px;
   font-weight: 700;
@@ -3011,7 +3017,7 @@ section p {
 }
 
 .event-section .row .col-xs-12 .row .col-xs-4 a.interessed:hover {
-  background: #cf9702;
+  background: #d39951;
   color: white;
 }
 
@@ -3363,7 +3369,7 @@ section p {
 
 .search .results-found a:hover {
   text-decoration: none;
-  color: #cf9702;
+  color: #d39951;
 }
 
 .search .results-found a:focus {
@@ -3385,7 +3391,7 @@ section p {
 
 .search .results-found article {
   padding: 0 2rem;
-  border-bottom: 1px solid #cf9702;
+  border-bottom: 1px solid #d39951;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -3652,7 +3658,33 @@ section p {
   text-decoration: none;
 }
 
-.sidebar .sidebar-padder {
+.sidebar .sidebar-padder li {
+  display: none;
+}
+
+.sidebar .sidebar-padder li:first-child {
+  display: block;
+}
+
+.sidebar .sidebar-padder li:first-child ul {
+  display: inline-block;
+}
+
+.sidebar .sidebar-padder li:first-child ul .lang-item {
+  display: inline-block;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.sidebar .sidebar-padder li:first-child ul .lang-item:first-child {
+  padding-left: 0;
+}
+
+.sidebar .sidebar-padder li:first-child ul .lang-item a {
+  padding: 0;
+}
+
+.sidebar .sidebar-padder li:first-child ul .lang-item:before {
   display: none;
 }
 
@@ -3685,6 +3717,9 @@ section p {
     margin: 0 auto;
     width: 200px;
     margin-bottom: 35px;
+  }
+  .sidebar .sidebar-padder li {
+    display: block;
   }
   .sidebar .sidebar-padder .widget {
     list-style: none;
@@ -5359,6 +5394,10 @@ body {
   .container-blog .posts article.col-lg-12.format-standard .post-header a .entry-meta {
     font-size: 11px;
   }
+  .container-archive .posts article.col-lg-12.format-gallery .post-image .img-responsive,
+  .container-blog .posts article.col-lg-12.format-gallery .post-image .img-responsive {
+    max-height: 500px;
+  }
   .container-archive .posts article.col-lg-12.format-gallery .post-header a .post-title,
   .container-blog .posts article.col-lg-12.format-gallery .post-header a .post-title {
     font-size: 18px;
@@ -5396,6 +5435,10 @@ body {
   .container-archive .posts article.col-lg-12.format-standard .post-header a .entry-summary,
   .container-blog .posts article.col-lg-12.format-standard .post-header a .entry-summary {
     display: block;
+  }
+  .container-archive .posts article.col-lg-12.format-gallery .post-image .img-responsive,
+  .container-blog .posts article.col-lg-12.format-gallery .post-image .img-responsive {
+    max-height: 500px;
   }
   .container-archive .posts article.col-lg-12.format-gallery .post-header,
   .container-blog .posts article.col-lg-12.format-gallery .post-header {
@@ -5437,6 +5480,10 @@ body {
   .container-archive .posts article.col-lg-12.format-standard .post-header a .post-title,
   .container-blog .posts article.col-lg-12.format-standard .post-header a .post-title {
     font-size: 28px;
+  }
+  .container-archive .posts article.col-lg-12.format-gallery .post-image .img-responsive,
+  .container-blog .posts article.col-lg-12.format-gallery .post-image .img-responsive {
+    max-height: 500px;
   }
   .container-archive .posts article.col-lg-12.format-gallery .post-header a .post-title,
   .container-blog .posts article.col-lg-12.format-gallery .post-header a .post-title {
@@ -5908,7 +5955,7 @@ footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(1) .col-xs-6:
 }
 
 footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(1) .col-xs-6 .fa:hover {
-  color: #cf9702;
+  color: #d39951;
 }
 
 footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(2) a {
@@ -5918,11 +5965,15 @@ footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(2) a {
 
 footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(2) a:hover {
   text-decoration: none;
-  color: #cf9702;
+  color: #d39951;
 }
 
 footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(2) a:active, footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(2) avisited, footer .row.partenairs .col-lg-12:first-child .col-xs-12:nth-child(2) afocus {
   text-decoration: none;
+}
+
+footer .row.partenairs .col-lg-12:nth-child(2) ul {
+  padding: 0;
 }
 
 footer .row.partenairs .col-lg-12:nth-child(2) ul li {
@@ -5936,7 +5987,7 @@ footer .row.partenairs .col-lg-12:nth-child(2) ul li a {
 }
 
 footer .row.partenairs .col-lg-12:nth-child(2) ul li a:hover {
-  color: #cf9702;
+  color: #d39951;
   text-decoration: none;
   font-size: 14px;
 }
@@ -5971,7 +6022,7 @@ footer .row.partenairs .col-lg-12:nth-child(2) ul li a:hover {
     line-height: 40px;
   }
   footer .col-lg-2:nth-child(1) a .fa:hover {
-    color: #cf9702;
+    color: #d39951;
   }
   footer .col-lg-2:nth-child(2) {
     text-align: left;

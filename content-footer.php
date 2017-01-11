@@ -10,7 +10,9 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/pont_pierre.png" class="img-responsive img-footer" alt="Responsive image">
 				<div class="row partenairs">
 						<?php $partenairs = new WP_Query(array(
-								'post_type' => 'partenaires'
+								'post_type' => 'partenaires',
+                                'numberposts' => 1,
+                                'orderby' => 'id'
 						));  ?>
 
 						<?php if ($partenairs->have_posts()) : $partenairs->the_post(); ?>
@@ -21,7 +23,7 @@
 										<a href="#" class="col-xs-6"><i class="fa fa-instagram fa-lg"></i></a>
 								</div>
 								<div class="col-xs-12 col-sm-2 col-md-2 col-sm-push-2 col-lg-2">
-										<a href="mailto:j.33@hotmail.fr">nous écrire</a>
+										<a href="mailto:<?php the_field('email'); ?>"><?php the_field('contact'); ?></a>
 								</div>
 								<div class="col-xs-12 col-sm-2 col-md-2 col-sm-pull-2 col-lg-2">
 										<a href="<?php the_field('lien_1'); ?>">

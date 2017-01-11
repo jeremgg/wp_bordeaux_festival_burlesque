@@ -14,8 +14,8 @@
                 color: $gray-ultra-light;
                 font-size: $font-size-20;
                 position: absolute;
-                bottom: 1%;
-                left: 30%;
+                bottom: -1.5%;
+                left: 29%;
             }
         }
     }
@@ -296,7 +296,7 @@
                     .col-lg-6{
                         width: 55%;
                         padding: $home-blog-bloc-content-padding;
-                        background: rgba(255, 255, 255, .65);
+                        background: rgba(255, 255, 255, .8);
                         text-align: right;
                         padding-top: 0;
                         top: 50%;
@@ -398,8 +398,22 @@
             .col-lg-12{
                 h2{
                     font-size: $font-size-large;
-                    bottom: 1%;
-                    left: 30%;
+                    bottom: -1.5%;
+                    left: 26%;
+                }
+            }
+        }
+
+        .home-section{
+            .row{
+                &.blog{
+                    margin-top: $home-blog-margin;
+
+                    .col-xs-12{
+                        .col-xs-12{
+                            height: 168px;
+                        }
+                    }
                 }
             }
         }
@@ -624,7 +638,7 @@
                                     padding-bottom: .4% !important;
 
                                     &:nth-child(3n+1){
-                                        background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-1.png') no-repeat;
+                                        background: url('../images/home-mascaron-1.png') no-repeat;
                                         background-size: contain;
 
                                         .aigpl-inr-wrp{
@@ -655,7 +669,7 @@
                                     }
 
                                     &:nth-child(3n+2){
-                                        background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-3.png') no-repeat;
+                                        background: url('../images/home-mascaron-3.png') no-repeat;
                                         background-size: contain;
 
                                         .aigpl-inr-wrp{
@@ -687,7 +701,7 @@
                                     }
 
                                     &:nth-child(3n+3){
-                                        background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/home-mascaron-2.png') no-repeat;
+                                        background: url('../images/home-mascaron-2.png') no-repeat;
                                         background-size: contain;
 
                                         .aigpl-inr-wrp{
@@ -727,11 +741,11 @@
                             top: 100% !important;
 
                             &.slick-prev{
-                                background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-g.png') no-repeat !important;
+                                background: url('../images/chevron-g.png') no-repeat !important;
                             }
 
                             &.slick-next{
-                                background: url('/Bordeaux-burlesque-festival/site2/wp-content/uploads/2016/11/chevron-d.png') no-repeat !important;
+                                background: url('../images/chevron-d.png') no-repeat !important;
                             }
                         }
 

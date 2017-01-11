@@ -5,6 +5,7 @@
  */
 
 get_header(); ?>
+<?php get_template_part( 'content', 'nav' ); ?>
 
 <!-- INTRO SECTION -->
 		<section id="intro" class="intro-section content-padder error-404 not-found">
@@ -29,5 +30,5 @@ get_header(); ?>
 
 
 
-
+<?php get_template_part( 'content', 'footer' ); ?>
 <?php get_footer(); ?>

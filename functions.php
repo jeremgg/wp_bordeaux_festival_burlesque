@@ -300,9 +300,9 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 //  register post type
 //----------------------------------------------
 $gallery_labels = array(
-	'name' => _x('Gallery', 'post type general name'),
-	'singular_name' => _x('Gallery', 'post type singular name'),
-	'add_new' => _x('Ajouter', 'gallery'),
+	'name' => _x('Evènements', 'post type general name'),
+	'singular_name' => _x('Evènements', 'post type singular name'),
+	'add_new' => _x('Ajouter', 'évènements'),
 	'add_new_item' => __("Ajouter un nouvel évènement"),
 	'edit_item' => __("Modifier l'évènement"),
 	'new_item' => __("New Gallery"),
