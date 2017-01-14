@@ -67,7 +67,7 @@ get_header(); ?>
 																<?php previous_post_link('%link', '<img src="' . get_bloginfo("template_directory") . '/assets/images/chevron-g.png" />'); ?>
 														</div>
 														<div class="col-xs-4">
-																<a href="<?php get_template_directory_uri() .  the_field('lien_reservation'); ?>" class="interessed">Je veux y aller</a>
+																<a href="<?php bloginfo( 'url' ) . the_field('lien_reservation'); ?>" class="interessed"><?php the_field('text_reservation'); ?></a>
 														</div>
 														<div class="col-xs-4 next">
 																<?php next_post_link('%link', '<img src="' . get_bloginfo("template_directory") . '/assets/images/chevron-d.png" />'); ?>

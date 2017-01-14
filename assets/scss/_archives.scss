@@ -13,6 +13,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
 .container-archive,
 .container-blog{
     width: $blog-container-size-xs;
+		max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+		margin-top: -1rem;
 
     .posts{
         float: none;
@@ -20,6 +24,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
         header{
             border: none;
             padding: $blog-padding-title-page-xs;
+						margin-top: 11rem;
 
             .section-inner{
               	margin: 0 auto;
@@ -41,11 +46,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
 
 
         article{
-            &.col-lg-12{
+						&.col-lg-12{
                 background: $blog-gray-ultra-light;
                 float: none;
                 margin: 2rem 2.5rem 0 2.5rem;
                 width: calc( 100% - (2.5rem * 2 ));
+								max-width: 750px;
                 overflow: hidden;
 
                 &.format-standard{
@@ -191,6 +197,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
         .posts{
           header{
               padding: $blog-padding-title-page-xs-min;
+							margin-top: 9rem;
 
               .section-inner{
                   .title-page{
@@ -249,8 +256,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
 @media(min-width:$screen-small-tablet) {
     .container-archive,
     .container-blog{
+				margin-top: -2rem;
+
         .posts{
             header{
+								margin-top: 9rem;
+
                 .section-inner{
                     width: $blog-section-inner-640;
                 }
@@ -288,7 +299,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
                                 max-height: 500px;
                             }
                         }
-                        
+
                         .post-header{
                             position: absolute;
                             background: rgba(238, 238, 238, .6);
@@ -329,6 +340,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
     .container-blog{
         .posts{
             header{
+								margin-top: 11rem;
+
                 .section-inner{
                     .title-page{
                         font-size: $blog-font-size-medium;
@@ -339,6 +352,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
 
             article{
                 &.col-lg-12{
+										margin-left: auto;
+										margin-right: auto;
+
                     &.format-standard{
                         .post-header{
                             a{
@@ -355,7 +371,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
                                 max-height: 500px;
                             }
                         }
-                        
+
                         .post-header{
                             a{
                                 .post-title{
@@ -375,8 +391,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
  @media(min-width:$screen-md) {
        .container-archive,
        .container-blog{
-            margin-left: $blog-container-margin-left-md;
+            // margin-left: $blog-container-margin-left-md;
             width: $blog-container-size-md;
+						margin-top: 5.4rem;
 
         .posts{
             header{
@@ -386,7 +403,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
 
             article{
                 &.col-lg-12{
-                    margin: 3.5rem 5.5rem 0 5.5rem;
+                    margin: 3.5rem auto 0 auto;
                     width: calc( 100% - (5.5rem * 2 ));
 
                     &:first-child{
@@ -411,7 +428,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
 
                     &.format-gallery{
                         .post-header{
-                            width: 60%;
+                            width: 50%;
 
                             a{
                                 padding: $blog-list-article-a-padding-md;
@@ -439,7 +456,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blog-color-s
         .posts{
            article{
                &.col-lg-12{
-                   margin: 4rem 6.5rem 0 6.5rem;
+                   margin: 4rem auto 0 auto;
                    width: calc( 100% - (6.5rem * 2 ));
 
                    &.format-gallery{

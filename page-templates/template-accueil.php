@@ -9,7 +9,7 @@ get_header(); ?>
 <?php get_template_part( 'content', 'nav' ); ?>
 
 <!-- INTRO SECTION -->
-		<section id="intro" class="intro-section">
+		<section id="intro" class="intro-section home">
 				<div class="container">
 						<div class="row">
 								<div class="col-lg-12">

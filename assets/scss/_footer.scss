@@ -15,6 +15,11 @@
             margin: 0;
 
             .col-lg-12:first-child{
+                margin: 0 auto;
+                max-width: 1280px;
+                float: none;
+                display: inline-block;
+
                 .col-xs-12{
                     margin-top: $footer-partenairs-margin-top;
                     text-align: center;
@@ -33,19 +38,33 @@
                         text-align: center;
                         padding: 0 7.5rem;
 
-                        .col-xs-6{
-                            width: calc(50% - 4rem);
-                            color: $gray-base;
-                            margin: 0 2rem;
-                            text-align: right;
+                        .bottom-social{
+                            #menu-social-media{
+                                list-style: none;
+                                padding: 0;
 
-                            &:nth-child(2){
-                                text-align: left;
-                            }
+                                li{
+                                    list-style: none;
+                                    display: inline-block;
+                                    //width: calc(50% - 4rem);
+                                    color: $gray-base;
+                                    margin: 0 2rem;
+                                    text-align: right;
 
-                            .fa{
-                                &:hover{
-                                    color: $theme-color;
+                                    &:nth-child(2){
+                                        text-align: left;
+                                    }
+
+                                    .fa{
+                                        &:hover{
+                                            color: $theme-color;
+                                        }
+
+                                        &:focus,
+                                        &:active{
+                                            text-decoration: none;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -62,8 +81,8 @@
                             }
 
                             &:active,
-                            &visited,
-                            &focus{
+                            &:visited,
+                            &:focus{
                                 text-decoration: none;
                             }
                         }
@@ -72,9 +91,14 @@
             }
 
             .col-lg-12:nth-child(2){
+                margin: 0 auto;
+                max-width: 1280px;
+                float: none;
+                display: inline-block;
+
                 ul{
                     padding: 0;
-                    
+
                     li{
                         list-style: none;
 
@@ -104,60 +128,65 @@
     footer{
        margin-top: 5rem;
 
-       .col-lg-2{
-           text-align: center;
-           img{ display: inline-block; }
+       .row{
+           &.partenairs{
+             .col-lg-12:first-child{
+                 margin: 0 auto;
+                 max-width: 1280px;
+                 width: 100%;
+                 float: none;
+                 display: inline-block;
 
-           &.col-md-pull-1{
-               right: 4.33333%;
-           }
+                 .col-xs-12{
+                     &:nth-child(1){
+                         padding: 0;
 
-           a{
-               font-family: $font-family-custom-1;
-           }
+                         .bottom-social{
+                             #menu-social-media{
+                                 li{
+                                     margin: 0 0.5rem;
 
-           &:nth-child(1){
-               padding: 0 !important;
-               text-align: left;
-               padding-left: $footer-rs-padding-left-tablet;
-               text-transform: uppercase;
+                                     &:nth-child(2){
 
-               a{
-                   color: $gray-base;
-                   font-size: $font-size-medium;
+                                     }
 
-                   .fa{
-                       line-height: $footer-line-height;
+                                     .fa{
+                                         line-height: $footer-line-height;
 
-                       &:hover{
-                           color: $theme-color;
-                       }
+                                         &:hover{
+
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+
+                     &:nth-child(2){
+                         text-align: left;
+                         padding-left: 15px;
+
+                         a{
+                             font-size: $font-size-large;
+                             //line-height: 1;
+                             margin-top: 1rem;
+                         }
+                     }
+
+                     &:nth-child(4){
+                         text-align: right;
+                     }
+
+                     &:nth-child(5){
+                         //img{ margin-left: -35px;}
+                     }
+
+                     &:nth-child(6){
+                         text-align: left;
+                         img{ margin-left: 12px;}
+                     }
                    }
                }
-           }
-
-           &:nth-child(2){
-               text-align: left;
-               padding-left: 15px;
-
-               a{
-                   font-size: $font-size-large;
-                   //line-height: 1;
-                   margin-top: 1rem;
-               }
-           }
-
-           &:nth-child(4){
-               text-align: right;
-           }
-
-           &:nth-child(5){
-               img{ margin-left: -35px;}
-           }
-
-           &:nth-child(6){
-               text-align: left;
-               img{ margin-left: 12px;}
            }
        }
     }
@@ -174,7 +203,7 @@
 
       .col-lg-2{
           &:nth-child(1){
-              padding-left: 12rem !important;
+              padding-left: 10rem !important;
 
           }
       }
@@ -184,6 +213,67 @@
 @media(min-width:$screen-lg) {
     footer{
        margin-top: $footer-margin-top-large-deskop;
+
+       .row{
+           &.partenairs{
+             .col-lg-12:first-child{
+                 margin: 0 auto;
+                 max-width: 1280px;
+                 float: none;
+                 display: inline-block;
+
+                 .col-xs-12{
+                     &:nth-child(1){
+                         padding: 0;
+
+                         .bottom-social{
+                             #menu-social-media{
+                                 li{
+                                     margin: 0 1rem;
+
+                                     &:nth-child(2){
+
+                                     }
+
+                                     .fa{
+                                         line-height: $footer-line-height;
+
+                                         &:hover{
+
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+
+                     &:nth-child(2){
+                         text-align: left;
+                         padding-left: 15px;
+
+                         a{
+                             font-size: $font-size-large;
+                             //line-height: 1;
+                             margin-top: 1rem;
+                         }
+                     }
+
+                     &:nth-child(4){
+                         text-align: right;
+                     }
+
+                     &:nth-child(5){
+                         //img{ margin-left: -35px;}
+                     }
+
+                     &:nth-child(6){
+                         text-align: left;
+                         img{ margin-left: 12px;}
+                     }
+                   }
+               }
+           }
+       }
 
     }
 }

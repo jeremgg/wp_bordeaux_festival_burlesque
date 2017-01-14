@@ -2,6 +2,10 @@
           PAGE ORGANISATRICES
  ================================== */
  .presentation-section{
+     max-width: 1280px;
+     margin-left: auto;
+     margin-right: auto;
+
      h2{
          font-family: $font-family-custom-1;
          text-transform: capitalize;

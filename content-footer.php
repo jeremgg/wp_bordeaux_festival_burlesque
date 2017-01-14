@@ -7,6 +7,8 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
+				<div class="pont">	
+				</div>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/pont_pierre.png" class="img-responsive img-footer" alt="Responsive image">
 				<div class="row partenairs">
 						<?php $partenairs = new WP_Query(array(
@@ -19,8 +21,18 @@
 						<!-- PARTENAIRES ET RESEAUX SOCIAUX -->
 						<div class="col-lg-12">
 								<div id="rs-bottom" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 rs">
-										<a href="http://fb.me/BordeauxFestivalBurlesque" target="_blank" class="col-xs-6"><i class="fa fa-facebook fa-lg"></i></a>
-										<a href="#" class="col-xs-6"><i class="fa fa-instagram fa-lg"></i></a>
+									<!-- translation button -->
+									<?php
+											wp_nav_menu(array(
+													'theme_location' 	=> 'social-bottom',
+													'container'         => 'div',
+													'container_class'   => 'bottom-social ',
+													'walker' 			=> ''
+											));
+									?>
+
+										<!-- <a href="http://fb.me/BordeauxFestivalBurlesque" target="_blank" class="col-xs-6"><i class="fa fa-facebook fa-lg"></i></a>
+										<a href="#" class="col-xs-6"><i class="fa fa-instagram fa-lg"></i></a> -->
 								</div>
 								<div class="col-xs-12 col-sm-2 col-md-2 col-sm-push-2 col-lg-2">
 										<a href="mailto:<?php the_field('email'); ?>"><?php the_field('contact'); ?></a>

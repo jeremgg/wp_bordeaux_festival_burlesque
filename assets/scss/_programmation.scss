@@ -1,6 +1,9 @@
 //programmation 2
 .programming-section{
+    max-width: 1280px;
     padding-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
 
     .container{
         margin-top: 3rem;
@@ -232,7 +235,30 @@
     }
 }
 
+@media (max-width: 320px) {
+    .programming-section{
+        .container{
+            margin-top: 6rem;
 
+            .row{
+                > .col-xs-12{
+                    &:last-child{
+                        width: calc( 100% - (2 * 1rem));
+                        background-size: 100%;
+                        margin: 0 1rem;
+
+                        .scroll{
+                            margin-left: 22%;
+                            margin-top: 76.5%;
+                            width: 215px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 440px) {
     .programming-section{
@@ -469,10 +495,16 @@
             margin: 0;
 
             .row{
-              > .col-xs-12.col-md-2{
+              > .col-xs-12.col-lg-2{
                   width: 18.66667%;
                   top: 17%;
+                  width: 320px  !important;
                   //position: static;
+
+                  &.col-lg-offset-2{
+                      margin-left: 125px !important;
+                  }
+
 
                       &.is-closed{ transform: translateX(0); right: auto; }
                       &.is-opened{ transform: translateX(0); right: auto;
@@ -523,7 +555,7 @@
                   }
 
 
-                > .col-xs-12.col-md-7{
+                > .col-xs-12.col-lg-7{
                     &:last-child{
                         background: url('../images/colonne-deskop.png') no-repeat;
                         background-size: cover;
@@ -532,7 +564,7 @@
                         width: 662px;
                         max-width: 58.33333%;
                         margin: 0 auto;
-                        margin-left: 35.33333%;
+                        margin-left: 38.33333% !important;
                         //float: left;
 
                         .scroll{

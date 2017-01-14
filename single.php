@@ -5,7 +5,9 @@
 ?>
 
 <?php get_header(); ?>
-<?php get_sidebar(); ?>
+<?php get_template_part( 'content', 'nav' ); ?>
+
+<?php //get_sidebar(); ?>
 
 <div class="container-single">
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -26,4 +28,5 @@
 		?>
 </div>
 
-<?php get_footer(); ?>
+<?php get_template_part( 'content', 'footer' ); ?>
+ <?php get_footer(); ?>

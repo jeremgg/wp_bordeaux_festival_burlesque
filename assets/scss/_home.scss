@@ -3,6 +3,10 @@
  ================================== */
 .home{
     .intro-section{
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+
         .col-lg-12{
             position: relative;
 
@@ -22,7 +26,9 @@
 }
 
 .home-section{
+    margin: 0 auto;
     margin-top: $home-margin;
+    max-width: 1280px;
 
     .row{
         &.slider{
@@ -295,12 +301,13 @@
 
                     .col-lg-6{
                         width: 55%;
+                        height: 100%;
                         padding: $home-blog-bloc-content-padding;
                         background: rgba(255, 255, 255, .8);
                         text-align: right;
                         padding-top: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
+                        // top: 50%;
+                        // transform: translateY(-50%);
 
                         h2{
                             font-family: $font-family-custom-1;
@@ -351,8 +358,8 @@
                         a{
                             color: $theme-color;
                             margin-left: auto;
-                            border-radius: $home-blog-button-border-radius;
-                            padding: $home-blog-button-padding;
+                            border-radius: .6rem;
+                            padding: 4px 6px;
                             display: block;
                             display: inline-block;
 
@@ -392,7 +399,7 @@
 }
 
 
-@media(max-width:420px) {
+@media(max-width:460px) {
     .home{
         .intro-section{
             .col-lg-12{
@@ -411,7 +418,7 @@
 
                     .col-xs-12{
                         .col-xs-12{
-                            height: 168px;
+                            height: 226px;
                         }
                     }
                 }
@@ -454,7 +461,7 @@
                         &.post-2{ display: block; }
 
                         .col-lg-6{
-                            width: calc(60% + 1.5rem);
+                            width: calc(60% + 1.5rem) !important;
                             padding: $home-blog-bloc-content-padding-tablet;
                             padding-top: 0;
 
@@ -471,6 +478,8 @@
                                 border-radius: $home-blog-button-border-radius-tablet;
                                 padding: $home-blog-button-padding-tablet
                             }
+
+
 
                             /*&.col-sm-offset-6{
                                 margin-left: $home-blog-offset-width;
@@ -591,8 +600,13 @@
 
                     .col-lg-12{
                         padding: 0;
+                        max-width: 600px !important;
+                        width: 85% !important;
+                        min-height: 320px !important;
+                        background-size: 100% 110% !important;
 
                         .col-lg-6{
+                            width: calc(40% + 1.5rem) !important;
                             h2{ font-size: 17px; margin-top: 1rem;}
 
                             .date{ font-size: $font-size-10; }
@@ -637,6 +651,14 @@
                                 .aigpl-slider-slide{
                                     padding-bottom: .4% !important;
 
+                                    .aigpl-img-caption{
+                                        //display: none;
+                                        color: $gray-base;
+                                        background: transparent;
+                                        top: 0;
+                                        transform: translateY(-50%);
+                                    }
+
                                     &:nth-child(3n+1){
                                         background: url('../images/home-mascaron-1.png') no-repeat;
                                         background-size: contain;
@@ -651,6 +673,10 @@
                                                     &:hover{
                                                         img{
                                                             opacity: 0.4;
+                                                        }
+
+                                                        &+ .aigpl-img-caption{
+                                                            display: block;
                                                         }
                                                     }
                                                     img{

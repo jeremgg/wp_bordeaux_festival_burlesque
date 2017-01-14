@@ -12,7 +12,7 @@
 <section id="programming" class="programming-section">
 		<div class="container">
 				<div class="row">
-						<div id="menu-controls" class="col-xs-12 col-md-2 col-md-offset-2 is-closed">
+						<div id="menu-controls" class="col-xs-12 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2 is-closed">
 
 								<!-- CONTROL DU FILTRAGE -->
 								<div class="col-xs-2 col-md-2">
@@ -32,7 +32,7 @@
 								</div>
 						</div>
 
-						<div class="col-xs-12 col-md-7 col-md-offset-4">
+						<div class="col-xs-12 col-md-7 col-md-offset-4 col-lg-7 col-lg-offset-4">
 								<div class="scroll">
 										<div id="contenu" class="col-xs-12">
 												<ul class="photogal">
@@ -81,7 +81,7 @@
 
 																						<p class="date"><em><?php echo date_i18n('l d F / ', $time_d); the_field('horaire'); ?></em></p>
 																						<a href="<?php the_permalink(); ?>" class="plus"><i class="fa fa-plus"></i></a>
-																						<a href="<?php get_template_directory_uri() .  the_field('lien_reservation'); ?>" class="reserve">je réserve !</i></a>
+																						<a href="<?php bloginfo( 'url' ) .  the_field('lien_reservation'); ?>" class="reserve"><?php the_field('text_reservation'); ?></i></a>
 																		</div>
 																</li><!--end li-->
 

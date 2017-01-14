@@ -5,7 +5,9 @@
 ?>
 
 <?php get_header(); ?>
-<?php get_sidebar(); ?>
+<?php get_template_part( 'content', 'nav' ); ?>
+
+<?php //get_sidebar(); ?>
 
 
 	<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
@@ -132,4 +134,5 @@
 
 </div><!-- .container -->
 
-<?php get_footer(); ?>
+<?php get_template_part( 'content', 'footer' ); ?>
+ <?php get_footer(); ?>

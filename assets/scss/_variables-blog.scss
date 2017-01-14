@@ -52,7 +52,7 @@ $blog-transition-delay:  ease-in-out;
 $blog-sidebar-max-width: 350px;
 
 $blog-container-size-xs: 100%;
-$blog-container-size-md: calc(100% - 350px);
+$blog-container-size-md: 100%; //calc(100% - 350px);
 
 $blog-container-margin-left-md: $blog-sidebar-max-width;   //350px
 

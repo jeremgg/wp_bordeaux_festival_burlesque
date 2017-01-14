@@ -14,7 +14,9 @@ get_header(); ?>
 						<div class="row">
 								<div class="col-lg-12">
 									<div class="entry-content-thumbnail">
-										<?php echo do_shortcode("[huge_it_maps id='1']"); ?>
+												<?php while ( have_posts() ) : the_post(); ?>
+                      		  <?php the_content(); ?>
+                      	<?php endwhile; ?>
 									</div>
 								</div>
 						</div>

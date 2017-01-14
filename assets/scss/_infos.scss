@@ -5,7 +5,15 @@
      height: $map-height-mobile;
  }
 
+ table .wpgmp_map_container .gm-style-iw{
+     min-height: 0px !important;
+ }
+
  .infos-section{
+     max-width: 1280px;
+     margin-left: auto;
+     margin-right: auto;
+
      .row{
          &.lieu{
              padding-top: $infos-lieu-padding-top-mobile;
@@ -107,7 +115,7 @@
              &.pratique{
                  h1{
                      font-size: $font-size-30;
-                     
+
                  }
 
                  .row{

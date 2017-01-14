@@ -11,6 +11,11 @@ html{
 .container-single,
 .container-page{
      width: $blog-container-size-xs;
+     max-width: 1280px;
+     margin-left: auto;
+     margin-right: auto;
+
+
 
      article{
          &.col-lg-8{
@@ -19,6 +24,10 @@ html{
              margin-bottom: $blog-single-article-margin-xs;
              width: 100%;
              float: none;
+
+             &.format-standard{
+                 margin-top: 8rem;
+             }
 
              .entry-content{
                  background: $blog-gray-ultra-light;
@@ -247,6 +256,10 @@ html{
     .container-page{
          article{
              &.col-lg-8{
+                 &.format-standard{
+                     margin-top: 8rem;
+                 }
+
                  .entry-content{
                      header{
                          .post-header{
@@ -270,6 +283,10 @@ html{
     .container-page{
          article{
              &.col-lg-8{
+                 &.format-standard{
+                     margin-top: 8rem;
+                 }
+
                  .entry-content{
                      header{
                          .post-header{
@@ -317,6 +334,10 @@ html{
              &.col-lg-8{
                  margin-bottom: $blog-single-article-margin-sm;
 
+                 &.format-standard{
+                     margin-top: 10rem;
+                 }
+
                  .entry-content{
                      header{
                          .post-header{
@@ -357,11 +378,15 @@ html{
  @media(min-width:$screen-md) {
      .container-single,
      .container-page{
-         margin-left: $blog-container-margin-left-md;
+        //  margin-left: $blog-container-margin-left-md;
          width: $blog-container-size-md;
 
          article{
              &.col-lg-8{
+                 &.format-standard{
+                     margin-top: 14rem;
+                 }
+
                  .entry-content{
                      header{
                          .post-header{
@@ -393,6 +418,10 @@ html{
      .container-page{
          article{
              &.col-lg-8{
+                 &.format-standard{
+                     margin-top: 14rem;
+                 }
+
                  .entry-content{
                      header{
                          .post-header{
@@ -444,6 +473,13 @@ html{
             &.format-gallery{
                .entry-content{
                      position: relative;
+
+                     .entry-content-thumbnail{
+                         max-height: 550px;
+                         overflow: hidden;
+
+                         img{ width: 100%; }
+                     }
 
                      header{
                          position: absolute;
@@ -540,7 +576,7 @@ html{
  @media(min-width:$screen-md) {
      .container-single,
      .container-page{
-         margin-left: $blog-container-margin-left-md;
+        //  margin-left: $blog-container-margin-left-md;
          width: $blog-container-size-md;
 
          article{

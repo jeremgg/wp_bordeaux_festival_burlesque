@@ -79,8 +79,11 @@
             })
 
 
+
             jQuery('#filters li:nth-child(2)').before("<li class='logo'><div class='left'></div><div class='image'><img src='/wp-content/uploads/2017/01/goussettransparent.gif' class='img-responsive'/></div><div class='right'></div></li>");
             jQuery('#filters li:nth-child(5)').before("<li class='logo logo2'><div class='left'></div><div class='image'><img src='/wp-content/uploads/2017/01/eventailtransparent.gif' class='img-responsive'/></div><div class='right'></div></li>");
+
+            jQuery('ngg-album-link a').before("<p>test</p>");
 
 
         });

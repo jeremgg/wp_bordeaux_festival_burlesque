@@ -39,8 +39,18 @@ p{
 .intro-section{
     text-align: center;
     margin-top: $header-margin-top-mobile;
+    border-bottom: $border-element;
+    max-height: 700px;
+    overflow: hidden;
 
-    img{ border-bottom: $border-element; }
+    &.home{
+        max-height: none;
+        border-bottom: none;
+    }
+
+    table{
+        width: 100%;
+    }
 }
 
 
@@ -59,7 +69,10 @@ p{
     .intro-section{
         margin-top: $header-margin-top-medium-deskop;
 
-        img{ width: 100%; max-width: 1350px; }
+        img{
+            width: 100%;
+            //max-width: 1350px;
+        }
 
         #map{
             img{ width: auto; }
@@ -70,7 +83,7 @@ p{
 @media(min-width:$screen-lg) {
     .container{
         width: 100%;
-        max-width: 1350px;
+        //max-width: 1350px;
         margin: 0 auto;
     }
 }

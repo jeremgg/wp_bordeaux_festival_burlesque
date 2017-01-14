@@ -8,6 +8,7 @@
     width: $blog-container-size-xs;
 
     .credits{
+        display: none;
         font-family: $blog-font-family-custom-2;
         font-size: $blog-font-size-base;
         color: $blog-gray-light;
@@ -69,7 +70,7 @@
     .container-single,
     .container-archive,
     .container-page{
-        margin-left: $blog-container-margin-left-md;
+        // margin-left: $blog-container-margin-left-md;
         width: $blog-container-size-md;
     }
 }

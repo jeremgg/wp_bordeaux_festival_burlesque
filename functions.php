@@ -158,10 +158,17 @@ function bfb_custom_styles() {
 				false ,false, 'all'
 		);
 
-		//load fancybox css
+      //load fancybox css
 	  wp_enqueue_style(
 				'customize',
 				get_template_directory_uri().'/assets/css/jquery.fancybox.css',
+				false ,false, 'all'
+		);
+
+    //load animate css
+	  wp_enqueue_style(
+				'animate',
+				get_template_directory_uri().'/assets/css/animate.css',
 				false ,false, 'all'
 		);
 }
