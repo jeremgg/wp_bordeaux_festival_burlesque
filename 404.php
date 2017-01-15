@@ -16,7 +16,7 @@ get_header(); ?>
 								</header>
 
 								<div class="page-content">
-										<img src="http://localhost:8888/Bordeaux-burlesque-festival/site/wp-content/uploads/2016/12/nippies404.gif" alt="" class="img-responsive nippies">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/nippies404.gif" alt="" class="img-responsive nippies">
 
 										<p><?php _e( '<i>Mais vous n\'êtes pas venu pour rien !</i>', 'bfb' ); ?></p>
 

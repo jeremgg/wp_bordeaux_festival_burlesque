@@ -8,10 +8,14 @@
      margin-right: auto;
 
     .container{
-        padding-top: $margin-large-big;
+        padding-top: 5.5rem;
+        margin-top: 5.5rem;
 
         article{
-            h1{ margin-bottom: $margin-medium; }
+            h1{
+                margin-bottom: $margin-medium;
+                margin-top: 0;
+            }
 
             .entry-content{
                 margin: 0 auto;
@@ -86,13 +90,17 @@
                                 color: $body-bg;
                                 height: auto;
                                 text-decoration: none;
+
+                                &:hover + .ngg-album-compactbox .ngg-album-link .gallery_link:hover{
+                                    opacity: .3;
+                                }
                             }
                         }
 
                         &:hover{
                             h4{
-                              display: block;
-                              transition: all 1s;
+                                display: block;
+                                transition: all 1s;
                             }
                         }
 
@@ -252,7 +260,8 @@
 @media(min-width:$screen-md) {
     .media-section{
         .container{
-            padding-top: $media-container-padding-top-medium-deskop;
+            margin-top: 8.5rem;
+            padding-top: 6.5rem;
 
             article{
                 h1{ margin-bottom: 4rem; }
@@ -302,8 +311,6 @@
 @media(min-width:$screen-lg) {
     .media-section{
         .container{
-            padding-top: $media-container-padding-top-large-deskop;
-
             article{
                 h1{ margin-bottom: 10rem; }
 
@@ -318,6 +325,10 @@
 
                             h4{
                                 font-size: $font-size-h3;
+                                background: rgba(255, 255, 255, .7);
+                                max-width: 190px;
+                                width: 90%;
+                                height: 190px;
                             }
                         }
                     }

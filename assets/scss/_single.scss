@@ -14,7 +14,7 @@ html{
      max-width: 1280px;
      margin-left: auto;
      margin-right: auto;
-
+     margin-top: 5.5rem;
 
 
      article{
@@ -330,6 +330,8 @@ html{
  @media(min-width:$screen-sm) {
      .container-single,
      .container-page{
+         margin-top: 5.5rem;
+
          article{
              &.col-lg-8{
                  margin-bottom: $blog-single-article-margin-sm;
@@ -380,6 +382,7 @@ html{
      .container-page{
         //  margin-left: $blog-container-margin-left-md;
          width: $blog-container-size-md;
+         margin-top: 8.5rem;
 
          article{
              &.col-lg-8{

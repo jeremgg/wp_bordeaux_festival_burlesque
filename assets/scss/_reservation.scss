@@ -59,10 +59,10 @@
 
             &:first-child{ margin-right: .25rem; }
             &:last-child{ margin-left: .5rem; }
-            &:nth-child(-n+2){ margin-bottom: .5rem; }
+            &:nth-child(-n+2){ margin-bottom: .5rem; margin-right: .5rem; }
 
             h2{
-                font-size: $font-size-large;
+                font-size: 19px;
                 margin: $booking-block-h2-margin;
             }
 

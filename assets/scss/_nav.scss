@@ -30,7 +30,7 @@
   }
 }
 
-            
+
 
 
 
@@ -157,14 +157,14 @@
                 margin-top: 8px;
                 padding-left: $padding-semi-micro;
             }
-            
+
             &:hover{
                 img{
                     animation: jello 2s;
                 }
             }
-            
-            
+
+
         }
     }
 
@@ -358,7 +358,7 @@
 
                         > a{
                             font-size: $font-size-medium;
-                            padding: $padding-micro;
+                            padding: .9rem;
 
                             &:before{
                                 width: calc( 100% - (10px * 2));

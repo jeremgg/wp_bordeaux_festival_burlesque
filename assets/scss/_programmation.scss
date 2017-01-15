@@ -1,12 +1,12 @@
 //programmation 2
 .programming-section{
     max-width: 1280px;
-    padding-top: 5rem;
+    padding-top: 5.5rem;
     margin-left: auto;
     margin-right: auto;
 
     .container{
-        margin-top: 3rem;
+        margin-top: 6.5rem;
 
         .row{
             > .col-xs-12{
@@ -112,6 +112,7 @@
                     width: 350px;
                     max-width: 420px;
                     margin: $margin-semi-medium-full;
+                    overflow: hidden;
 
 
                     .scroll{
@@ -120,6 +121,11 @@
                         width: 250px;
                         height: 64.1% !important;
                         overflow-y: scroll;
+                        // padding-right: 200px;
+
+                        //&::-webkit-scrollbar { display: none; }
+
+
 
                         #contenu{
                             width: 79%;
@@ -235,10 +241,13 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 440px) {
     .programming-section{
+        padding-top: 5.5rem;
+
         .container{
-            margin-top: 6rem;
+            margin-top: 5.5rem;
+
 
             .row{
                 > .col-xs-12{
@@ -250,7 +259,21 @@
                         .scroll{
                             margin-left: 22%;
                             margin-top: 76.5%;
-                            width: 215px;
+                            width: calc(71.7% + 200px);
+                            padding-right: 200px;
+
+                            .event-title{ margin-bottom: 1.5rem !important; }
+
+                            .date{ display: none; }
+
+                            .plus{
+                                padding: 2px 5px !important;
+                            }
+
+                            .reserve{
+                                font-size: 12px !important;
+                            }
+
 
                         }
                     }
@@ -275,10 +298,11 @@
                         .scroll{
                             margin-left: 22%;
                             margin-top: 76.5%;
-                            width: 301px;
+                            width: calc(301px + 200px);
                             height: 64.1% !important;
                             overflow-y: scroll;
                             float: left;
+                            padding-right: 200px;
 
                             #contenu{
                                 width: 79%;
@@ -297,10 +321,10 @@
 
 @media (min-width:$screen-sm-min) {
     .programming-section{
-        padding-top: $margin-top-medium-deskop;
+        padding-top: 5.5rem;
 
         .container{
-            margin-top: $margin-medium;
+            margin-top: 6.5rem;
 
             >.col-xs-12{
                 &:first-child{ height: 100px;}
@@ -315,10 +339,11 @@
                     .scroll{
                         margin-left: 30.4%;
                         margin-top: 73.3%;
-                        width: 300px;
+                        width: calc(300px + 200px);
                         height: 58.8% !important;
                         overflow-y: scroll;
                         float: left;
+                        margin-right: 200px;
 
                         #contenu{
                             width: 76.3%;
@@ -359,10 +384,11 @@
 
 @media (min-width:$screen-md-min) {
     .programming-section{
-        padding-top: $margin-top-large-deskop;
+        padding-top: 8.5rem;
 
         .container{
             margin: 0;
+            margin-top: 3.5rem;
 
             .row{
               > .col-xs-12.col-md-2{
@@ -444,10 +470,11 @@
                         .scroll{
                             margin-left: 30%;
                             margin-top: 73.3%;
-                            width: 300px;
+                            width: calc(300px + 200px);
                             height: 58.8% !important;
                             overflow-y: scroll;
                             float: left;
+                            margin-right: 200px
 
                             #contenu{
                                 width: 77.4%;
@@ -489,11 +516,7 @@
 
 @media (min-width:$screen-lg-min) {
     .programming-section{
-        padding-top: $margin-top-large-deskop;
-
         .container{
-            margin: 0;
-
             .row{
               > .col-xs-12.col-lg-2{
                   width: 18.66667%;
@@ -570,10 +593,11 @@
                         .scroll{
                             margin-left: 30%;
                             margin-top: 73.3%;
-                            width: 330px;
+                            width: calc( 329.5px + 200px);
                             height: 58.8% !important;
                             overflow-y: scroll;
                             float: left;
+                            margin-right: 200px;
 
                             #contenu{
                                 width: 79.9%;

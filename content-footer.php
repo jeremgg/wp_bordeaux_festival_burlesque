@@ -7,9 +7,8 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
-				<div class="pont">	
+				<div class="pont">
 				</div>
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/pont_pierre.png" class="img-responsive img-footer" alt="Responsive image">
 				<div class="row partenairs">
 						<?php $partenairs = new WP_Query(array(
 								'post_type' => 'partenaires',
